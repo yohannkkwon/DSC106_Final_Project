@@ -1,0 +1,304 @@
+/* ============================================================
+   Your City in 2080 — climate explorable styles
+   ============================================================ */
+
+:root {
+  --ink: #1d1c1a;
+  --ink-soft: #5a5752;
+  --paper: #faf8f3;
+  --paper-warm: #f3ede2;
+  --paper-deep: #ecdfc8;
+  --line: #e2dbcd;
+
+  /* scenario palette — same hues across all charts */
+  --hist: #4a4a4a;
+  --ssp126: #1f78b4;     /* low — blue */
+  --ssp245: #ff7f00;     /* mid — orange */
+  --ssp585: #c1272d;     /* high — red */
+
+  --ssp126-soft: #b6dcef;
+  --ssp245-soft: #ffd6a8;
+  --ssp585-soft: #f1a48c;
+
+  --warm: #e8773a;
+  --neutral: #888884;
+
+  --shadow: 0 2px 8px rgba(40, 30, 10, 0.08), 0 10px 30px rgba(40, 30, 10, 0.05);
+
+  --serif: "Fraunces", "Georgia", serif;
+  --sans:  "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body { padding: 0 24px 80px 24px; }
+
+a { color: var(--ssp126); text-decoration: none; border-bottom: 1px solid var(--ssp126-soft); }
+a:hover { color: var(--ssp585); border-color: var(--ssp585-soft); }
+
+section { max-width: 1040px; margin: 70px auto; }
+
+h1, h2, h3 { font-family: var(--serif); color: var(--ink); }
+
+h2 {
+  font-size: clamp(28px, 3.4vw, 40px); margin: 0 0 10px 0;
+  font-weight: 700; letter-spacing: -0.02em;
+}
+
+.caption {
+  color: var(--ink-soft); margin: 0 0 24px 0; max-width: 740px;
+  font-size: 16px; line-height: 1.55;
+}
+.caption strong { color: var(--ink); font-weight: 600; }
+.caption em { color: var(--ssp585); font-style: italic; font-weight: 600; }
+
+/* ---------- HERO ---------- */
+.hero { max-width: 920px; margin: 80px auto 40px auto; }
+.kicker {
+  font-family: var(--sans); text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 12px; color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--serif); font-weight: 800;
+  font-size: clamp(48px, 7.5vw, 100px);
+  line-height: 0.95; letter-spacing: -0.025em;
+  margin: 0 0 22px 0;
+}
+.hero h1 .year { color: var(--ssp585); font-style: italic; }
+.hero .subtitle {
+  font-size: clamp(18px, 2.2vw, 22px); line-height: 1.45;
+  color: var(--ink-soft); max-width: 740px; margin: 0;
+}
+.hero .subtitle em {
+  color: var(--ink); font-style: normal; font-weight: 600;
+  background: linear-gradient(180deg, transparent 60%, var(--ssp585-soft) 60%);
+  padding: 0 2px;
+}
+
+/* ---------- GLOBAL OVERVIEW ---------- */
+.overview h2 { margin-bottom: 4px; }
+#overview-chart {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- CITY PICKER ---------- */
+.city-picker {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px;
+  padding: 20px 24px; background: var(--paper-warm);
+  border-radius: 14px; border: 1px solid var(--line);
+  position: sticky; top: 14px; z-index: 50;
+  box-shadow: var(--shadow);
+  margin: 60px auto 30px auto;
+  max-width: 1040px;
+}
+.city-picker label {
+  font-weight: 500; font-size: 16px; color: var(--ink-soft);
+}
+#city-select {
+  font-family: var(--sans); font-size: 18px; font-weight: 600;
+  background: var(--paper); color: var(--ssp585);
+  border: 2px solid var(--line); border-radius: 8px;
+  padding: 8px 12px; cursor: pointer;
+  min-width: 200px;
+}
+#city-select:focus { outline: none; border-color: var(--ssp585); }
+
+#random-btn {
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 14px; cursor: pointer;
+  transition: transform 0.1s ease;
+}
+#random-btn:hover { background: var(--ssp585); color: white; border-color: var(--ssp585); }
+#random-btn:active { transform: scale(0.96); }
+
+.model-toggle {
+  margin-left: auto;
+  font-size: 13px; color: var(--ink-soft);
+}
+.model-toggle label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.model-toggle input { accent-color: var(--ssp585); cursor: pointer; }
+
+/* ---------- BIG NUMBERS ---------- */
+.big-numbers {
+  display: flex; align-items: stretch; justify-content: center;
+  flex-wrap: wrap; gap: 0;
+  margin: 36px auto;
+  max-width: 1040px;
+}
+.bn-card {
+  flex: 1 1 220px; padding: 28px 24px;
+  background: var(--paper-warm); border: 1px solid var(--line);
+  border-radius: 14px; margin: 6px;
+  display: flex; flex-direction: column; justify-content: center;
+  text-align: center;
+  min-height: 150px;
+}
+.bn-card.highlight {
+  background: linear-gradient(180deg, #fff4ee 0%, #fde4d9 100%);
+  border-color: var(--ssp585-soft);
+}
+.bn-card.change { background: var(--paper); }
+.bn-arrow {
+  align-self: center; font-size: 36px; color: var(--ink-soft);
+  font-weight: 200;
+}
+.bn-label { font-size: 12px; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 12px; }
+.bn-value {
+  font-family: var(--serif); font-weight: 800;
+  font-size: clamp(40px, 6vw, 64px); line-height: 1;
+  color: var(--ink);
+  transition: color 0.3s, transform 0.3s;
+}
+.bn-card.highlight .bn-value { color: var(--ssp585); }
+.bn-card.change .bn-value { color: var(--warm); }
+.bn-sub { font-size: 12px; color: var(--ink-soft); margin-top: 12px; }
+
+/* ---------- CHART CONTAINERS ---------- */
+#trajectory-chart, #dumbbell-chart, #choice-chart, #warming-chart {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 14px; padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.trajectory-line { fill: none; stroke-width: 2.2; }
+.trajectory-line.individual { stroke-width: 0.9; opacity: 0.55; }
+.trajectory-band { opacity: 0.16; }
+.paris-line { stroke: var(--ink); stroke-dasharray: 4 3; stroke-width: 1; opacity: 0.6; }
+.axis path, .axis line { stroke: var(--line); }
+.axis text { fill: var(--ink-soft); font-size: 12px; }
+
+.hover-line { stroke: var(--ink); stroke-dasharray: 3 3; stroke-width: 1; }
+.tooltip {
+  position: absolute; pointer-events: none; opacity: 0;
+  background: rgba(29, 28, 26, 0.94); color: white;
+  padding: 10px 14px; border-radius: 8px; font-size: 13px;
+  font-family: var(--sans);
+  box-shadow: var(--shadow);
+  transition: opacity 0.15s;
+  min-width: 160px;
+  z-index: 200;
+}
+.tooltip .tooltip-year { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+.tooltip .tooltip-row { display: flex; justify-content: space-between; gap: 12px; }
+.tooltip .tooltip-swatch {
+  display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+  margin-right: 6px; vertical-align: middle;
+}
+
+/* ---------- FUTURE IS A CHOICE ---------- */
+#choice-chart .choice-bar { stroke: white; stroke-width: 1.5; }
+#choice-chart .choice-label { font-size: 12px; fill: var(--ink-soft); }
+#choice-chart .choice-value { font-size: 14px; font-weight: 700; font-family: var(--serif); }
+
+/* ---------- ANALOG ---------- */
+.analog-card {
+  background: linear-gradient(135deg, #fff4ee 0%, #fde4d9 100%);
+  border: 1px solid var(--ssp585-soft);
+  border-radius: 18px;
+  padding: 44px 36px; text-align: center;
+  box-shadow: var(--shadow);
+}
+.analog-name {
+  font-family: var(--serif); font-weight: 800;
+  font-size: clamp(48px, 8vw, 92px); line-height: 1;
+  color: var(--ssp585); margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+.analog-temps {
+  display: flex; justify-content: center; align-items: baseline; gap: 14px;
+  font-family: var(--serif); font-size: 22px; color: var(--ink);
+}
+.analog-temps .future { color: var(--ssp585); font-weight: 700; }
+.analog-temps .approx { color: var(--ink-soft); font-size: 18px; }
+.analog-temps .today { color: var(--ink); }
+.analog-explain {
+  margin: 22px auto 0 auto; max-width: 480px;
+  font-size: 14px; color: var(--ink-soft);
+}
+
+/* ---------- DUMBBELL ---------- */
+.dumbbell-line { stroke: var(--ssp585-soft); stroke-width: 2.5; }
+.dumbbell-line.active { stroke: var(--ssp585); stroke-width: 3.5; }
+.dumbbell-today { fill: var(--neutral); stroke: white; stroke-width: 1.5; }
+.dumbbell-future { fill: var(--ssp585); stroke: white; stroke-width: 1.5; }
+.dumbbell-row.active .city-label { font-weight: 700; fill: var(--ssp585); }
+.city-label { font-size: 12px; fill: var(--ink); font-family: var(--sans); }
+.dumbbell-value { font-size: 11px; font-family: var(--sans); font-weight: 600; }
+
+/* ---------- MAP SECTIONS ---------- */
+.map-section h2 { margin-bottom: 4px; }
+.scen-tabs {
+  display: inline-flex; margin: 8px 0 18px 0;
+  background: var(--paper-warm); border-radius: 8px;
+  border: 1px solid var(--line); padding: 3px;
+}
+.map-tab {
+  background: transparent; border: none; padding: 6px 14px;
+  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  color: var(--ink-soft); border-radius: 6px;
+  cursor: pointer; transition: all 0.15s;
+}
+.map-tab.active { background: var(--ssp585); color: white; box-shadow: 0 1px 4px rgba(193, 39, 45, 0.3); }
+.map-tab:not(.active):hover { background: var(--paper); color: var(--ink); }
+
+#temp-map, #precip-map {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 14px; padding: 16px;
+  box-shadow: var(--shadow);
+}
+.map-cell { stroke: none; }
+.map-coastline { fill: none; stroke: rgba(29, 28, 26, 0.55); stroke-width: 0.4; }
+.map-city-marker { fill: white; stroke: var(--ink); stroke-width: 1.5; }
+.map-city-label { font-size: 11px; fill: var(--ink); font-weight: 600; font-family: var(--sans); pointer-events: none; }
+
+/* ---------- WRITEUP ---------- */
+.writeup { max-width: 780px; }
+.writeup h3 {
+  font-family: var(--sans); font-size: 18px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--ssp585); margin: 32px 0 8px 0;
+}
+.writeup p { font-size: 17px; line-height: 1.65; color: var(--ink); }
+.writeup code {
+  font-family: "SF Mono", Menlo, monospace; font-size: 14px;
+  background: var(--paper-warm); padding: 1px 5px; border-radius: 3px;
+}
+.writeup em { font-style: italic; color: var(--ssp585); }
+.writeup strong { font-weight: 600; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  max-width: 1040px; margin: 80px auto 0 auto;
+  padding: 28px 0; border-top: 1px solid var(--line);
+  font-size: 13px; color: var(--ink-soft);
+}
+footer p { margin: 6px 0; }
+footer .tiny { font-size: 11px; opacity: 0.8; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 720px) {
+  .city-picker { flex-direction: column; align-items: stretch; }
+  .city-picker label { text-align: left; }
+  .model-toggle { margin-left: 0; }
+  .big-numbers .bn-arrow { display: none; }
+  .bn-card { flex: 1 1 100%; }
+}

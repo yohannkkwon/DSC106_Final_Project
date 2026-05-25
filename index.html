@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your City in 2080 — A climate explorable</title>
+  <meta name="description" content="An interactive visualization of how 36 major cities will change under CMIP6 climate projections by the end of the century." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <p class="kicker">CMIP6 climate projections · DSC 106 final project</p>
+    <h1>Your city in <span class="year">2080</span>.</h1>
+    <p class="subtitle">
+      Climate change is usually communicated as a global average — "+2.8 °C by 2100" — and almost
+      nobody can feel that. So we broke the same data the IPCC uses down to the city level. Pick a
+      place. Watch what climate change does, not to <em>the planet</em>, but to <em>your weekend in 2080</em>.
+    </p>
+  </header>
+
+  <!-- ============ SECTION 1: GLOBAL OVERVIEW ============ -->
+  <section class="overview">
+    <h2>The four futures we're choosing between</h2>
+    <p class="caption">
+      Global mean surface temperature, observed (1850&ndash;2014) and projected
+      (2015&ndash;2100). Each line is the mean across our 8 CMIP6 models for one of
+      three emissions pathways &mdash; from <strong>SSP1-2.6</strong> (we act decisively)
+      to <strong>SSP5-8.5</strong> (we keep burning). The dotted line is the <strong>+1.5 °C
+      Paris target</strong>; we have already crossed +1.0.
+    </p>
+    <div id="overview-chart"></div>
+  </section>
+
+  <!-- ============ CITY PICKER ============ -->
+  <section class="city-picker">
+    <label for="city-select">Show me what happens to</label>
+    <select id="city-select" aria-label="City"></select>
+    <button id="random-btn" type="button" title="Surprise me">🎲 Random city</button>
+    <div class="model-toggle" title="Show individual model lines">
+      <label><input type="checkbox" id="show-models"> Show individual models</label>
+    </div>
+  </section>
+
+  <!-- ============ BIG NUMBERS ============ -->
+  <section class="big-numbers">
+    <div class="bn-card">
+      <span class="bn-label">Days/year above 35 °C — today</span>
+      <span class="bn-value" id="bn-today">—</span>
+      <span class="bn-sub">1985–2014 baseline</span>
+    </div>
+    <div class="bn-arrow">→</div>
+    <div class="bn-card highlight">
+      <span class="bn-label">Days/year above 35 °C — 2080</span>
+      <span class="bn-value" id="bn-2080">—</span>
+      <span class="bn-sub" id="bn-2080-scen">2071–2100, SSP5-8.5 (worst case)</span>
+    </div>
+    <div class="bn-card change">
+      <span class="bn-label">Change</span>
+      <span class="bn-value" id="bn-change">—</span>
+      <span class="bn-sub" id="bn-change-x">—</span>
+    </div>
+  </section>
+
+  <!-- ============ TRAJECTORY ============ -->
+  <section class="trajectory">
+    <h2>Annual mean temperature, 1850–2100</h2>
+    <p class="caption">
+      8-model ensemble. Lines are 10-year running means; shaded bands show the
+      p10–p90 spread across the 8 models. Hover for the year-by-year values.
+      Toggle "Show individual models" above to see each model's trajectory.
+    </p>
+    <div id="trajectory-chart"></div>
+  </section>
+
+  <!-- ============ FUTURE IS A CHOICE ============ -->
+  <section class="future-choice">
+    <h2>The future is a choice</h2>
+    <p class="caption">
+      The same city under three emission pathways — projected mean temperature
+      change from <strong>1950–2014 baseline</strong> to <strong>2071–2100</strong>.
+      Decisive action limits the warming. Inaction triples it.
+    </p>
+    <div id="choice-chart"></div>
+  </section>
+
+  <!-- ============ CLIMATE ANALOG ============ -->
+  <section class="analog">
+    <h2>In 2080, your city will feel like…</h2>
+    <div class="analog-card">
+      <div class="analog-name" id="analog-name">—</div>
+      <div class="analog-temps">
+        <span class="future" id="analog-future">—</span>
+        <span class="approx">≈</span>
+        <span class="today" id="analog-today">—</span>
+      </div>
+      <p class="analog-explain" id="analog-explain">—</p>
+    </div>
+  </section>
+
+  <!-- ============ EXTREME HEAT RANK ============ -->
+  <section class="dumbbell">
+    <h2>How "too hot" becomes the new normal</h2>
+    <p class="caption">
+      Days per year above 35 °C (95 °F), today vs end of century (SSP5-8.5). Sorted by
+      absolute change. Top 18 cities shown — <strong>click any row to jump to that city</strong>.
+    </p>
+    <div id="dumbbell-chart"></div>
+  </section>
+
+  <!-- ============ TOP CITIES BY WARMING ============ -->
+  <section class="warming-rank">
+    <h2>Where the warming is most extreme</h2>
+    <p class="caption">
+      Projected change in <strong>mean annual temperature</strong>, end-of-century
+      vs 1950–2014 baseline, under SSP5-8.5. The cities that warm most are not
+      the tropical ones — they're the <strong>high-latitude</strong> cities
+      (Anchorage, Reykjavík, Moscow) and continental interiors. That's
+      <em>polar amplification</em> in action.
+    </p>
+    <div id="warming-chart"></div>
+  </section>
+
+  <!-- ============ GLOBAL TEMPERATURE MAP ============ -->
+  <section class="map-section">
+    <h2>Where on Earth warms most</h2>
+    <p class="caption">
+      Projected change in annual mean temperature, 2071–2100 vs 1950–2014 baseline,
+      ensemble mean across 3 CMIP6 models. The Arctic warms 2–3× the global average —
+      that's <strong>polar amplification</strong>.
+    </p>
+    <div class="scen-tabs" data-target="temp-map">
+      <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
+      <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
+      <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+    </div>
+    <div id="temp-map"></div>
+  </section>
+
+  <!-- ============ GLOBAL PRECIP MAP ============ -->
+  <section class="map-section">
+    <h2>Where it gets wetter, where it gets drier</h2>
+    <p class="caption">
+      Percent change in annual precipitation, 2071–2100 vs 1950–2014 baseline.
+      Wet regions get wetter, dry regions get drier — the
+      <strong>wet-gets-wetter</strong> signal.
+    </p>
+    <div class="scen-tabs" data-target="precip-map">
+      <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
+      <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
+      <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+    </div>
+    <div id="precip-map"></div>
+  </section>
+
+  <!-- ============ WRITEUP ============ -->
+  <section class="writeup">
+    <h2>About this project</h2>
+
+    <h3>What we've done so far</h3>
+    <p>
+      We pulled the <strong>CMIP6</strong> climate-model archive directly from the
+      Pangeo cloud mirror (<code>gs://cmip6</code>), extracting monthly near-surface air
+      temperature (<code>tas</code>), monthly precipitation (<code>pr</code>), and
+      daily maximum temperature (<code>tasmax</code>) for 36 globally-distributed
+      cities across <strong>eight independent climate models</strong> and four emissions
+      scenarios (historical, SSP1-2.6, SSP2-4.5, SSP5-8.5). Raw Zarr stores totaled
+      more than 100 GB; we processed them into roughly 130 MB of intermediate CSVs and
+      then aggregated again to a 2 MB browser-ready dataset. We derived annual extreme
+      heat metrics (days above 30/35/40 °C, longest annual heatwave, hottest day) from
+      daily-resolution model runs, computed a <strong>climate-analog mapping</strong>
+      (for each city under each future scenario, the historical city whose 12-month
+      climatology best matches it by RMSE), and pulled <strong>global spatial fields</strong>
+      for the world maps below. This prototype wires all of that into a single
+      interactive D3 explorable with eight distinct visualizations — a global
+      overview to set context, then five city-level views (trajectory, scenario
+      comparison, climate analog, extreme heat days, warming rank), then two
+      world maps to zoom back out — five of which are directly responsive to
+      the city the reader picks.
+    </p>
+
+    <h3>The most challenging design decision</h3>
+    <p>
+      The hardest design tension is between <em>honest uncertainty</em> and <em>narrative
+      punch</em>. Eight CMIP6 models disagree by up to 6.6 °C at end of century for a
+      single city under one scenario — that spread is not a bug, it's the real state of
+      knowledge in climate science. But "your city will get between 1 and 8 degrees
+      hotter" is exactly the kind of fuzzy framing that lets readers tune out. Our
+      answer is a layered one: lead with a confident headline number (the ensemble
+      mean), expose the p10–p90 model spread as a shaded band, and let the reader
+      opt-in to seeing each individual model trajectory with one click. The
+      <em>climate-analog</em> framing sidesteps the precision problem entirely — even
+      if we can't pin San Diego's 2080 mean to a tenth of a degree, the answer "it will
+      feel like North Africa" is robust across the ensemble and sticks in the reader's
+      head. The remaining challenge is keeping seven visualizations from drowning each
+      other out — the page reads top-to-bottom as a story (global context → your city's
+      trajectory → the choice → the analog → the ranking → the world maps), with
+      every viz earning its place in the narrative.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Data: <a href="https://pangeo-data.github.io/pangeo-cmip6-cloud/" target="_blank" rel="noopener">Pangeo CMIP6 cloud archive</a>
+      · Models: CESM2, GFDL-ESM4, MPI-ESM1-2-LR, UKESM1-0-LL, CanESM5, IPSL-CM6A-LR, ACCESS-CM2, MIROC6
+      · Built with D3.js v7
+      · <a href="https://github.com/" id="repo-link" target="_blank" rel="noopener">Source on GitHub</a>
+    </p>
+    <p class="tiny">
+      Climate-analog framing inspired by Fitzpatrick &amp; Dunn (2019),
+      <em>Contemporary climatic analogs for 540 North American urban areas</em>,
+      Nature Communications.
+    </p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="main.js"></script>
+</body>
+</html>
