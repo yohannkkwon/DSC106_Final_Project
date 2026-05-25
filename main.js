@@ -34,10 +34,11 @@ const FUTURE_SCEN = ["ssp126", "ssp245", "ssp585"];
 
 const state = {
   city: "San Diego",
-  overviewStep: "historical",     // which scenario(s) to show
-  trajectoryStep: "all",          // which to highlight
-  tempMapScen: "ssp585",
-  precipMapScen: "ssp585",
+  overviewStep: "historical",
+  trajectoryStep: "all",
+  // Map sliders: 0 = SSP1-2.6, 0.5 = SSP2-4.5, 1.0 = SSP5-8.5 (smooth interp)
+  tempMapT: 1.0,
+  precipMapT: 1.0,
 };
 
 const tooltip = d3.select("body").append("div").attr("class", "tooltip");
@@ -110,10 +111,62 @@ function rowParse(d) {
 function buildCitySelect() {
   const cities = citiesMeta.map(d => d.city).sort();
   if (!cities.includes(state.city)) state.city = cities[0];
-  const sel = d3.select("#city-select");
-  sel.selectAll("option").data(cities).join("option").attr("value", d => d).text(d => d);
-  sel.property("value", state.city);
-  sel.on("change", function () { state.city = this.value; renderCity(); });
+
+  const button = document.getElementById("city-picker-button");
+  const menu = document.getElementById("city-picker-menu");
+  const currentLabel = document.getElementById("city-picker-current");
+
+  // populate menu
+  menu.innerHTML = "";
+  cities.forEach(c => {
+    const item = document.createElement("div");
+    item.className = "city-picker-item" + (c === state.city ? " selected" : "");
+    item.setAttribute("role", "option");
+    item.dataset.city = c;
+    item.textContent = c;
+    item.addEventListener("click", () => selectCity(c));
+    menu.appendChild(item);
+  });
+
+  function selectCity(c) {
+    state.city = c;
+    currentLabel.textContent = c;
+    menu.querySelectorAll(".city-picker-item").forEach(el => {
+      el.classList.toggle("selected", el.dataset.city === c);
+    });
+    closeMenu();
+    renderCity();
+  }
+  function openMenu() {
+    button.setAttribute("aria-expanded", "true");
+    menu.setAttribute("aria-hidden", "false");
+    // scroll selected item into view
+    const sel = menu.querySelector(".selected");
+    if (sel) sel.scrollIntoView({ block: "nearest" });
+  }
+  function closeMenu() {
+    button.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
+  }
+  function toggleMenu() {
+    if (button.getAttribute("aria-expanded") === "true") closeMenu();
+    else openMenu();
+  }
+  button.addEventListener("click", toggleMenu);
+  document.addEventListener("click", (e) => {
+    if (!button.parentElement.contains(e.target)) closeMenu();
+  });
+  // keyboard
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleMenu(); }
+  });
+
+  // expose for use elsewhere (e.g., random btn, dumbbell click)
+  window.__selectCity = selectCity;
+
+  // initial label
+  currentLabel.textContent = state.city;
 }
 
 function setupControls() {
@@ -121,27 +174,69 @@ function setupControls() {
     const cities = citiesMeta.map(d => d.city);
     let c;
     do { c = cities[Math.floor(Math.random() * cities.length)]; } while (c === state.city);
-    state.city = c;
-    d3.select("#city-select").property("value", c);
-    renderCity();
+    if (window.__selectCity) window.__selectCity(c);
+    else { state.city = c; renderCity(); }
   });
 
   d3.select("#city-pill").on("click", () => {
     document.querySelector(".pick-city").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  d3.selectAll(".scen-tabs").each(function () {
-    const target = this.dataset.target;
-    d3.select(this).selectAll(".map-tab").on("click", function () {
-      const scen = this.dataset.scen;
-      if (target === "temp-map") state.tempMapScen = scen;
-      else state.precipMapScen = scen;
-      d3.select(this.parentNode).selectAll(".map-tab").classed("active", false);
-      d3.select(this).classed("active", true);
-      if (target === "temp-map") drawTempMap();
-      else drawPrecipMap();
+  // Map sliders
+  setupMapSlider("temp-map-slider", "temp-map", (t) => {
+    state.tempMapT = t;
+    updateMapCellsByT("#temp-map", "tas", t);
+    updateMapReadout("temp-map-name", "temp-map-sub", t);
+  });
+  setupMapSlider("precip-map-slider", "precip-map", (t) => {
+    state.precipMapT = t;
+    updateMapCellsByT("#precip-map", "pr", t);
+    updateMapReadout("precip-map-name", "precip-map-sub", t);
+  });
+  // tick clicks snap to those positions
+  document.querySelectorAll(".map-slider-ticks").forEach(group => {
+    group.querySelectorAll("span").forEach(span => {
+      span.addEventListener("click", () => {
+        const sliderEl = group.previousElementSibling;
+        const pos = parseInt(span.dataset.pos, 10);
+        sliderEl.value = pos;
+        sliderEl.dispatchEvent(new Event("input"));
+      });
     });
   });
+}
+
+function setupMapSlider(sliderId, mapId, onChange) {
+  const slider = document.getElementById(sliderId);
+  if (!slider) return;
+  const fire = () => {
+    const t = +slider.value / 1000;
+    onChange(t);
+  };
+  slider.addEventListener("input", fire);
+  slider.addEventListener("change", fire);
+  fire();  // initial
+}
+
+// Piecewise-linear interp between SSP1-2.6 (t=0), SSP2-4.5 (t=0.5), SSP5-8.5 (t=1)
+function blendScenarios(v126, v245, v585, t) {
+  if (t <= 0.5) return v126 + (v245 - v126) * (t * 2);
+  return v245 + (v585 - v245) * ((t - 0.5) * 2);
+}
+
+function describeScen(t) {
+  if (t <= 0.01) return { name: "SSP1-2.6", sub: "low emissions · we act decisively" };
+  if (t < 0.5)   return { name: "between SSP1-2.6 and SSP2-4.5", sub: "interpolated" };
+  if (t <= 0.51) return { name: "SSP2-4.5", sub: "middle of the road · current pace" };
+  if (t < 1.0)   return { name: "between SSP2-4.5 and SSP5-8.5", sub: "interpolated" };
+  return { name: "SSP5-8.5", sub: "high emissions · we keep burning" };
+}
+function updateMapReadout(nameId, subId, t) {
+  const d = describeScen(t);
+  const nm = document.getElementById(nameId);
+  const sb = document.getElementById(subId);
+  if (nm) nm.textContent = d.name;
+  if (sb) sb.textContent = d.sub;
 }
 
 // ============================================================
@@ -332,17 +427,20 @@ function renderAll() {
   drawPrecipMap();
 }
 function renderCity() {
-  // text
-  document.getElementById("traj-city-name").textContent = state.city;
-  document.getElementById("bn-city-name").textContent = state.city;
-  document.getElementById("choice-city-name").textContent = state.city;
-  document.getElementById("analog-source-city").textContent = state.city;
-  document.getElementById("pill-city-name").textContent = state.city;
+  // text — guarded against missing elements (some get re-rendered by other functions)
+  const setText = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  };
+  setText("traj-city-name", state.city);
+  setText("choice-city-name", state.city);
+  setText("analog-source-city", state.city);
+  setText("pill-city-name", state.city);
 
   drawTrajectoryChart();
   drawChoiceChart();
   updateAnalogCard();
-  updateBigNumbers();   // sets text values w/o animation
+  updateBigNumbers();   // also updates the bn-city-name span
   drawDumbbell();
 }
 
@@ -393,7 +491,7 @@ function countUp(sel, target, duration) {
 
 function updateBigCaption(today, future) {
   const captionEl = document.getElementById("bn-caption");
-  if (today == null || future == null) return;
+  if (!captionEl || today == null || future == null) return;
   let xText;
   if (today >= 1) {
     const x = (future / today).toFixed(1);
@@ -403,7 +501,8 @@ function updateBigCaption(today, future) {
   } else {
     xText = "no change";
   }
-  captionEl.innerHTML = `That's a <strong>${xText}</strong> in dangerously hot days for <span>${state.city}</span>.`;
+  // preserve the bn-city-name id so renderCity can keep working
+  captionEl.innerHTML = `That's a <strong>${xText}</strong> in dangerously hot days for <span id="bn-city-name">${state.city}</span>.`;
 }
 
 // ============================================================
@@ -655,8 +754,8 @@ function drawChoiceChart() {
     div.innerHTML = `
       <div class="scen-name" style="color:${COLOR[d.scen]}">${SHORT[d.scen]}</div>
       <div class="scen-desc">${desc[d.scen]}</div>
-      <div class="scen-value">+${d.delta.toFixed(1)}<span style="font-size:0.55em">°C</span></div>
-      <div class="scen-spread">+${d.low.toFixed(1)} to +${d.high.toFixed(1)} °C across 8 models</div>
+      <div class="scen-value">+${d.delta.toFixed(1)}<span class="scen-unit">°C</span></div>
+      <div class="scen-spread">+${d.low.toFixed(1)} to +${d.high.toFixed(1)} °C · 8 models</div>
     `;
     container.appendChild(div);
   });
@@ -738,9 +837,9 @@ function drawWarmingRank() {
     .attr("transform", d => `translate(0,${y(d.city)})`)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
-      state.city = d.city;
-      d3.select("#city-select").property("value", d.city);
-      renderCity(); drawWarmingRank();
+      if (window.__selectCity) window.__selectCity(d.city);
+      else { state.city = d.city; renderCity(); }
+      drawWarmingRank();
     });
   rows.append("text").attr("class", "city-label")
     .attr("x", -8).attr("y", y.bandwidth() / 2).attr("dy", "0.35em")
@@ -799,9 +898,8 @@ function drawDumbbell() {
     .attr("transform", d => `translate(0,${y(d.city) + y.bandwidth()/2})`)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
-      state.city = d.city;
-      d3.select("#city-select").property("value", d.city);
-      renderCity();
+      if (window.__selectCity) window.__selectCity(d.city);
+      else { state.city = d.city; renderCity(); }
     });
   rows.append("text").attr("class", "city-label")
     .attr("x", -8).attr("dy", "0.35em").attr("text-anchor", "end").text(d => d.city);
@@ -828,10 +926,37 @@ function drawDumbbell() {
 // ============================================================
 // Maps
 // ============================================================
-function drawTempMap() { drawMap("#temp-map", "tas", state.tempMapScen,
+function drawTempMap() { drawMap("#temp-map", "tas", state.tempMapT,
   { label: "Δ Temperature (°C)", cmap: tasColor, domain: [0, 13] }); }
-function drawPrecipMap() { drawMap("#precip-map", "pr", state.precipMapScen,
+function drawPrecipMap() { drawMap("#precip-map", "pr", state.precipMapT,
   { label: "Δ Precipitation (%)", cmap: prColor, domain: [-50, 50] }); }
+
+// Per-cell lookup tables built on demand: key = "lat,lon" -> {ssp126, ssp245, ssp585}
+const cellIndex = { tas: null, pr: null };
+function buildCellIndex(variable) {
+  if (cellIndex[variable]) return cellIndex[variable];
+  const idx = new Map();
+  spatial.forEach(r => {
+    if (r.variable !== variable) return;
+    const key = `${r.lat},${r.lon}`;
+    if (!idx.has(key)) idx.set(key, { lat: r.lat, lon: r.lon });
+    idx.get(key)[r.scenario] = r.delta;
+  });
+  cellIndex[variable] = idx;
+  return idx;
+}
+
+// Recolor map cells given a slider t value (0..1). Much cheaper than redrawing.
+function updateMapCellsByT(selector, variable, t) {
+  const container = d3.select(selector);
+  const cells = container.selectAll(".map-cell");
+  if (cells.empty()) return;
+  const cmap = variable === "tas" ? tasColor : prColor;
+  cells.attr("fill", d => {
+    d.delta = blendScenarios(d._ssp126, d._ssp245, d._ssp585, t);
+    return cmap(d.delta);
+  });
+}
 
 function tasColor(v) {
   const t = Math.max(0, Math.min(13, v)) / 13;
@@ -842,15 +967,26 @@ function prColor(v) {
   return d3.interpolateBrBG(Math.max(0, Math.min(1, t)));
 }
 
-function drawMap(selector, variable, scenario, opts) {
+function drawMap(selector, variable, t, opts) {
   const container = d3.select(selector);
   container.selectAll("*").remove();
-  const rows = spatial.filter(d => d.variable === variable && d.scenario === scenario);
+  // Build per-cell {ssp126, ssp245, ssp585} index, then synthesize "rows" for rendering
+  const idx = buildCellIndex(variable);
+  const rows = Array.from(idx.values()).filter(r =>
+    r.ssp126 != null && r.ssp245 != null && r.ssp585 != null
+  );
   if (!rows.length) {
     container.append("div").style("padding", "60px 20px")
       .style("text-align", "center").style("color", "#888").text("Spatial data loading…");
     return;
   }
+  // attach a blended .delta plus underscored anchor values for later updates
+  rows.forEach(r => {
+    r._ssp126 = r.ssp126;
+    r._ssp245 = r.ssp245;
+    r._ssp585 = r.ssp585;
+    r.delta = blendScenarios(r._ssp126, r._ssp245, r._ssp585, t);
+  });
   const W = container.node().clientWidth || 1000;
   const H = 480;
   const margin = { top: 8, right: 80, bottom: 30, left: 36 };

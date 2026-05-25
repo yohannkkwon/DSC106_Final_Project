@@ -54,6 +54,49 @@
   </section>
 
   <!-- ============================================================
+       CHAPTER 2.5 — SSP EXPLAINER
+       ============================================================ -->
+  <section class="chapter ssp-explainer-chapter">
+    <div class="chapter-content">
+      <p class="kicker">first, a word on what we're showing</p>
+      <h2 class="chapter-title">Four <em>SSPs</em>. Four possible futures.</h2>
+      <p class="chapter-deck">
+        Climate scientists don't predict the future — they project what would happen
+        <em>if</em> humanity follows different paths. The IPCC calls these
+        <strong>Shared Socioeconomic Pathways</strong>, or SSPs.
+        Each combines assumptions about energy, population, policy and growth.
+      </p>
+      <div class="ssp-cards">
+        <div class="ssp-card hist">
+          <div class="ssp-tag">historical</div>
+          <h3>What we've measured.</h3>
+          <p>The observed record from 1850 to 2014. Real measurements, not projections. The Earth warmed about <strong>+1.0 °C</strong> in this window.</p>
+        </div>
+        <div class="ssp-card ssp126">
+          <div class="ssp-tag">SSP1-2.6</div>
+          <h3>"Sustainability."</h3>
+          <p>We get to <strong>net-zero by mid-century</strong>, shift to clean energy fast, lower inequality. Warming stabilizes near <strong>+1.8 °C</strong>. This is the "if we act" path.</p>
+        </div>
+        <div class="ssp-card ssp245">
+          <div class="ssp-tag">SSP2-4.5</div>
+          <h3>"Middle of the road."</h3>
+          <p>Current policies, modest progress, the world we're trending toward. Warming reaches about <strong>+2.7 °C</strong> by 2100.</p>
+        </div>
+        <div class="ssp-card ssp585">
+          <div class="ssp-tag">SSP5-8.5</div>
+          <h3>"Fossil-fueled."</h3>
+          <p>No serious decarbonization. Economic growth powered by coal and oil through 2100. Warming hits <strong>+4.4 °C</strong> and keeps rising past 2100.</p>
+        </div>
+      </div>
+      <p class="ssp-footnote">
+        The "2.6", "4.5", and "8.5" in the names are the <em>radiative forcing</em>
+        in watts per square meter at 2100 — basically, how much extra energy the
+        atmosphere is trapping. Bigger numbers = more warming.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
        CHAPTER 3 — FOUR FUTURES (scrolly with global overview)
        ============================================================ -->
   <section class="chapter scrolly four-futures-chapter">
@@ -107,7 +150,14 @@
       <p class="kicker">make it personal</p>
       <h2>Pick a city.</h2>
       <div class="picker-row">
-        <select id="city-select" aria-label="City"></select>
+        <div class="city-picker-wrapper">
+          <button class="city-picker-button" id="city-picker-button" type="button"
+                  aria-haspopup="listbox" aria-expanded="false">
+            <span id="city-picker-current">San Diego</span>
+            <span class="city-picker-arrow">▾</span>
+          </button>
+          <div class="city-picker-menu" id="city-picker-menu" role="listbox" aria-hidden="true"></div>
+        </div>
         <button id="random-btn" type="button">🎲 Surprise me</button>
       </div>
       <p class="hint">36 cities across every inhabited continent. The five visualizations below all respond.</p>
@@ -261,10 +311,18 @@
         Projected change in annual mean temperature, 2071–2100 vs 1950–2014 baseline.
         Switch the scenario tabs to see how the map redraws under each emissions pathway.
       </p>
-      <div class="scen-tabs" data-target="temp-map">
-        <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
-        <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
-        <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+      <div class="map-slider-wrapper">
+        <div class="map-slider-readout">
+          <span class="slider-scen-name" id="temp-map-name">SSP5-8.5</span>
+          <span class="slider-scen-sub" id="temp-map-sub">high emissions · we keep burning</span>
+        </div>
+        <input type="range" class="map-slider" id="temp-map-slider"
+               min="0" max="1000" value="1000" step="1" data-target="temp-map" />
+        <div class="map-slider-ticks">
+          <span data-pos="0">SSP1-2.6</span>
+          <span data-pos="500">SSP2-4.5</span>
+          <span data-pos="1000">SSP5-8.5</span>
+        </div>
       </div>
       <div id="temp-map"></div>
     </div>
@@ -281,10 +339,18 @@
         Percent change in annual precipitation vs baseline. Wet regions get wetter,
         dry regions get drier — the "<em>wet-gets-wetter</em>" signal of a warmer atmosphere.
       </p>
-      <div class="scen-tabs" data-target="precip-map">
-        <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
-        <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
-        <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+      <div class="map-slider-wrapper">
+        <div class="map-slider-readout">
+          <span class="slider-scen-name" id="precip-map-name">SSP5-8.5</span>
+          <span class="slider-scen-sub" id="precip-map-sub">high emissions · we keep burning</span>
+        </div>
+        <input type="range" class="map-slider" id="precip-map-slider"
+               min="0" max="1000" value="1000" step="1" data-target="precip-map" />
+        <div class="map-slider-ticks">
+          <span data-pos="0">SSP1-2.6</span>
+          <span data-pos="500">SSP2-4.5</span>
+          <span data-pos="1000">SSP5-8.5</span>
+        </div>
       </div>
       <div id="precip-map"></div>
     </div>
