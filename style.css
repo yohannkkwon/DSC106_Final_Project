@@ -166,11 +166,12 @@ h2.chapter-title {
   font-family: var(--serif);
   font-weight: 700;
   font-size: clamp(40px, 5.5vw, 76px);
-  line-height: 0.98;
-  letter-spacing: -0.025em;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
   margin-bottom: 24px;
   max-width: 900px;
 }
+h2.chapter-title em { margin: 0 0.04em; }
 h2.chapter-title em { color: var(--accent); font-style: italic; }
 .chapter.dark h2.chapter-title em { color: var(--ssp585); }
 
@@ -681,11 +682,20 @@ h2.chapter-title em { color: var(--accent); font-style: italic; }
 .analog-chapter .analog-name {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: clamp(100px, 18vw, 280px);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  font-size: clamp(64px, 11vw, 168px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   color: var(--ssp585);
-  margin: 30px 0;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 0 24px;
+  word-break: break-word;
+  hyphens: none;
+}
+/* Tighter font for multi-word analog cities so they fit on a single line */
+.analog-chapter .analog-name.multi-word {
+  font-size: clamp(56px, 8.5vw, 132px);
+  letter-spacing: -0.025em;
 }
 .analog-chapter .analog-temps {
   font-family: var(--serif);

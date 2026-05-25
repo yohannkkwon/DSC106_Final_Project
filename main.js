@@ -774,15 +774,19 @@ function updateAnalogCard() {
     document.getElementById("analog-explain").textContent = "";
     return;
   }
+  const nameEl = document.getElementById("analog-name");
   if (row.analog_city === state.city) {
-    document.getElementById("analog-name").textContent = "nowhere on Earth today";
+    nameEl.textContent = "nowhere on Earth today";
+    nameEl.classList.add("multi-word");
     document.getElementById("analog-future").textContent = `${row.future_T_C.toFixed(1)} °C`;
     document.getElementById("analog-today").textContent = "—";
     document.getElementById("analog-explain").textContent =
       `No major city today has a year-round climate as hot as ${state.city} will. ` +
       `It's entering an unprecedented temperature regime.`;
   } else {
-    document.getElementById("analog-name").textContent = row.analog_city + ".";
+    nameEl.textContent = row.analog_city + ".";
+    // Apply tighter sizing to multi-word names so they don't overflow
+    nameEl.classList.toggle("multi-word", row.analog_city.includes(" "));
     document.getElementById("analog-future").textContent =
       `${state.city}, 2080: ${row.future_T_C.toFixed(1)} °C`;
     document.getElementById("analog-today").textContent =
