@@ -7,90 +7,207 @@
   <meta name="description" content="An interactive visualization of how 36 major cities will change under CMIP6 climate projections by the end of the century." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="hero">
-    <p class="kicker">CMIP6 climate projections · DSC 106 final project</p>
-    <h1>Your city in <span class="year">2080</span>.</h1>
-    <p class="subtitle">
-      Climate change is usually communicated as a global average — "+2.8 °C by 2100" — and almost
-      nobody can feel that. So we broke the same data the IPCC uses down to the city level. Pick a
-      place. Watch what climate change does, not to <em>the planet</em>, but to <em>your weekend in 2080</em>.
-    </p>
-  </header>
+  <!-- progress bar + floating city pill -->
+  <div class="progress-bar"><div class="fill"></div></div>
+  <div class="city-pill" id="city-pill">
+    Showing: <span class="pill-city" id="pill-city-name">San Diego</span>
+    <span class="pill-arrow">▾</span>
+  </div>
 
-  <!-- ============ SECTION 1: GLOBAL OVERVIEW ============ -->
-  <section class="overview">
-    <h2>The four futures we're choosing between</h2>
-    <p class="caption">
-      Global mean surface temperature, observed (1850&ndash;2014) and projected
-      (2015&ndash;2100). Each line is the mean across our 8 CMIP6 models for one of
-      three emissions pathways &mdash; from <strong>SSP1-2.6</strong> (we act decisively)
-      to <strong>SSP5-8.5</strong> (we keep burning). The dotted line is the <strong>+1.5 °C
-      Paris target</strong>; we have already crossed +1.0.
-    </p>
-    <div id="overview-chart"></div>
+  <!-- ============================================================
+       CHAPTER 1 — HERO
+       ============================================================ -->
+  <section class="chapter hero">
+    <div class="chapter-content">
+      <p class="kicker">CMIP6 climate projections · DSC 106 final project</p>
+      <h1>Your city in <span class="year">2080</span>.</h1>
+      <p class="subtitle">
+        Climate change is usually communicated as a global average. So we broke
+        the same data the IPCC uses down to the city level. Pick a place. Watch
+        what climate change does, not to <em>the planet</em>, but to
+        <em>your weekend in 2080</em>.
+      </p>
+    </div>
+    <div class="scroll-cue">↓</div>
   </section>
 
-  <!-- ============ CITY PICKER ============ -->
-  <section class="city-picker">
-    <label for="city-select">Show me what happens to</label>
-    <select id="city-select" aria-label="City"></select>
-    <button id="random-btn" type="button" title="Surprise me">🎲 Random city</button>
-    <div class="model-toggle" title="Show individual model lines">
-      <label><input type="checkbox" id="show-models"> Show individual models</label>
+  <!-- ============================================================
+       CHAPTER 2 — STAKES (dark)
+       ============================================================ -->
+  <section class="chapter dark stakes-chapter" data-step-trigger="stakes">
+    <div class="chapter-content">
+      <p class="kicker">why this matters</p>
+      <div class="stakes-lines">
+        <div class="stakes-line" data-step="0">The headline says <strong>+2.8 °C by 2100</strong>.</div>
+        <div class="stakes-line" data-step="1">A number almost nobody can actually feel.</div>
+        <div class="stakes-line" data-step="2">But the underlying data isn't abstract.</div>
+        <div class="stakes-line" data-step="3">It says <strong>your city will have 60 more dangerously hot days a year</strong>.</div>
+        <div class="stakes-line" data-step="4">It says <strong>your city in 2080 will feel like one you've heard of</strong>.</div>
+        <div class="stakes-line" data-step="5">Scroll on.</div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ BIG NUMBERS ============ -->
-  <section class="big-numbers">
-    <div class="bn-card">
-      <span class="bn-label">Days/year above 35 °C — today</span>
-      <span class="bn-value" id="bn-today">—</span>
-      <span class="bn-sub">1985–2014 baseline</span>
+  <!-- ============================================================
+       CHAPTER 3 — FOUR FUTURES (scrolly with global overview)
+       ============================================================ -->
+  <section class="chapter scrolly four-futures-chapter">
+    <div class="chapter-content">
+      <p class="kicker">the global picture</p>
+      <h2 class="chapter-title">The four futures we're choosing between.</h2>
+      <p class="chapter-deck">
+        Global mean surface temperature, 1850 to 2100. The four lines are the futures
+        we get under four emissions pathways — from acting decisively to not acting at all.
+      </p>
     </div>
-    <div class="bn-arrow">→</div>
-    <div class="bn-card highlight">
-      <span class="bn-label">Days/year above 35 °C — 2080</span>
-      <span class="bn-value" id="bn-2080">—</span>
-      <span class="bn-sub" id="bn-2080-scen">2071–2100, SSP5-8.5 (worst case)</span>
-    </div>
-    <div class="bn-card change">
-      <span class="bn-label">Change</span>
-      <span class="bn-value" id="bn-change">—</span>
-      <span class="bn-sub" id="bn-change-x">—</span>
+    <div class="chapter-content scrolly-container">
+      <div class="scrolly-graphic">
+        <div id="overview-chart"></div>
+      </div>
+      <div class="scrolly-steps" data-scrolly="overview">
+        <div class="scrolly-step" data-step="historical">
+          <h3>1850–2014</h3>
+          <p>The historical record. Real measurements. The Earth warmed about <em>+1.0 °C</em>
+             — and the warming accelerated after 1980.</p>
+        </div>
+        <div class="scrolly-step" data-step="ssp126">
+          <h3>SSP1-2.6 — the Paris path</h3>
+          <p>If we get net-zero by mid-century, warming flattens out near <em>+1.8 °C</em>.
+             We just barely overshoot the Paris target.</p>
+        </div>
+        <div class="scrolly-step" data-step="ssp245">
+          <h3>SSP2-4.5 — the middle path</h3>
+          <p>Current policies, modest action. Warming reaches about <em>+2.7 °C</em>
+             by 2100 — the world we're trending toward.</p>
+        </div>
+        <div class="scrolly-step" data-step="ssp585">
+          <h3>SSP5-8.5 — fossil-fueled development</h3>
+          <p>No serious decarbonization. Warming hits <em>+4.4 °C</em> — and keeps rising
+             past 2100. The point of "<em>this is what we avoid</em>".</p>
+        </div>
+        <div class="scrolly-step" data-step="paris">
+          <h3>The dotted line</h3>
+          <p>+1.5 °C is the Paris Agreement target. We've already crossed +1.0.
+             Whether we hold the line depends on which path above we end up on.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ TRAJECTORY ============ -->
-  <section class="trajectory">
-    <h2>Annual mean temperature, 1850–2100</h2>
-    <p class="caption">
-      8-model ensemble. Lines are 10-year running means; shaded bands show the
-      p10–p90 spread across the 8 models. Hover for the year-by-year values.
-      Toggle "Show individual models" above to see each model's trajectory.
-    </p>
-    <div id="trajectory-chart"></div>
+  <!-- ============================================================
+       CHAPTER 4 — PICK A CITY
+       ============================================================ -->
+  <section class="chapter pick-city">
+    <div class="chapter-content">
+      <p class="kicker">make it personal</p>
+      <h2>Pick a city.</h2>
+      <div class="picker-row">
+        <select id="city-select" aria-label="City"></select>
+        <button id="random-btn" type="button">🎲 Surprise me</button>
+      </div>
+      <p class="hint">36 cities across every inhabited continent. The five visualizations below all respond.</p>
+    </div>
+    <div class="scroll-cue">↓</div>
   </section>
 
-  <!-- ============ FUTURE IS A CHOICE ============ -->
-  <section class="future-choice">
-    <h2>The future is a choice</h2>
-    <p class="caption">
-      The same city under three emission pathways — projected mean temperature
-      change from <strong>1950–2014 baseline</strong> to <strong>2071–2100</strong>.
-      Decisive action limits the warming. Inaction triples it.
-    </p>
-    <div id="choice-chart"></div>
+  <!-- ============================================================
+       CHAPTER 5 — TRAJECTORY (pinned scrolly)
+       ============================================================ -->
+  <section class="chapter scrolly trajectory-chapter">
+    <div class="chapter-content">
+      <p class="kicker">your city's trajectory</p>
+      <h2 class="chapter-title">Annual mean temperature, <span id="traj-city-name">San Diego</span>.</h2>
+    </div>
+    <div class="chapter-content scrolly-container">
+      <div class="scrolly-graphic">
+        <div id="trajectory-chart"></div>
+      </div>
+      <div class="scrolly-steps" data-scrolly="trajectory">
+        <div class="scrolly-step" data-step="all">
+          <h3>All scenarios</h3>
+          <p>The historical record at left, then the projections fork after 2015.
+             8-model ensemble; shaded bands show p10–p90 model spread.</p>
+        </div>
+        <div class="scrolly-step" data-step="ssp126">
+          <h3>If we act</h3>
+          <p>Under <em>SSP1-2.6</em>, your city's temperature flattens out within decades —
+             warmer than today, but stable. This is the version of the future we have to fight for.</p>
+        </div>
+        <div class="scrolly-step" data-step="ssp245">
+          <h3>The middle path</h3>
+          <p><em>SSP2-4.5</em> keeps climbing. Mid-century looks recognizable; end-of-century
+             starts to feel like a different climate zone.</p>
+        </div>
+        <div class="scrolly-step" data-step="ssp585">
+          <h3>If we don't</h3>
+          <p>Under <em>SSP5-8.5</em>, the line keeps climbing past 2100. The gap between
+             this red line and the blue one above is what your generation decides.</p>
+        </div>
+        <div class="scrolly-step" data-step="spread">
+          <h3>How much do models agree?</h3>
+          <p>The shaded band is real disagreement. Climate science is honest about it —
+             your city's 2080 mean could be anywhere in that band. The center line is
+             still the best estimate.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- ============ CLIMATE ANALOG ============ -->
-  <section class="analog">
-    <h2>In 2080, your city will feel like…</h2>
-    <div class="analog-card">
+  <!-- ============================================================
+       CHAPTER 6 — BIG NUMBERS (dark)
+       ============================================================ -->
+  <section class="chapter dark big-numbers-chapter">
+    <div class="chapter-content">
+      <p class="kicker">days per year above 35 °C (95 °F)</p>
+      <h2 class="chapter-title">The "too hot" days <em>multiply</em>.</h2>
+      <div class="bn-frame">
+        <div class="bn-block today">
+          <div class="bn-label">today</div>
+          <div class="bn-value" id="bn-today">—</div>
+          <div class="bn-unit">days / year</div>
+        </div>
+        <div class="bn-arrow-big">→</div>
+        <div class="bn-block future">
+          <div class="bn-label" id="bn-2080-scen">2080 · SSP5-8.5</div>
+          <div class="bn-value" id="bn-2080">—</div>
+          <div class="bn-unit">days / year</div>
+        </div>
+      </div>
+      <p class="bn-caption" id="bn-caption">That's a <strong>—× increase</strong> in dangerously hot days for <span id="bn-city-name">your city</span>.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CHAPTER 7 — FUTURE IS A CHOICE
+       ============================================================ -->
+  <section class="chapter future-choice">
+    <div class="chapter-content">
+      <p class="kicker">the same city, three futures</p>
+      <h2 class="chapter-title">The future is a <em>choice</em>.</h2>
+      <p class="chapter-deck">
+        Mean annual temperature change in <strong id="choice-city-name">San Diego</strong>,
+        from 1950–2014 baseline to 2071–2100, under each of three emissions pathways.
+      </p>
+      <div class="scenario-bars" id="choice-bars">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CHAPTER 8 — CLIMATE ANALOG (dark, dramatic)
+       ============================================================ -->
+  <section class="chapter dark analog-chapter">
+    <div class="chapter-content">
+      <p class="kicker">climate analog</p>
+      <p class="analog-lead">
+        In 2080, <span class="analog-source-city" id="analog-source-city">San Diego</span> will feel like
+      </p>
       <div class="analog-name" id="analog-name">—</div>
       <div class="analog-temps">
         <span class="future" id="analog-future">—</span>
@@ -101,113 +218,130 @@
     </div>
   </section>
 
-  <!-- ============ EXTREME HEAT RANK ============ -->
-  <section class="dumbbell">
-    <h2>How "too hot" becomes the new normal</h2>
-    <p class="caption">
-      Days per year above 35 °C (95 °F), today vs end of century (SSP5-8.5). Sorted by
-      absolute change. Top 18 cities shown — <strong>click any row to jump to that city</strong>.
-    </p>
-    <div id="dumbbell-chart"></div>
-  </section>
-
-  <!-- ============ TOP CITIES BY WARMING ============ -->
-  <section class="warming-rank">
-    <h2>Where the warming is most extreme</h2>
-    <p class="caption">
-      Projected change in <strong>mean annual temperature</strong>, end-of-century
-      vs 1950–2014 baseline, under SSP5-8.5. The cities that warm most are not
-      the tropical ones — they're the <strong>high-latitude</strong> cities
-      (Anchorage, Reykjavík, Moscow) and continental interiors. That's
-      <em>polar amplification</em> in action.
-    </p>
-    <div id="warming-chart"></div>
-  </section>
-
-  <!-- ============ GLOBAL TEMPERATURE MAP ============ -->
-  <section class="map-section">
-    <h2>Where on Earth warms most</h2>
-    <p class="caption">
-      Projected change in annual mean temperature, 2071–2100 vs 1950–2014 baseline,
-      ensemble mean across 3 CMIP6 models. The Arctic warms 2–3× the global average —
-      that's <strong>polar amplification</strong>.
-    </p>
-    <div class="scen-tabs" data-target="temp-map">
-      <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
-      <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
-      <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+  <!-- ============================================================
+       CHAPTER 9 — WARMING RANK
+       ============================================================ -->
+  <section class="chapter warming-rank-chapter">
+    <div class="chapter-content">
+      <p class="kicker">polar amplification</p>
+      <h2 class="chapter-title">It's not the tropics that warm <em>most</em>.</h2>
+      <p class="chapter-deck">
+        Projected mean annual temperature change, end of century under SSP5-8.5. The cities that warm
+        most aren't on the equator — they're high-latitude and continental: Montreal, Moscow,
+        Toronto. <strong>Polar amplification</strong> in action.
+      </p>
+      <div id="warming-chart"></div>
     </div>
-    <div id="temp-map"></div>
   </section>
 
-  <!-- ============ GLOBAL PRECIP MAP ============ -->
-  <section class="map-section">
-    <h2>Where it gets wetter, where it gets drier</h2>
-    <p class="caption">
-      Percent change in annual precipitation, 2071–2100 vs 1950–2014 baseline.
-      Wet regions get wetter, dry regions get drier — the
-      <strong>wet-gets-wetter</strong> signal.
-    </p>
-    <div class="scen-tabs" data-target="precip-map">
-      <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
-      <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
-      <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+  <!-- ============================================================
+       CHAPTER 10 — EXTREME HEAT DAYS DUMBBELL
+       ============================================================ -->
+  <section class="chapter dumbbell-chapter">
+    <div class="chapter-content">
+      <p class="kicker">extreme heat days, ranked</p>
+      <h2 class="chapter-title">From "<em>never</em>" to "<em>routine</em>".</h2>
+      <p class="chapter-deck">
+        Days per year above 35 °C today vs end of century. Lagos goes from
+        essentially never to <strong>more than 100 days a year</strong>. Click any row to
+        switch the explorable to that city.
+      </p>
+      <div id="dumbbell-chart"></div>
     </div>
-    <div id="precip-map"></div>
   </section>
 
-  <!-- ============ WRITEUP ============ -->
-  <section class="writeup">
-    <h2>About this project</h2>
+  <!-- ============================================================
+       CHAPTER 11 — WORLD TEMPERATURE MAP
+       ============================================================ -->
+  <section class="chapter map-section">
+    <div class="chapter-content">
+      <p class="kicker">where on earth warms most</p>
+      <h2 class="chapter-title">The whole world, mapped.</h2>
+      <p class="chapter-deck">
+        Projected change in annual mean temperature, 2071–2100 vs 1950–2014 baseline.
+        Switch the scenario tabs to see how the map redraws under each emissions pathway.
+      </p>
+      <div class="scen-tabs" data-target="temp-map">
+        <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
+        <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
+        <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+      </div>
+      <div id="temp-map"></div>
+    </div>
+  </section>
 
-    <h3>What we've done so far</h3>
-    <p>
-      We pulled the <strong>CMIP6</strong> climate-model archive directly from the
-      Pangeo cloud mirror (<code>gs://cmip6</code>), extracting monthly near-surface air
-      temperature (<code>tas</code>), monthly precipitation (<code>pr</code>), and
-      daily maximum temperature (<code>tasmax</code>) for 36 globally-distributed
-      cities across <strong>eight independent climate models</strong> and four emissions
-      scenarios (historical, SSP1-2.6, SSP2-4.5, SSP5-8.5). Raw Zarr stores totaled
-      more than 100 GB; we processed them into roughly 130 MB of intermediate CSVs and
-      then aggregated again to a 2 MB browser-ready dataset. We derived annual extreme
-      heat metrics (days above 30/35/40 °C, longest annual heatwave, hottest day) from
-      daily-resolution model runs, computed a <strong>climate-analog mapping</strong>
-      (for each city under each future scenario, the historical city whose 12-month
-      climatology best matches it by RMSE), and pulled <strong>global spatial fields</strong>
-      for the world maps below. This prototype wires all of that into a single
-      interactive D3 explorable with eight distinct visualizations — a global
-      overview to set context, then five city-level views (trajectory, scenario
-      comparison, climate analog, extreme heat days, warming rank), then two
-      world maps to zoom back out — five of which are directly responsive to
-      the city the reader picks.
-    </p>
+  <!-- ============================================================
+       CHAPTER 12 — PRECIP MAP
+       ============================================================ -->
+  <section class="chapter map-section">
+    <div class="chapter-content">
+      <p class="kicker">wet gets wetter, dry gets drier</p>
+      <h2 class="chapter-title">Rain, redrawn.</h2>
+      <p class="chapter-deck">
+        Percent change in annual precipitation vs baseline. Wet regions get wetter,
+        dry regions get drier — the "<em>wet-gets-wetter</em>" signal of a warmer atmosphere.
+      </p>
+      <div class="scen-tabs" data-target="precip-map">
+        <button class="map-tab" data-scen="ssp126">SSP1-2.6</button>
+        <button class="map-tab" data-scen="ssp245">SSP2-4.5</button>
+        <button class="map-tab active" data-scen="ssp585">SSP5-8.5</button>
+      </div>
+      <div id="precip-map"></div>
+    </div>
+  </section>
 
-    <h3>The most challenging design decision</h3>
-    <p>
-      The hardest design tension is between <em>honest uncertainty</em> and <em>narrative
-      punch</em>. Eight CMIP6 models disagree by up to 6.6 °C at end of century for a
-      single city under one scenario — that spread is not a bug, it's the real state of
-      knowledge in climate science. But "your city will get between 1 and 8 degrees
-      hotter" is exactly the kind of fuzzy framing that lets readers tune out. Our
-      answer is a layered one: lead with a confident headline number (the ensemble
-      mean), expose the p10–p90 model spread as a shaded band, and let the reader
-      opt-in to seeing each individual model trajectory with one click. The
-      <em>climate-analog</em> framing sidesteps the precision problem entirely — even
-      if we can't pin San Diego's 2080 mean to a tenth of a degree, the answer "it will
-      feel like North Africa" is robust across the ensemble and sticks in the reader's
-      head. The remaining challenge is keeping seven visualizations from drowning each
-      other out — the page reads top-to-bottom as a story (global context → your city's
-      trajectory → the choice → the analog → the ranking → the world maps), with
-      every viz earning its place in the narrative.
-    </p>
+  <!-- ============================================================
+       CHAPTER 13 — ABOUT
+       ============================================================ -->
+  <section class="chapter about-chapter">
+    <div class="chapter-content">
+      <h2>About this project.</h2>
+      <h3>What we've done so far</h3>
+      <p>
+        We pulled the <strong>CMIP6</strong> climate-model archive directly from the
+        Pangeo cloud mirror (<code>gs://cmip6</code>), extracting monthly near-surface air
+        temperature (<code>tas</code>), monthly precipitation (<code>pr</code>), and daily
+        maximum temperature (<code>tasmax</code>) for 36 globally-distributed cities across
+        <strong>eight independent climate models</strong> and four emissions scenarios
+        (historical, SSP1-2.6, SSP2-4.5, SSP5-8.5). Raw Zarr stores totaled more than
+        100 GB; we processed them into roughly 165 MB of intermediate CSVs and then
+        aggregated again to a 9 MB browser-ready dataset. We derived annual extreme
+        heat metrics (days above 30/35/40 °C, longest annual heatwave, hottest day)
+        from daily-resolution model runs, computed a <strong>climate-analog mapping</strong>
+        (for each city under each future scenario, the historical city whose 12-month
+        climatology best matches it by RMSE), and pulled <strong>global spatial
+        fields</strong> for the world maps. This prototype wires all of that into a
+        single interactive D3 explorable structured as a top-to-bottom narrative, with
+        ten distinct chapter-style sections and five of them directly responsive to the
+        city the reader picks.
+      </p>
+      <h3>The most challenging design decision</h3>
+      <p>
+        The hardest design tension is between <em>honest uncertainty</em> and
+        <em>narrative punch</em>. Eight CMIP6 models disagree by up to 6.6 °C at end of
+        century for a single city under one scenario — that spread is not a bug, it's
+        the real state of knowledge in climate science. But "your city will get between
+        1 and 8 degrees hotter" is exactly the kind of fuzzy framing that lets readers
+        tune out. Our answer is layered: lead with a confident headline number (the
+        ensemble mean), expose the p10–p90 model spread as a shaded band, and use a
+        pinned scrolly section to walk readers through what each scenario actually looks
+        like rather than leaving them to interpret the spread on their own. The
+        <em>climate-analog</em> framing sidesteps the precision problem entirely — even
+        if we can't pin San Diego's 2080 mean to a tenth of a degree, the answer "it
+        will feel like North Africa" is robust across the ensemble and sticks. The
+        remaining challenge was keeping ten chapters from drowning each other out — the
+        Apple-style chapter layout, with alternating light and dark backgrounds and one
+        big idea per viewport, was our resolution.
+      </p>
+    </div>
   </section>
 
   <footer>
     <p>
       Data: <a href="https://pangeo-data.github.io/pangeo-cmip6-cloud/" target="_blank" rel="noopener">Pangeo CMIP6 cloud archive</a>
       · Models: CESM2, GFDL-ESM4, MPI-ESM1-2-LR, UKESM1-0-LL, CanESM5, IPSL-CM6A-LR, ACCESS-CM2, MIROC6
-      · Built with D3.js v7
-      · <a href="https://github.com/" id="repo-link" target="_blank" rel="noopener">Source on GitHub</a>
+      · Built with D3.js v7 + Scrollama
+      · <a href="https://github.com/yohannkkwon/DSC106_Final_Project" target="_blank" rel="noopener">Source on GitHub</a>
     </p>
     <p class="tiny">
       Climate-analog framing inspired by Fitzpatrick &amp; Dunn (2019),
