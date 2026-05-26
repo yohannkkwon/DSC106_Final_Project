@@ -1,181 +1,325 @@
-city,scenario,future_decade,analog_city,future_T_C,analog_T_C,n_models
-Anchorage,ssp245,2020-2049,Anchorage,0.95,0.47,8
-Anchorage,ssp245,2040-2069,Anchorage,1.74,1.56,7
-Anchorage,ssp245,2070-2099,Stockholm,2.87,3.95,7
-Anchorage,ssp585,2020-2049,Anchorage,1.06,1.07,8
-Anchorage,ssp585,2040-2069,Anchorage,2.75,2.94,8
-Anchorage,ssp585,2070-2099,Stockholm,5.56,4.93,8
-Bangkok,ssp245,2020-2049,Mumbai,27.25,26.66,8
-Bangkok,ssp245,2040-2069,Singapore,27.76,26.8,7
-Bangkok,ssp245,2070-2099,Singapore,28.51,26.8,7
-Bangkok,ssp585,2020-2049,Mumbai,27.37,26.66,8
-Bangkok,ssp585,2040-2069,Singapore,28.45,26.84,8
-Bangkok,ssp585,2070-2099,Singapore,30.38,26.94,8
-Beijing,ssp245,2020-2049,Chicago,10.12,9.1,8
-Beijing,ssp245,2040-2069,Chicago,10.91,9.46,7
-Beijing,ssp245,2070-2099,Chicago,11.84,10.14,7
-Beijing,ssp585,2020-2049,Chicago,10.48,9.1,8
-Beijing,ssp585,2040-2069,Chicago,11.89,9.69,8
-Beijing,ssp585,2070-2099,New York,14.55,12.37,8
-Berlin,ssp245,2020-2049,Berlin,10.3,10.19,8
-Berlin,ssp245,2040-2069,Paris,10.84,10.66,7
-Berlin,ssp245,2070-2099,Madrid,11.5,11.19,7
-Berlin,ssp585,2020-2049,Berlin,10.5,10.47,8
-Berlin,ssp585,2040-2069,Madrid,11.68,11.47,8
-Berlin,ssp585,2070-2099,Tokyo,13.96,13.72,8
-Bogota,ssp245,2020-2049,Nairobi,22.6,22.6,8
-Bogota,ssp245,2040-2069,Nairobi,23.55,22.77,7
-Bogota,ssp245,2070-2099,Honolulu,24.34,23.96,7
-Bogota,ssp585,2020-2049,Nairobi,22.78,22.6,8
-Bogota,ssp585,2040-2069,Bogota,24.01,23.64,8
-Bogota,ssp585,2070-2099,Lagos,26.29,25.5,8
-Buenos Aires,ssp245,2020-2049,Buenos Aires,18.75,18.27,8
-Buenos Aires,ssp245,2040-2069,Buenos Aires,18.74,17.93,7
-Buenos Aires,ssp245,2070-2099,Buenos Aires,19.36,18.32,7
-Buenos Aires,ssp585,2020-2049,Buenos Aires,18.93,18.27,8
-Buenos Aires,ssp585,2040-2069,Buenos Aires,19.77,18.61,8
-Buenos Aires,ssp585,2070-2099,Buenos Aires,21.45,18.95,8
-Cairo,ssp245,2020-2049,Cairo,22.54,21.91,8
-Cairo,ssp245,2040-2069,Cairo,22.56,21.1,7
-Cairo,ssp245,2070-2099,Cairo,23.34,22.05,7
-Cairo,ssp585,2020-2049,Cairo,22.68,21.91,8
-Cairo,ssp585,2040-2069,Cairo,23.78,22.74,8
-Cairo,ssp585,2070-2099,Dubai,25.92,25.96,8
-Cape Town,ssp245,2020-2049,Cape Town,18.46,18.06,8
-Cape Town,ssp245,2040-2069,Cape Town,18.81,18.54,7
-Cape Town,ssp245,2070-2099,Cape Town,19.32,18.96,7
-Cape Town,ssp585,2020-2049,Cape Town,18.57,18.06,8
-Cape Town,ssp585,2040-2069,Cape Town,19.29,18.8,8
-Cape Town,ssp585,2070-2099,Sao Paulo,20.66,20.28,8
-Chicago,ssp245,2020-2049,Chicago,11.42,9.96,8
-Chicago,ssp245,2040-2069,Chicago,12.04,10.16,7
-Chicago,ssp245,2070-2099,New York,13.07,11.55,7
-Chicago,ssp585,2020-2049,Chicago,11.73,9.96,8
-Chicago,ssp585,2040-2069,Seoul,13.26,11.74,8
-Chicago,ssp585,2070-2099,Los Angeles,16.0,14.45,8
-Delhi,ssp245,2020-2049,Delhi,25.43,25.19,8
-Delhi,ssp245,2040-2069,Delhi,25.74,25.3,7
-Delhi,ssp245,2070-2099,Delhi,26.72,25.78,7
-Delhi,ssp585,2020-2049,Delhi,25.59,25.19,8
-Delhi,ssp585,2040-2069,Delhi,27.02,26.0,8
-Delhi,ssp585,2070-2099,Dubai,29.56,26.79,8
-Dubai,ssp245,2020-2049,Dubai,29.0,27.18,8
-Dubai,ssp245,2040-2069,Dubai,28.64,27.58,7
-Dubai,ssp245,2070-2099,Dubai,29.4,27.58,7
-Dubai,ssp585,2020-2049,Dubai,29.24,27.58,8
-Dubai,ssp585,2040-2069,Dubai,30.48,27.58,8
-Dubai,ssp585,2070-2099,Dubai,32.72,27.58,8
-Honolulu,ssp245,2020-2049,Honolulu,24.63,23.69,8
-Honolulu,ssp245,2040-2069,Honolulu,25.08,24.19,7
-Honolulu,ssp245,2070-2099,Singapore,25.64,25.7,7
-Honolulu,ssp585,2020-2049,Honolulu,24.82,24.13,8
-Honolulu,ssp585,2040-2069,Singapore,25.71,25.89,8
-Honolulu,ssp585,2070-2099,Singapore,27.34,27.22,8
-Lagos,ssp245,2020-2049,Lagos,28.13,27.09,8
-Lagos,ssp245,2040-2069,Lagos,28.77,27.09,7
-Lagos,ssp245,2070-2099,Lagos,29.57,27.09,7
-Lagos,ssp585,2020-2049,Lagos,28.23,27.09,8
-Lagos,ssp585,2040-2069,Lagos,29.2,27.09,8
-Lagos,ssp585,2070-2099,Lagos,31.14,27.12,8
-London,ssp245,2020-2049,London,11.86,11.22,8
-London,ssp245,2040-2069,London,12.15,11.08,7
-London,ssp245,2070-2099,Madrid,12.66,11.95,7
-London,ssp585,2020-2049,London,11.98,11.26,8
-London,ssp585,2040-2069,Madrid,12.86,12.31,8
-London,ssp585,2070-2099,Tokyo,14.65,14.41,8
-Los Angeles,ssp245,2020-2049,Los Angeles,18.22,17.74,8
-Los Angeles,ssp245,2040-2069,San Diego,18.3,18.12,7
-Los Angeles,ssp245,2070-2099,San Diego,18.9,18.75,7
-Los Angeles,ssp585,2020-2049,Los Angeles,18.27,17.99,8
-Los Angeles,ssp585,2040-2069,San Diego,19.52,19.46,8
-Los Angeles,ssp585,2070-2099,Cairo,21.5,21.61,8
-Madrid,ssp245,2020-2049,Madrid,14.33,14.28,8
-Madrid,ssp245,2040-2069,Madrid,14.68,14.25,7
-Madrid,ssp245,2070-2099,Madrid,15.52,14.86,7
-Madrid,ssp585,2020-2049,Madrid,14.66,14.28,8
-Madrid,ssp585,2040-2069,Tokyo,15.99,15.92,8
-Madrid,ssp585,2070-2099,Los Angeles,18.54,18.14,8
-Mexico City,ssp245,2020-2049,Mexico City,20.03,19.76,8
-Mexico City,ssp245,2040-2069,Mexico City,20.42,20.24,7
-Mexico City,ssp245,2070-2099,Mexico City,21.19,20.99,7
-Mexico City,ssp585,2020-2049,Mexico City,20.25,19.88,8
-Mexico City,ssp585,2040-2069,Mexico City,21.38,21.32,8
-Mexico City,ssp585,2070-2099,Honolulu,23.56,23.84,8
-Moscow,ssp245,2020-2049,Moscow,6.17,5.95,8
-Moscow,ssp245,2040-2069,Moscow,6.94,6.84,7
-Moscow,ssp245,2070-2099,Chicago,7.98,7.27,7
-Moscow,ssp585,2020-2049,Moscow,6.51,6.44,8
-Moscow,ssp585,2040-2069,Chicago,8.08,7.84,8
-Moscow,ssp585,2070-2099,Chicago,10.92,10.2,8
-Mumbai,ssp245,2020-2049,Singapore,27.42,26.77,8
-Mumbai,ssp245,2040-2069,Singapore,28.05,26.86,7
-Mumbai,ssp245,2070-2099,Singapore,28.78,27.01,7
-Mumbai,ssp585,2020-2049,Singapore,27.53,26.77,8
-Mumbai,ssp585,2040-2069,Singapore,28.57,27.02,8
-Mumbai,ssp585,2070-2099,Singapore,30.46,27.02,8
-Nairobi,ssp245,2020-2049,Nairobi,23.47,23.01,8
-Nairobi,ssp245,2040-2069,Nairobi,23.86,23.58,7
-Nairobi,ssp245,2070-2099,Nairobi,24.56,24.4,7
-Nairobi,ssp585,2020-2049,Nairobi,23.6,23.01,8
-Nairobi,ssp585,2040-2069,Nairobi,24.57,24.16,8
-Nairobi,ssp585,2070-2099,Lagos,26.4,26.52,8
-New York,ssp245,2020-2049,New York,13.09,12.61,8
-New York,ssp245,2040-2069,New York,13.96,13.12,7
-New York,ssp245,2070-2099,Tokyo,14.91,14.5,7
-New York,ssp585,2020-2049,New York,13.42,12.81,8
-New York,ssp585,2040-2069,Tokyo,14.81,14.57,8
-New York,ssp585,2070-2099,Los Angeles,17.17,16.55,8
-Paris,ssp245,2020-2049,Madrid,12.36,11.9,8
-Paris,ssp245,2040-2069,Madrid,12.87,12.62,7
-Paris,ssp245,2070-2099,Madrid,13.5,12.94,7
-Paris,ssp585,2020-2049,Madrid,12.5,12.13,8
-Paris,ssp585,2040-2069,Madrid,13.56,13.16,8
-Paris,ssp585,2070-2099,Los Angeles,15.73,15.8,8
-Reykjavik,ssp245,2020-2049,Reykjavik,5.2,4.7,8
-Reykjavik,ssp245,2040-2069,Reykjavik,5.2,3.85,7
-Reykjavik,ssp245,2070-2099,Reykjavik,5.68,5.11,7
-Reykjavik,ssp585,2020-2049,Reykjavik,5.22,4.7,8
-Reykjavik,ssp585,2040-2069,Reykjavik,5.96,5.56,8
-Reykjavik,ssp585,2070-2099,London,7.4,7.89,8
-San Diego,ssp245,2020-2049,San Diego,20.13,20.01,8
-San Diego,ssp245,2040-2069,San Diego,20.19,19.38,7
-San Diego,ssp245,2070-2099,Cairo,20.74,20.07,7
-San Diego,ssp585,2020-2049,San Diego,20.18,20.01,8
-San Diego,ssp585,2040-2069,Cairo,21.36,21.31,8
-San Diego,ssp585,2070-2099,Cairo,23.24,23.04,8
-Sao Paulo,ssp245,2020-2049,Nairobi,21.79,21.51,8
-Sao Paulo,ssp245,2040-2069,Nairobi,22.39,21.64,7
-Sao Paulo,ssp245,2070-2099,Nairobi,23.0,22.56,7
-Sao Paulo,ssp585,2020-2049,Nairobi,21.98,21.51,8
-Sao Paulo,ssp585,2040-2069,Nairobi,23.07,22.53,8
-Sao Paulo,ssp585,2070-2099,Lagos,25.1,25.33,8
-Seoul,ssp245,2020-2049,New York,12.32,11.59,8
-Seoul,ssp245,2040-2069,New York,13.01,12.4,7
-Seoul,ssp245,2070-2099,Tokyo,13.85,13.03,7
-Seoul,ssp585,2020-2049,New York,12.58,12.06,8
-Seoul,ssp585,2040-2069,New York,13.9,12.81,8
-Seoul,ssp585,2070-2099,Los Angeles,16.28,15.95,8
-Singapore,ssp245,2020-2049,Singapore,28.18,27.22,8
-Singapore,ssp245,2040-2069,Singapore,28.76,27.22,7
-Singapore,ssp245,2070-2099,Singapore,29.39,27.22,7
-Singapore,ssp585,2020-2049,Singapore,28.26,27.22,8
-Singapore,ssp585,2040-2069,Singapore,29.16,27.22,8
-Singapore,ssp585,2070-2099,Singapore,30.79,27.22,8
-Stockholm,ssp245,2020-2049,Berlin,7.6,7.68,8
-Stockholm,ssp245,2040-2069,Berlin,8.12,8.26,7
-Stockholm,ssp245,2070-2099,Berlin,8.74,8.38,7
-Stockholm,ssp585,2020-2049,Berlin,7.86,8.06,8
-Stockholm,ssp585,2040-2069,Berlin,9.12,9.24,8
-Stockholm,ssp585,2070-2099,Paris,11.33,11.24,8
-Sydney,ssp245,2020-2049,Sydney,18.11,17.67,8
-Sydney,ssp245,2040-2069,Cape Town,18.58,17.97,7
-Sydney,ssp245,2070-2099,Sao Paulo,19.29,19.74,7
-Sydney,ssp585,2020-2049,Sydney,18.27,18.03,8
-Sydney,ssp585,2040-2069,Sao Paulo,19.31,19.15,8
-Sydney,ssp585,2070-2099,Sao Paulo,21.3,20.31,8
-Tokyo,ssp245,2020-2049,Tokyo,16.45,16.1,8
-Tokyo,ssp245,2040-2069,Tokyo,17.19,16.91,7
-Tokyo,ssp245,2070-2099,San Diego,17.87,17.95,7
-Tokyo,ssp585,2020-2049,Los Angeles,16.62,16.6,8
-Tokyo,ssp585,2040-2069,Los Angeles,17.73,17.79,8
-Tokyo,ssp585,2070-2099,San Diego,19.77,19.47,8
+city,scenario,future_decade,analog_city,future_T_C,analog_T_C,rmse_C,unprecedented
+Anchorage,ssp126,2020-2049,Oslo,0.87,3.69,2.991,0
+Bangkok,ssp126,2020-2049,Mumbai,27.2,26.51,1.197,0
+Beijing,ssp126,2020-2049,Chicago,10.26,9.3,1.589,0
+Berlin,ssp126,2020-2049,Paris,10.29,10.98,1.663,0
+Bogota,ssp126,2020-2049,Nairobi,22.53,22.38,0.393,0
+Buenos Aires,ssp126,2020-2049,Sydney,18.64,17.06,2.368,0
+Cairo,ssp126,2020-2049,Delhi,22.48,24.43,3.674,0
+Cape Town,ssp126,2020-2049,Sydney,18.41,17.06,1.793,0
+Chicago,ssp126,2020-2049,Seoul,11.33,10.67,2.055,0
+Delhi,ssp126,2020-2049,Dubai,25.52,27.58,3.27,0
+Dubai,ssp126,2020-2049,Delhi,29.03,24.43,5.282,1
+Helsinki,ssp126,2020-2049,Stockholm,5.99,5.81,2.058,0
+Honolulu,ssp126,2020-2049,Mumbai,24.62,26.51,2.825,0
+Lagos,ssp126,2020-2049,Singapore,28.16,27.21,1.573,1
+London,ssp126,2020-2049,Paris,11.84,10.98,1.406,0
+Los Angeles,ssp126,2020-2049,San Diego,18.16,18.69,0.976,0
+Madrid,ssp126,2020-2049,Rome,14.39,15.88,1.824,0
+Mexico City,ssp126,2020-2049,Bogota,19.96,21.39,2.81,0
+Montreal,ssp126,2020-2049,Toronto,6.68,7.51,0.921,0
+Moscow,ssp126,2020-2049,Toronto,6.09,7.51,1.95,0
+Mumbai,ssp126,2020-2049,Singapore,27.47,27.21,1.404,0
+Nairobi,ssp126,2020-2049,Bogota,23.45,21.39,2.093,0
+New York,ssp126,2020-2049,Madrid,13.03,12.83,2.263,0
+Oslo,ssp126,2020-2049,Stockholm,5.25,5.81,1.206,0
+Paris,ssp126,2020-2049,Madrid,12.35,12.83,1.065,0
+Phoenix,ssp126,2020-2049,Cairo,20.15,21.1,3.109,0
+Reykjavik,ssp126,2020-2049,Stockholm,5.03,5.81,3.042,0
+Rome,ssp126,2020-2049,Los Angeles,17.37,16.68,1.133,0
+San Diego,ssp126,2020-2049,Cairo,20.11,21.1,1.451,0
+Sao Paulo,ssp126,2020-2049,Nairobi,21.69,22.38,1.833,0
+Seoul,ssp126,2020-2049,New York,12.29,11.26,1.297,0
+Singapore,ssp126,2020-2049,Lagos,28.07,27.09,1.574,1
+Stockholm,ssp126,2020-2049,Berlin,7.56,8.81,1.59,0
+Sydney,ssp126,2020-2049,Cape Town,18.07,17.69,1.295,0
+Tokyo,ssp126,2020-2049,Los Angeles,16.37,16.68,1.226,0
+Toronto,ssp126,2020-2049,Chicago,9.59,9.3,0.969,0
+Anchorage,ssp245,2020-2049,Oslo,0.84,3.69,2.989,0
+Bangkok,ssp245,2020-2049,Mumbai,27.22,26.51,1.205,0
+Beijing,ssp245,2020-2049,Chicago,10.07,9.3,1.453,0
+Berlin,ssp245,2020-2049,Paris,10.26,10.98,1.682,0
+Bogota,ssp245,2020-2049,Nairobi,22.66,22.38,0.439,0
+Buenos Aires,ssp245,2020-2049,Sydney,18.61,17.06,2.388,0
+Cairo,ssp245,2020-2049,Delhi,22.36,24.43,3.793,0
+Cape Town,ssp245,2020-2049,Sydney,18.43,17.06,1.807,0
+Chicago,ssp245,2020-2049,Seoul,11.32,10.67,2.17,0
+Delhi,ssp245,2020-2049,Dubai,25.24,27.58,3.465,0
+Dubai,ssp245,2020-2049,Delhi,28.67,24.43,5.031,1
+Helsinki,ssp245,2020-2049,Stockholm,6.1,5.81,1.984,0
+Honolulu,ssp245,2020-2049,Mumbai,24.6,26.51,2.867,0
+Lagos,ssp245,2020-2049,Singapore,28.13,27.21,1.532,1
+London,ssp245,2020-2049,Paris,11.79,10.98,1.407,0
+Los Angeles,ssp245,2020-2049,San Diego,18.03,18.69,1.054,0
+Madrid,ssp245,2020-2049,Tokyo,14.2,15.07,1.856,0
+Mexico City,ssp245,2020-2049,Bogota,19.95,21.39,2.842,0
+Montreal,ssp245,2020-2049,Toronto,6.69,7.51,0.893,0
+Moscow,ssp245,2020-2049,Toronto,6.15,7.51,1.884,0
+Mumbai,ssp245,2020-2049,Singapore,27.4,27.21,1.356,0
+Nairobi,ssp245,2020-2049,Bogota,23.42,21.39,2.061,0
+New York,ssp245,2020-2049,Madrid,13.1,12.83,2.27,0
+Oslo,ssp245,2020-2049,Stockholm,5.24,5.81,1.231,0
+Paris,ssp245,2020-2049,Madrid,12.32,12.83,1.136,0
+Phoenix,ssp245,2020-2049,Cairo,19.92,21.1,3.132,0
+Reykjavik,ssp245,2020-2049,Stockholm,5.1,5.81,3.081,0
+Rome,ssp245,2020-2049,Los Angeles,17.22,16.68,1.034,0
+San Diego,ssp245,2020-2049,Cairo,19.94,21.1,1.595,0
+Sao Paulo,ssp245,2020-2049,Nairobi,21.77,22.38,1.778,0
+Seoul,ssp245,2020-2049,New York,12.28,11.26,1.249,0
+Singapore,ssp245,2020-2049,Lagos,28.2,27.09,1.643,1
+Stockholm,ssp245,2020-2049,Berlin,7.55,8.81,1.568,0
+Sydney,ssp245,2020-2049,Cape Town,18.05,17.69,1.323,0
+Tokyo,ssp245,2020-2049,Los Angeles,16.48,16.68,1.203,0
+Toronto,ssp245,2020-2049,Chicago,9.6,9.3,0.955,0
+Anchorage,ssp585,2020-2049,Oslo,1.06,3.69,2.847,0
+Bangkok,ssp585,2020-2049,Mumbai,27.37,26.51,1.266,0
+Beijing,ssp585,2020-2049,Chicago,10.48,9.3,1.691,0
+Berlin,ssp585,2020-2049,Paris,10.5,10.98,1.607,0
+Bogota,ssp585,2020-2049,Nairobi,22.78,22.38,0.527,0
+Buenos Aires,ssp585,2020-2049,Sydney,18.93,17.06,2.664,0
+Cairo,ssp585,2020-2049,Delhi,22.68,24.43,3.55,0
+Cape Town,ssp585,2020-2049,Sydney,18.57,17.06,1.903,0
+Chicago,ssp585,2020-2049,Seoul,11.73,10.67,2.22,0
+Delhi,ssp585,2020-2049,Dubai,25.59,27.58,3.248,0
+Dubai,ssp585,2020-2049,Delhi,29.24,24.43,5.476,1
+Helsinki,ssp585,2020-2049,Stockholm,6.37,5.81,2.07,0
+Honolulu,ssp585,2020-2049,Mumbai,24.82,26.51,2.692,0
+Lagos,ssp585,2020-2049,Singapore,28.23,27.21,1.59,1
+London,ssp585,2020-2049,Paris,11.98,10.98,1.496,0
+Los Angeles,ssp585,2020-2049,San Diego,18.27,18.69,0.971,0
+Madrid,ssp585,2020-2049,Rome,14.66,15.88,1.66,0
+Mexico City,ssp585,2020-2049,Bogota,20.25,21.39,2.674,0
+Montreal,ssp585,2020-2049,Toronto,7.06,7.51,0.539,0
+Moscow,ssp585,2020-2049,Toronto,6.51,7.51,1.692,0
+Mumbai,ssp585,2020-2049,Singapore,27.53,27.21,1.451,0
+Nairobi,ssp585,2020-2049,Honolulu,23.6,23.69,2.064,0
+New York,ssp585,2020-2049,Madrid,13.42,12.83,2.278,0
+Oslo,ssp585,2020-2049,Stockholm,5.54,5.81,1.106,0
+Paris,ssp585,2020-2049,Madrid,12.5,12.83,0.971,0
+Phoenix,ssp585,2020-2049,Cairo,20.34,21.1,3.053,0
+Reykjavik,ssp585,2020-2049,Stockholm,5.22,5.81,3.018,0
+Rome,ssp585,2020-2049,Los Angeles,17.57,16.68,1.278,0
+San Diego,ssp585,2020-2049,Cairo,20.18,21.1,1.43,0
+Sao Paulo,ssp585,2020-2049,Nairobi,21.98,22.38,1.72,0
+Seoul,ssp585,2020-2049,New York,12.58,11.26,1.525,0
+Singapore,ssp585,2020-2049,Lagos,28.26,27.09,1.698,1
+Stockholm,ssp585,2020-2049,Berlin,7.86,8.81,1.319,0
+Sydney,ssp585,2020-2049,Cape Town,18.27,17.69,1.405,0
+Tokyo,ssp585,2020-2049,Los Angeles,16.62,16.68,1.184,0
+Toronto,ssp585,2020-2049,Chicago,10.0,9.3,1.234,0
+Anchorage,ssp126,2040-2069,Oslo,1.51,3.69,2.375,0
+Bangkok,ssp126,2040-2069,Mumbai,27.55,26.51,1.412,0
+Beijing,ssp126,2040-2069,Chicago,10.81,9.3,1.956,0
+Berlin,ssp126,2040-2069,Paris,10.67,10.98,1.627,0
+Bogota,ssp126,2040-2069,Nairobi,22.89,22.38,0.625,0
+Buenos Aires,ssp126,2040-2069,Sydney,18.87,17.06,2.577,0
+Cairo,ssp126,2040-2069,Delhi,22.84,24.43,3.486,0
+Cape Town,ssp126,2040-2069,Sydney,18.65,17.06,1.988,0
+Chicago,ssp126,2040-2069,Seoul,11.91,10.67,2.28,0
+Delhi,ssp126,2040-2069,Dubai,26.07,27.58,2.875,0
+Dubai,ssp126,2040-2069,Delhi,29.37,24.43,5.596,1
+Helsinki,ssp126,2040-2069,Toronto,6.58,7.51,2.161,0
+Honolulu,ssp126,2040-2069,Singapore,24.9,27.21,2.647,0
+Lagos,ssp126,2040-2069,Singapore,28.48,27.21,1.79,1
+London,ssp126,2040-2069,Paris,12.05,10.98,1.506,0
+Los Angeles,ssp126,2040-2069,San Diego,18.52,18.69,0.859,0
+Madrid,ssp126,2040-2069,Rome,14.77,15.88,1.589,0
+Mexico City,ssp126,2040-2069,Bogota,20.32,21.39,2.654,0
+Montreal,ssp126,2040-2069,Toronto,7.32,7.51,0.409,0
+Moscow,ssp126,2040-2069,Toronto,6.66,7.51,1.587,0
+Mumbai,ssp126,2040-2069,Singapore,27.8,27.21,1.47,1
+Nairobi,ssp126,2040-2069,Honolulu,23.69,23.69,2.03,0
+New York,ssp126,2040-2069,Madrid,13.54,12.83,2.322,0
+Oslo,ssp126,2040-2069,Stockholm,5.64,5.81,1.159,0
+Paris,ssp126,2040-2069,Madrid,12.63,12.83,0.904,0
+Phoenix,ssp126,2040-2069,Cairo,20.48,21.1,3.029,0
+Reykjavik,ssp126,2040-2069,Stockholm,5.15,5.81,3.043,0
+Rome,ssp126,2040-2069,Los Angeles,17.73,16.68,1.416,0
+San Diego,ssp126,2040-2069,Cairo,20.44,21.1,1.264,0
+Sao Paulo,ssp126,2040-2069,Nairobi,22.01,22.38,1.675,0
+Seoul,ssp126,2040-2069,New York,12.87,11.26,1.767,0
+Singapore,ssp126,2040-2069,Lagos,28.36,27.09,1.765,1
+Stockholm,ssp126,2040-2069,Berlin,8.01,8.81,1.216,0
+Sydney,ssp126,2040-2069,Cape Town,18.39,17.69,1.48,0
+Tokyo,ssp126,2040-2069,Los Angeles,16.84,16.68,1.206,0
+Toronto,ssp126,2040-2069,Chicago,10.18,9.3,1.293,0
+Anchorage,ssp245,2040-2069,Oslo,1.74,3.69,2.141,0
+Bangkok,ssp245,2040-2069,Mumbai,27.76,26.51,1.567,1
+Beijing,ssp245,2040-2069,Chicago,10.91,9.3,2.015,0
+Berlin,ssp245,2040-2069,Paris,10.84,10.98,1.429,0
+Bogota,ssp245,2040-2069,Nairobi,23.55,22.38,1.207,0
+Buenos Aires,ssp245,2040-2069,Sydney,18.74,17.06,2.443,0
+Cairo,ssp245,2040-2069,Delhi,22.57,24.43,3.732,0
+Cape Town,ssp245,2040-2069,Sao Paulo,18.81,20.65,2.082,0
+Chicago,ssp245,2040-2069,Seoul,12.04,10.67,2.491,0
+Delhi,ssp245,2040-2069,Dubai,25.74,27.58,3.026,0
+Dubai,ssp245,2040-2069,Delhi,28.64,24.43,5.145,1
+Helsinki,ssp245,2040-2069,Stockholm,6.82,5.81,1.985,0
+Honolulu,ssp245,2040-2069,Singapore,25.08,27.21,2.532,0
+Lagos,ssp245,2040-2069,Singapore,28.77,27.21,1.994,1
+London,ssp245,2040-2069,Paris,12.15,10.98,1.614,0
+Los Angeles,ssp245,2040-2069,San Diego,18.3,18.69,0.808,0
+Madrid,ssp245,2040-2069,Rome,14.68,15.88,1.555,0
+Mexico City,ssp245,2040-2069,Bogota,20.42,21.39,2.673,0
+Montreal,ssp245,2040-2069,Toronto,7.6,7.51,0.369,0
+Moscow,ssp245,2040-2069,Toronto,6.94,7.51,1.483,0
+Mumbai,ssp245,2040-2069,Singapore,28.05,27.21,1.533,1
+Nairobi,ssp245,2040-2069,Honolulu,23.86,23.69,2.165,0
+New York,ssp245,2040-2069,Tokyo,13.96,15.07,2.404,0
+Oslo,ssp245,2040-2069,Stockholm,5.76,5.81,1.045,0
+Paris,ssp245,2040-2069,Madrid,12.87,12.83,0.939,0
+Phoenix,ssp245,2040-2069,Cairo,20.1,21.1,2.939,0
+Reykjavik,ssp245,2040-2069,Stockholm,5.19,5.81,3.012,0
+Rome,ssp245,2040-2069,Los Angeles,17.67,16.68,1.303,0
+San Diego,ssp245,2040-2069,Cairo,20.19,21.1,1.598,0
+Sao Paulo,ssp245,2040-2069,Nairobi,22.39,22.38,1.671,0
+Seoul,ssp245,2040-2069,New York,13.01,11.26,1.897,0
+Singapore,ssp245,2040-2069,Lagos,28.76,27.09,2.076,1
+Stockholm,ssp245,2040-2069,Berlin,8.12,8.81,1.182,0
+Sydney,ssp245,2040-2069,Cape Town,18.58,17.69,1.638,0
+Tokyo,ssp245,2040-2069,Los Angeles,17.19,16.68,1.315,0
+Toronto,ssp245,2040-2069,Chicago,10.43,9.3,1.419,0
+Anchorage,ssp585,2040-2069,Oslo,2.75,3.69,1.354,0
+Bangkok,ssp585,2040-2069,Singapore,28.45,27.21,2.038,1
+Beijing,ssp585,2040-2069,Chicago,11.89,9.3,2.87,0
+Berlin,ssp585,2040-2069,Madrid,11.68,12.83,1.554,0
+Bogota,ssp585,2040-2069,Nairobi,24.01,22.38,1.659,0
+Buenos Aires,ssp585,2040-2069,Sydney,19.77,17.06,3.355,0
+Cairo,ssp585,2040-2069,Delhi,23.78,24.43,3.215,0
+Cape Town,ssp585,2040-2069,Sao Paulo,19.29,20.65,1.692,0
+Chicago,ssp585,2040-2069,New York,13.26,11.26,3.095,0
+Delhi,ssp585,2040-2069,Dubai,27.02,27.58,2.644,0
+Dubai,ssp585,2040-2069,Delhi,30.48,24.43,6.602,1
+Helsinki,ssp585,2040-2069,Toronto,7.82,7.51,2.084,0
+Honolulu,ssp585,2040-2069,Singapore,25.71,27.21,2.036,0
+Lagos,ssp585,2040-2069,Singapore,29.2,27.21,2.338,1
+London,ssp585,2040-2069,Madrid,12.86,12.83,2.082,0
+Los Angeles,ssp585,2040-2069,San Diego,19.52,18.69,1.273,0
+Madrid,ssp585,2040-2069,Rome,15.99,15.88,1.454,0
+Mexico City,ssp585,2040-2069,Bogota,21.38,21.39,2.422,0
+Montreal,ssp585,2040-2069,Chicago,8.74,9.3,0.843,0
+Moscow,ssp585,2040-2069,Toronto,8.08,7.51,1.477,0
+Mumbai,ssp585,2040-2069,Singapore,28.57,27.21,1.904,1
+Nairobi,ssp585,2040-2069,Honolulu,24.57,23.69,2.212,0
+New York,ssp585,2040-2069,Tokyo,14.81,15.07,2.156,0
+Oslo,ssp585,2040-2069,Stockholm,6.75,5.81,1.384,0
+Paris,ssp585,2040-2069,Madrid,13.56,12.83,1.023,0
+Phoenix,ssp585,2040-2069,Cairo,21.65,21.1,3.053,0
+Reykjavik,ssp585,2040-2069,Stockholm,5.96,5.81,3.04,0
+Rome,ssp585,2040-2069,San Diego,18.76,18.69,1.767,0
+San Diego,ssp585,2040-2069,Cairo,21.36,21.1,1.181,0
+Sao Paulo,ssp585,2040-2069,Nairobi,23.07,22.38,1.781,0
+Seoul,ssp585,2040-2069,New York,13.9,11.26,2.756,0
+Singapore,ssp585,2040-2069,Lagos,29.16,27.09,2.411,1
+Stockholm,ssp585,2040-2069,Berlin,9.12,8.81,1.016,0
+Sydney,ssp585,2040-2069,Cape Town,19.31,17.69,2.106,0
+Tokyo,ssp585,2040-2069,Los Angeles,17.73,16.68,1.613,0
+Toronto,ssp585,2040-2069,Seoul,11.56,10.67,1.552,0
+Anchorage,ssp126,2070-2099,Oslo,1.74,3.69,2.153,0
+Bangkok,ssp126,2070-2099,Mumbai,27.59,26.51,1.477,1
+Beijing,ssp126,2070-2099,Chicago,10.87,9.3,2.062,0
+Berlin,ssp126,2070-2099,Paris,10.72,10.98,1.581,0
+Bogota,ssp126,2070-2099,Nairobi,22.93,22.38,0.647,0
+Buenos Aires,ssp126,2070-2099,Sydney,18.97,17.06,2.666,0
+Cairo,ssp126,2070-2099,Delhi,22.85,24.43,3.408,0
+Cape Town,ssp126,2070-2099,Sydney,18.69,17.06,2.022,0
+Chicago,ssp126,2070-2099,Seoul,12.06,10.67,2.274,0
+Delhi,ssp126,2070-2099,Dubai,26.21,27.58,2.821,0
+Dubai,ssp126,2070-2099,Delhi,29.36,24.43,5.57,1
+Helsinki,ssp126,2070-2099,Toronto,6.6,7.51,2.137,0
+Honolulu,ssp126,2070-2099,Singapore,24.99,27.21,2.57,0
+Lagos,ssp126,2070-2099,Singapore,28.51,27.21,1.813,1
+London,ssp126,2070-2099,Paris,12.05,10.98,1.552,0
+Los Angeles,ssp126,2070-2099,San Diego,18.61,18.69,0.87,0
+Madrid,ssp126,2070-2099,Rome,14.87,15.88,1.492,0
+Mexico City,ssp126,2070-2099,Bogota,20.36,21.39,2.67,0
+Montreal,ssp126,2070-2099,Toronto,7.48,7.51,0.314,0
+Moscow,ssp126,2070-2099,Toronto,6.75,7.51,1.557,0
+Mumbai,ssp126,2070-2099,Singapore,27.91,27.21,1.507,1
+Nairobi,ssp126,2070-2099,Honolulu,23.7,23.69,2.03,0
+New York,ssp126,2070-2099,Madrid,13.71,12.83,2.351,0
+Oslo,ssp126,2070-2099,Stockholm,5.63,5.81,1.16,0
+Paris,ssp126,2070-2099,Madrid,12.68,12.83,0.956,0
+Phoenix,ssp126,2070-2099,Cairo,20.51,21.1,2.998,0
+Reykjavik,ssp126,2070-2099,Stockholm,5.12,5.81,3.081,0
+Rome,ssp126,2070-2099,Los Angeles,17.82,16.68,1.475,0
+San Diego,ssp126,2070-2099,Cairo,20.53,21.1,1.222,0
+Sao Paulo,ssp126,2070-2099,Nairobi,22.01,22.38,1.703,0
+Seoul,ssp126,2070-2099,New York,12.94,11.26,1.837,0
+Singapore,ssp126,2070-2099,Lagos,28.4,27.09,1.794,1
+Stockholm,ssp126,2070-2099,Berlin,8.04,8.81,1.206,0
+Sydney,ssp126,2070-2099,Cape Town,18.49,17.69,1.555,0
+Tokyo,ssp126,2070-2099,Los Angeles,16.84,16.68,1.179,0
+Toronto,ssp126,2070-2099,Seoul,10.35,10.67,1.306,0
+Anchorage,ssp245,2070-2099,Oslo,2.87,3.69,1.135,0
+Bangkok,ssp245,2070-2099,Singapore,28.51,27.21,2.179,1
+Beijing,ssp245,2070-2099,Chicago,11.84,9.3,2.775,0
+Berlin,ssp245,2070-2099,Paris,11.5,10.98,1.563,0
+Bogota,ssp245,2070-2099,Nairobi,24.34,22.38,1.98,0
+Buenos Aires,ssp245,2070-2099,Sydney,19.36,17.06,2.951,0
+Cairo,ssp245,2070-2099,Delhi,23.34,24.43,3.406,0
+Cape Town,ssp245,2070-2099,Sao Paulo,19.32,20.65,1.667,0
+Chicago,ssp245,2070-2099,New York,13.07,11.26,3.058,0
+Delhi,ssp245,2070-2099,Dubai,26.72,27.58,2.51,0
+Dubai,ssp245,2070-2099,Mumbai,29.4,26.51,5.769,1
+Helsinki,ssp245,2070-2099,Berlin,7.62,8.81,2.039,0
+Honolulu,ssp245,2070-2099,Singapore,25.64,27.21,2.133,0
+Lagos,ssp245,2070-2099,Singapore,29.57,27.21,2.688,1
+London,ssp245,2070-2099,Paris,12.66,10.98,2.006,0
+Los Angeles,ssp245,2070-2099,San Diego,18.9,18.69,0.827,0
+Madrid,ssp245,2070-2099,Rome,15.52,15.88,1.245,0
+Mexico City,ssp245,2070-2099,Bogota,21.19,21.39,2.546,0
+Montreal,ssp245,2070-2099,Chicago,8.8,9.3,0.823,0
+Moscow,ssp245,2070-2099,Toronto,7.98,7.51,1.503,0
+Mumbai,ssp245,2070-2099,Singapore,28.78,27.21,2.032,1
+Nairobi,ssp245,2070-2099,Honolulu,24.56,23.69,2.298,0
+New York,ssp245,2070-2099,Tokyo,14.91,15.07,2.065,0
+Oslo,ssp245,2070-2099,Stockholm,6.33,5.81,1.135,0
+Paris,ssp245,2070-2099,Madrid,13.5,12.83,1.045,0
+Phoenix,ssp245,2070-2099,Cairo,20.78,21.1,2.89,0
+Reykjavik,ssp245,2070-2099,Stockholm,5.68,5.81,2.896,0
+Rome,ssp245,2070-2099,San Diego,18.42,18.69,1.523,0
+San Diego,ssp245,2070-2099,Cairo,20.74,21.1,1.428,0
+Sao Paulo,ssp245,2070-2099,Nairobi,23.0,22.38,1.782,0
+Seoul,ssp245,2070-2099,New York,13.85,11.26,2.694,0
+Singapore,ssp245,2070-2099,Lagos,29.39,27.09,2.614,1
+Stockholm,ssp245,2070-2099,Berlin,8.74,8.81,1.015,0
+Sydney,ssp245,2070-2099,Buenos Aires,19.29,17.93,2.038,0
+Tokyo,ssp245,2070-2099,San Diego,17.87,18.69,1.656,0
+Toronto,ssp245,2070-2099,Seoul,11.51,10.67,1.654,0
+Anchorage,ssp585,2070-2099,Stockholm,5.56,5.81,1.381,0
+Bangkok,ssp585,2070-2099,Singapore,30.38,27.21,3.61,1
+Beijing,ssp585,2070-2099,New York,14.55,11.26,4.697,0
+Berlin,ssp585,2070-2099,Madrid,13.96,12.83,1.549,0
+Bogota,ssp585,2070-2099,Lagos,26.29,27.09,1.261,0
+Buenos Aires,ssp585,2070-2099,Sao Paulo,21.45,20.65,3.642,0
+Cairo,ssp585,2070-2099,Dubai,25.92,27.58,1.804,0
+Cape Town,ssp585,2070-2099,Sao Paulo,20.66,20.65,0.998,0
+Chicago,ssp585,2070-2099,Phoenix,16.0,18.52,3.538,0
+Delhi,ssp585,2070-2099,Dubai,29.56,27.58,3.212,1
+Dubai,ssp585,2070-2099,Singapore,32.72,27.21,8.217,1
+Helsinki,ssp585,2070-2099,New York,10.38,11.26,1.394,0
+Honolulu,ssp585,2070-2099,Singapore,27.34,27.21,1.53,0
+Lagos,ssp585,2070-2099,Singapore,31.14,27.21,4.137,1
+London,ssp585,2070-2099,Tokyo,14.65,15.07,1.725,0
+Los Angeles,ssp585,2070-2099,Cairo,21.5,21.1,1.33,0
+Madrid,ssp585,2070-2099,Phoenix,18.54,18.52,1.109,0
+Mexico City,ssp585,2070-2099,Honolulu,23.56,23.69,2.15,0
+Montreal,ssp585,2070-2099,Seoul,11.8,10.67,2.016,0
+Moscow,ssp585,2070-2099,Chicago,10.92,9.3,2.183,0
+Mumbai,ssp585,2070-2099,Singapore,30.46,27.21,3.478,1
+Nairobi,ssp585,2070-2099,Lagos,26.4,27.09,1.021,0
+New York,ssp585,2070-2099,Phoenix,17.17,18.52,1.892,0
+Oslo,ssp585,2070-2099,Berlin,8.95,8.81,0.796,0
+Paris,ssp585,2070-2099,Rome,15.73,15.88,0.376,0
+Phoenix,ssp585,2070-2099,Delhi,23.93,24.43,3.211,0
+Reykjavik,ssp585,2070-2099,Berlin,7.4,8.81,3.287,0
+Rome,ssp585,2070-2099,Cairo,21.07,21.1,1.912,0
+San Diego,ssp585,2070-2099,Cairo,23.24,21.1,2.492,0
+Sao Paulo,ssp585,2070-2099,Lagos,25.1,27.09,2.906,0
+Seoul,ssp585,2070-2099,Phoenix,16.28,18.52,2.666,0
+Singapore,ssp585,2070-2099,Lagos,30.79,27.09,3.918,1
+Stockholm,ssp585,2070-2099,Paris,11.33,10.98,1.691,0
+Sydney,ssp585,2070-2099,Sao Paulo,21.3,20.65,1.829,0
+Tokyo,ssp585,2070-2099,San Diego,19.77,18.69,1.822,0
+Toronto,ssp585,2070-2099,New York,14.35,11.26,3.59,0

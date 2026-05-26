@@ -491,7 +491,17 @@ function countUp(sel, target, duration) {
 
 function updateBigCaption(today, future) {
   const captionEl = document.getElementById("bn-caption");
-  if (!captionEl || today == null || future == null) return;
+  if (!captionEl) return;
+  // Cities without daily-resolution model output (e.g. Montreal, Toronto, Phoenix,
+  // Helsinki, Oslo, Rome) can't have an exact day-counting answer — show an
+  // honest empty state instead of stale numbers from the last city.
+  if (today == null || future == null) {
+    captionEl.innerHTML =
+      `<strong>Daily extreme-heat data isn't available for ${state.city} yet</strong> ` +
+      `(only a subset of climate models publish daily output at high resolution). ` +
+      `The temperature trajectory and analog above are still based on the full 8-model ensemble.`;
+    return;
+  }
   let xText;
   if (today >= 1) {
     const x = (future / today).toFixed(1);
@@ -501,7 +511,6 @@ function updateBigCaption(today, future) {
   } else {
     xText = "no change";
   }
-  // preserve the bn-city-name id so renderCity can keep working
   captionEl.innerHTML = `That's a <strong>${xText}</strong> in dangerously hot days for <span id="bn-city-name">${state.city}</span>.`;
 }
 
@@ -767,34 +776,38 @@ function drawChoiceChart() {
 function updateAnalogCard() {
   const row = analog.find(d => d.city === state.city && d.scenario === "ssp585"
                           && d.future_decade === "2070-2099");
+  const nameEl = document.getElementById("analog-name");
   if (!row) {
-    document.getElementById("analog-name").textContent = "(no match)";
+    nameEl.textContent = "(no data)";
+    nameEl.classList.add("multi-word");
     document.getElementById("analog-future").textContent = "—";
     document.getElementById("analog-today").textContent = "—";
     document.getElementById("analog-explain").textContent = "";
     return;
   }
-  const nameEl = document.getElementById("analog-name");
-  if (row.analog_city === state.city) {
-    nameEl.textContent = "nowhere on Earth today";
-    nameEl.classList.add("multi-word");
-    document.getElementById("analog-future").textContent = `${row.future_T_C.toFixed(1)} °C`;
-    document.getElementById("analog-today").textContent = "—";
-    document.getElementById("analog-explain").textContent =
-      `No major city today has a year-round climate as hot as ${state.city} will. ` +
-      `It's entering an unprecedented temperature regime.`;
+
+  // Always show a real city analog (self-excluded in the data prep step)
+  nameEl.textContent = row.analog_city + ".";
+  nameEl.classList.toggle("multi-word", row.analog_city.includes(" "));
+  document.getElementById("analog-future").textContent =
+    `${state.city}, 2080: ${row.future_T_C.toFixed(1)} °C`;
+  document.getElementById("analog-today").textContent =
+    `${row.analog_city}, today: ${row.analog_T_C.toFixed(1)} °C`;
+
+  // "Unprecedented" cities: future is hotter than every modern city.
+  const unprecedented = row.unprecedented === 1 || row.unprecedented === "1";
+  const explainEl = document.getElementById("analog-explain");
+  if (unprecedented) {
+    explainEl.innerHTML =
+      `<strong>Even the closest match falls short.</strong> No major city today ` +
+      `has a year-round climate as hot as ${state.city}'s 2080 projection — ` +
+      `${row.analog_city} is the nearest, but ${state.city} is heading into a ` +
+      `temperature regime that's unprecedented for any modern city.`;
   } else {
-    nameEl.textContent = row.analog_city + ".";
-    // Apply tighter sizing to multi-word names so they don't overflow
-    nameEl.classList.toggle("multi-word", row.analog_city.includes(" "));
-    document.getElementById("analog-future").textContent =
-      `${state.city}, 2080: ${row.future_T_C.toFixed(1)} °C`;
-    document.getElementById("analog-today").textContent =
-      `${row.analog_city}, today: ${row.analog_T_C.toFixed(1)} °C`;
-    document.getElementById("analog-explain").textContent =
+    explainEl.textContent =
       `By 2070–2099 under SSP5-8.5, the year-round climate of ${state.city} will ` +
       `most closely resemble ${row.analog_city} today. Match across all 12 months; ` +
-      `mode of 8 climate models.`;
+      `ensemble mean of 8 climate models.`;
   }
 }
 
