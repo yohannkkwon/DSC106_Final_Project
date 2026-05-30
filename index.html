@@ -39,7 +39,7 @@
   <!-- ============================================================
        CHAPTER 2 — STAKES (dark)
        ============================================================ -->
-  <section class="chapter dark stakes-chapter" data-step-trigger="stakes">
+  <section class="chapter compact dark stakes-chapter" data-step-trigger="stakes">
     <div class="chapter-content">
       <p class="kicker">why this matters</p>
       <div class="stakes-lines">
@@ -56,7 +56,7 @@
   <!-- ============================================================
        CHAPTER 2.5 — SSP EXPLAINER
        ============================================================ -->
-  <section class="chapter ssp-explainer-chapter">
+  <section class="chapter compact ssp-explainer-chapter">
     <div class="chapter-content">
       <p class="kicker">first, a word on what we're showing</p>
       <h2 class="chapter-title">Four <em>SSPs</em>. Four possible futures.</h2>
@@ -145,7 +145,7 @@
   <!-- ============================================================
        CHAPTER 4 — PICK A CITY
        ============================================================ -->
-  <section class="chapter pick-city">
+  <section class="chapter compact pick-city">
     <div class="chapter-content">
       <p class="kicker">make it personal</p>
       <h2>Pick a city.</h2>
@@ -166,11 +166,114 @@
   </section>
 
   <!-- ============================================================
-       CHAPTER 5 — TRAJECTORY (pinned scrolly)
+       CHAPTER 5 — BIG NUMBERS (the main story, expanded scrolly)
+       ============================================================ -->
+  <section class="chapter dark scrolly big-numbers-chapter">
+    <div class="chapter-content">
+      <p class="kicker">the main story</p>
+      <h2 class="chapter-title">The &ldquo;too hot&rdquo; days <em>multiply</em>.</h2>
+    </div>
+    <div class="chapter-content scrolly-container">
+      <div class="scrolly-graphic">
+        <div class="bn-stage">
+          <!-- one panel visible at a time; controlled by state.bnStep -->
+          <div class="bn-panel" data-panel="today">
+            <div class="bn-label">today, dangerously hot days a year</div>
+            <div class="bn-megavalue" id="bn-today">—</div>
+            <div class="bn-unit">above 35 °C / 95 °F · 1985–2014 baseline</div>
+          </div>
+          <div class="bn-panel" data-panel="2080">
+            <div class="bn-pair">
+              <div class="bn-side">
+                <div class="bn-label">today</div>
+                <div class="bn-megavalue bn-today-dual">—</div>
+              </div>
+              <div class="bn-arrow-big">→</div>
+              <div class="bn-side">
+                <div class="bn-label">by 2080</div>
+                <div class="bn-megavalue bn-2080-dual">—</div>
+              </div>
+            </div>
+            <div class="bn-multiplier"><span id="bn-multiplier-text">—× more</span></div>
+          </div>
+          <div class="bn-panel" data-panel="calendar">
+            <div class="bn-label">a year, with dangerously hot days marked</div>
+            <div class="bn-calendar-wrap">
+              <div class="bn-cal-block">
+                <div class="bn-cal-title">today · <span id="cal-today-count">—</span> days</div>
+                <div class="bn-cal" id="cal-today"></div>
+                <div class="bn-cal-months">J F M A M J J A S O N D</div>
+              </div>
+              <div class="bn-cal-block">
+                <div class="bn-cal-title future">2080 · <span id="cal-future-count">—</span> days</div>
+                <div class="bn-cal" id="cal-future"></div>
+                <div class="bn-cal-months">J F M A M J J A S O N D</div>
+              </div>
+            </div>
+          </div>
+          <div class="bn-panel" data-panel="heatwave">
+            <div class="bn-label">longest consecutive heatwave above 35 °C</div>
+            <div class="bn-megavalue bn-heatwave-value">—</div>
+            <div class="bn-unit">days in a row, worst end-of-century year</div>
+            <div class="bn-compare" id="bn-heatwave-compare">today: — days</div>
+          </div>
+          <div class="bn-panel" data-panel="thresholds">
+            <div class="bn-label">days per year above each threshold, 2080 vs today</div>
+            <div class="bn-threshold-bars" id="bn-threshold-bars"></div>
+          </div>
+          <div class="bn-panel" data-panel="ranking">
+            <div class="bn-label">your city compared to the world's hardest-hit</div>
+            <div class="bn-ranking" id="bn-ranking"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scrolly-steps" data-scrolly="bigNumbers">
+        <div class="scrolly-step" data-step="today">
+          <h3>Today</h3>
+          <p>Right now, <strong class="bn-city-inline">San Diego</strong> has
+             roughly <em><span class="bn-today-inline">—</span> days</em> a year that climb above
+             <strong>35 °C / 95 °F</strong> — what the heat index calls "dangerous."</p>
+        </div>
+        <div class="scrolly-step" data-step="2080">
+          <h3>By 2080…</h3>
+          <p>Under <em>SSP5-8.5</em>, that climbs to <em><span class="bn-2080-inline">—</span> days</em>.
+             A <strong><span class="bn-mult-inline">—×</span></strong> increase. Effectively all of summer.</p>
+        </div>
+        <div class="scrolly-step" data-step="calendar">
+          <h3>Picture it as a year.</h3>
+          <p>Every square is a day. Red squares are dangerously hot ones. Today,
+             they're scattered across the summer. By 2080, they bleed into spring and
+             fall — and the heart of summer becomes a solid wall.</p>
+        </div>
+        <div class="scrolly-step" data-step="heatwave">
+          <h3>And the heatwaves get <em>longer</em>.</h3>
+          <p>Today, the worst heatwave above 35 °C runs about
+             <em><span class="bn-hw-today-inline">—</span></em> consecutive days.
+             By 2080 (worst case): <em><span class="bn-hw-future-inline">—</span></em>.
+             In Delhi: <strong>270 days in a row</strong>.</p>
+        </div>
+        <div class="scrolly-step" data-step="thresholds">
+          <h3>It doesn't stop at 35°.</h3>
+          <p>Days above <em>30 °C</em> are common today; days above <em>40 °C</em>
+             (104 °F, heatstroke territory) are rare. By 2080, both multiply — and the
+             40° line, near-zero today, becomes a recurring event.</p>
+        </div>
+        <div class="scrolly-step" data-step="ranking">
+          <h3>And not every city is hit the same way.</h3>
+          <p>Lagos goes from essentially never to <em>110 days a year</em>.
+             Madrid: <em>0 → 49</em>. Delhi: <em>111 → 179</em>. The cities at the bottom
+             of the list still triple their hot-day counts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CHAPTER 6 — TRAJECTORY (pinned scrolly, demoted to supporting evidence)
        ============================================================ -->
   <section class="chapter scrolly trajectory-chapter">
     <div class="chapter-content">
-      <p class="kicker">your city's trajectory</p>
+      <p class="kicker">the underlying warming</p>
       <h2 class="chapter-title">Annual mean temperature, <span id="traj-city-name">San Diego</span>.</h2>
     </div>
     <div class="chapter-content scrolly-container">
@@ -198,37 +301,7 @@
           <p>Under <em>SSP5-8.5</em>, the line keeps climbing past 2100. The gap between
              this red line and the blue one above is what your generation decides.</p>
         </div>
-        <div class="scrolly-step" data-step="spread">
-          <h3>How much do models agree?</h3>
-          <p>The shaded band is real disagreement. Climate science is honest about it —
-             your city's 2080 mean could be anywhere in that band. The center line is
-             still the best estimate.</p>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CHAPTER 6 — BIG NUMBERS (dark)
-       ============================================================ -->
-  <section class="chapter dark big-numbers-chapter">
-    <div class="chapter-content">
-      <p class="kicker">days per year above 35 °C (95 °F)</p>
-      <h2 class="chapter-title">The &ldquo;too hot&rdquo; days <em>multiply</em>.</h2>
-      <div class="bn-frame">
-        <div class="bn-block today">
-          <div class="bn-label">today</div>
-          <div class="bn-value" id="bn-today">—</div>
-          <div class="bn-unit">days / year</div>
-        </div>
-        <div class="bn-arrow-big">→</div>
-        <div class="bn-block future">
-          <div class="bn-label" id="bn-2080-scen">2080 · SSP5-8.5</div>
-          <div class="bn-value" id="bn-2080">—</div>
-          <div class="bn-unit">days / year</div>
-        </div>
-      </div>
-      <p class="bn-caption" id="bn-caption">That's a <strong>—× increase</strong> in dangerously hot days for <span id="bn-city-name">your city</span>.</p>
     </div>
   </section>
 
@@ -301,65 +374,44 @@
   </section>
 
   <!-- ============================================================
-       CHAPTER 11 — WORLD TEMPERATURE MAP
+       CHAPTER 11 — WORLD MAP (merged temp + precip with toggle)
        ============================================================ -->
   <section class="chapter map-section">
     <div class="chapter-content">
-      <p class="kicker">where on earth warms most</p>
-      <h2 class="chapter-title">The whole world, mapped.</h2>
-      <p class="chapter-deck">
+      <p class="kicker">the whole world, mapped</p>
+      <h2 class="chapter-title" id="map-title">The whole world, <em>redrawn</em>.</h2>
+      <p class="chapter-deck" id="map-deck">
         Projected change in annual mean temperature, 2071–2100 vs 1950–2014 baseline.
-        Switch the scenario tabs to see how the map redraws under each emissions pathway.
+        Toggle between temperature and precipitation; drag the slider to morph
+        between emissions pathways.
       </p>
-      <div class="map-slider-wrapper">
-        <div class="map-slider-readout">
-          <span class="slider-scen-name" id="temp-map-name">SSP5-8.5</span>
-          <span class="slider-scen-sub" id="temp-map-sub">high emissions · we keep burning</span>
+      <div class="map-controls-row">
+        <div class="map-var-toggle" role="radiogroup" aria-label="Map variable">
+          <button class="map-var-btn active" data-var="tas">Temperature</button>
+          <button class="map-var-btn" data-var="pr">Precipitation</button>
         </div>
-        <input type="range" class="map-slider" id="temp-map-slider"
-               min="0" max="1000" value="1000" step="1" data-target="temp-map" />
-        <div class="map-slider-ticks">
-          <span data-pos="0">SSP1-2.6</span>
-          <span data-pos="500">SSP2-4.5</span>
-          <span data-pos="1000">SSP5-8.5</span>
+        <div class="map-slider-wrapper">
+          <div class="map-slider-readout">
+            <span class="slider-scen-name" id="map-name">SSP5-8.5</span>
+            <span class="slider-scen-sub" id="map-sub">high emissions · we keep burning</span>
+          </div>
+          <input type="range" class="map-slider" id="map-slider"
+                 min="0" max="1000" value="1000" step="1" />
+          <div class="map-slider-ticks">
+            <span data-pos="0">SSP1-2.6</span>
+            <span data-pos="500">SSP2-4.5</span>
+            <span data-pos="1000">SSP5-8.5</span>
+          </div>
         </div>
       </div>
-      <div id="temp-map"></div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CHAPTER 12 — PRECIP MAP
-       ============================================================ -->
-  <section class="chapter map-section">
-    <div class="chapter-content">
-      <p class="kicker">wet gets wetter, dry gets drier</p>
-      <h2 class="chapter-title">Rain, redrawn.</h2>
-      <p class="chapter-deck">
-        Percent change in annual precipitation vs baseline. Wet regions get wetter,
-        dry regions get drier — the "<em>wet-gets-wetter</em>" signal of a warmer atmosphere.
-      </p>
-      <div class="map-slider-wrapper">
-        <div class="map-slider-readout">
-          <span class="slider-scen-name" id="precip-map-name">SSP5-8.5</span>
-          <span class="slider-scen-sub" id="precip-map-sub">high emissions · we keep burning</span>
-        </div>
-        <input type="range" class="map-slider" id="precip-map-slider"
-               min="0" max="1000" value="1000" step="1" data-target="precip-map" />
-        <div class="map-slider-ticks">
-          <span data-pos="0">SSP1-2.6</span>
-          <span data-pos="500">SSP2-4.5</span>
-          <span data-pos="1000">SSP5-8.5</span>
-        </div>
-      </div>
-      <div id="precip-map"></div>
+      <div id="world-map"></div>
     </div>
   </section>
 
   <!-- ============================================================
        CHAPTER 13 — ABOUT
        ============================================================ -->
-  <section class="chapter about-chapter">
+  <section class="chapter compact about-chapter">
     <div class="chapter-content">
       <h2>About this project.</h2>
       <h3>What we've done so far</h3>

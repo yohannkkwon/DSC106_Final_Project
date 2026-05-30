@@ -1,0 +1,1729 @@
+city,period,month,tas_C,std_C
+Anchorage,today,1,-10.917,5.041
+Anchorage,today,2,-9.621,4.682
+Anchorage,today,3,-7.457,3.855
+Anchorage,today,4,-2.47,2.36
+Anchorage,today,5,2.83,2.371
+Anchorage,today,6,8.13,2.915
+Anchorage,today,7,11.237,2.45
+Anchorage,today,8,10.53,2.313
+Anchorage,today,9,6.078,2.29
+Anchorage,today,10,0.198,2.71
+Anchorage,today,11,-6.253,3.502
+Anchorage,today,12,-10.061,4.93
+Bangkok,today,1,22.698,1.948
+Bangkok,today,2,25.066,1.805
+Bangkok,today,3,27.991,1.372
+Bangkok,today,4,29.492,1.368
+Bangkok,today,5,28.974,1.626
+Bangkok,today,6,27.547,1.42
+Bangkok,today,7,26.771,1.142
+Bangkok,today,8,26.515,1.044
+Bangkok,today,9,26.196,1.083
+Bangkok,today,10,25.69,1.465
+Bangkok,today,11,24.525,1.727
+Bangkok,today,12,22.963,1.795
+Beijing,today,1,-8.708,3.237
+Beijing,today,2,-5.655,3.455
+Beijing,today,3,0.962,3.32
+Beijing,today,4,8.882,3.209
+Beijing,today,5,16.031,2.354
+Beijing,today,6,21.751,1.686
+Beijing,today,7,24.535,1.441
+Beijing,today,8,23.425,1.671
+Beijing,today,9,17.704,1.924
+Beijing,today,10,9.927,2.481
+Beijing,today,11,1.123,2.77
+Beijing,today,12,-6.107,3.274
+Berlin,today,1,0.302,2.815
+Berlin,today,2,0.817,2.807
+Berlin,today,3,2.99,2.474
+Berlin,today,4,7.356,2.4
+Berlin,today,5,12.41,2.192
+Berlin,today,6,16.866,2.021
+Berlin,today,7,18.67,2.391
+Berlin,today,8,17.883,2.213
+Berlin,today,9,14.381,1.901
+Berlin,today,10,9.653,1.764
+Berlin,today,11,4.891,2.027
+Berlin,today,12,1.551,2.392
+Bogota,today,1,21.519,2.156
+Bogota,today,2,22.375,2.325
+Bogota,today,3,22.763,2.247
+Bogota,today,4,22.156,1.775
+Bogota,today,5,21.267,1.414
+Bogota,today,6,20.733,1.342
+Bogota,today,7,20.607,1.369
+Bogota,today,8,21.049,1.381
+Bogota,today,9,21.475,1.497
+Bogota,today,10,21.397,1.667
+Bogota,today,11,21.217,1.889
+Bogota,today,12,21.132,2.071
+Buenos Aires,today,1,25.754,2.425
+Buenos Aires,today,2,25.383,2.276
+Buenos Aires,today,3,22.67,2.051
+Buenos Aires,today,4,18.26,2.022
+Buenos Aires,today,5,14.034,1.723
+Buenos Aires,today,6,11.0,1.824
+Buenos Aires,today,7,10.319,1.953
+Buenos Aires,today,8,11.841,2.0
+Buenos Aires,today,9,14.504,2.119
+Buenos Aires,today,10,17.461,2.263
+Buenos Aires,today,11,20.82,2.528
+Buenos Aires,today,12,23.91,2.768
+Cairo,today,1,12.877,1.504
+Cairo,today,2,13.917,1.744
+Cairo,today,3,16.547,2.056
+Cairo,today,4,19.807,2.227
+Cairo,today,5,23.575,2.509
+Cairo,today,6,27.283,2.726
+Cairo,today,7,29.396,2.988
+Cairo,today,8,29.125,2.836
+Cairo,today,9,26.697,2.352
+Cairo,today,10,23.261,1.949
+Cairo,today,11,18.43,1.873
+Cairo,today,12,14.243,1.55
+Cape Town,today,1,21.321,1.248
+Cape Town,today,2,21.828,1.199
+Cape Town,today,3,21.045,1.085
+Cape Town,today,4,18.97,0.943
+Cape Town,today,5,16.838,0.985
+Cape Town,today,6,15.054,1.022
+Cape Town,today,7,14.107,0.951
+Cape Town,today,8,14.014,1.007
+Cape Town,today,9,14.949,1.023
+Cape Town,today,10,16.585,1.078
+Cape Town,today,11,18.303,1.201
+Cape Town,today,12,20.022,1.26
+Chicago,today,1,-6.352,4.084
+Chicago,today,2,-4.954,3.956
+Chicago,today,3,0.839,3.512
+Chicago,today,4,8.56,2.497
+Chicago,today,5,15.201,2.228
+Chicago,today,6,20.693,1.993
+Chicago,today,7,24.257,2.147
+Chicago,today,8,23.928,2.202
+Chicago,today,9,19.229,2.501
+Chicago,today,10,11.458,2.68
+Chicago,today,11,3.919,2.882
+Chicago,today,12,-2.872,3.58
+Delhi,today,1,12.119,3.459
+Delhi,today,2,15.276,4.08
+Delhi,today,3,21.259,4.352
+Delhi,today,4,26.938,4.321
+Delhi,today,5,32.17,4.286
+Delhi,today,6,35.079,4.248
+Delhi,today,7,33.374,3.456
+Delhi,today,8,31.354,3.403
+Delhi,today,9,29.799,3.878
+Delhi,today,10,25.09,3.804
+Delhi,today,11,18.545,3.543
+Delhi,today,12,13.346,3.539
+Dubai,today,1,18.089,2.627
+Dubai,today,2,19.256,2.986
+Dubai,today,3,22.625,3.378
+Dubai,today,4,26.394,3.551
+Dubai,today,5,31.119,4.388
+Dubai,today,6,34.911,5.24
+Dubai,today,7,36.306,5.219
+Dubai,today,8,36.02,4.935
+Dubai,today,9,33.782,4.42
+Dubai,today,10,29.858,3.267
+Dubai,today,11,24.726,2.781
+Dubai,today,12,19.929,2.947
+Helsinki,today,1,-7.862,4.935
+Helsinki,today,2,-7.117,4.487
+Helsinki,today,3,-3.598,2.762
+Helsinki,today,4,2.271,2.448
+Helsinki,today,5,9.284,2.478
+Helsinki,today,6,14.573,2.518
+Helsinki,today,7,16.663,2.327
+Helsinki,today,8,15.288,2.256
+Helsinki,today,9,11.002,2.258
+Helsinki,today,10,5.722,2.254
+Helsinki,today,11,0.058,3.163
+Helsinki,today,12,-4.604,4.281
+Honolulu,today,1,22.405,0.821
+Honolulu,today,2,22.053,0.912
+Honolulu,today,3,22.011,1.031
+Honolulu,today,4,22.32,1.029
+Honolulu,today,5,23.216,0.974
+Honolulu,today,6,24.313,0.919
+Honolulu,today,7,24.977,0.843
+Honolulu,today,8,25.525,0.832
+Honolulu,today,9,25.762,0.822
+Honolulu,today,10,25.288,0.724
+Honolulu,today,11,24.197,0.729
+Honolulu,today,12,23.136,0.782
+Lagos,today,1,26.692,1.524
+Lagos,today,2,28.127,1.361
+Lagos,today,3,29.152,1.027
+Lagos,today,4,28.824,1.057
+Lagos,today,5,28.054,0.925
+Lagos,today,6,27.273,0.915
+Lagos,today,7,26.335,0.814
+Lagos,today,8,25.755,0.826
+Lagos,today,9,25.99,0.946
+Lagos,today,10,26.507,0.985
+Lagos,today,11,26.916,0.987
+Lagos,today,12,26.458,1.412
+London,today,1,5.943,1.743
+London,today,2,5.653,1.963
+London,today,3,6.428,1.897
+London,today,4,8.37,1.917
+London,today,5,11.401,1.592
+London,today,6,14.841,1.575
+London,today,7,17.104,1.9
+London,today,8,17.145,1.799
+London,today,9,15.128,1.594
+London,today,10,11.871,1.501
+London,today,11,8.898,1.532
+London,today,12,6.947,1.586
+Los Angeles,today,1,8.812,2.024
+Los Angeles,today,2,10.073,1.955
+Los Angeles,today,3,11.957,2.106
+Los Angeles,today,4,14.368,2.253
+Los Angeles,today,5,18.102,2.644
+Los Angeles,today,6,21.878,3.206
+Los Angeles,today,7,25.432,3.209
+Los Angeles,today,8,25.989,2.795
+Los Angeles,today,9,23.611,2.403
+Los Angeles,today,10,19.11,2.209
+Los Angeles,today,11,13.236,2.312
+Los Angeles,today,12,9.483,2.231
+Madrid,today,1,5.093,2.357
+Madrid,today,2,5.742,2.471
+Madrid,today,3,7.711,2.443
+Madrid,today,4,10.362,2.527
+Madrid,today,5,13.806,2.442
+Madrid,today,6,18.911,2.844
+Madrid,today,7,23.34,3.095
+Madrid,today,8,23.343,2.709
+Madrid,today,9,19.317,2.476
+Madrid,today,10,13.367,2.385
+Madrid,today,11,8.608,2.324
+Madrid,today,12,5.784,2.306
+Mexico City,today,1,15.211,2.637
+Mexico City,today,2,16.452,2.601
+Mexico City,today,3,18.566,2.537
+Mexico City,today,4,20.748,2.391
+Mexico City,today,5,21.399,2.343
+Mexico City,today,6,21.213,2.268
+Mexico City,today,7,20.811,2.079
+Mexico City,today,8,20.727,1.997
+Mexico City,today,9,20.312,2.083
+Mexico City,today,10,18.854,2.307
+Mexico City,today,11,17.121,2.604
+Mexico City,today,12,15.749,2.629
+Montreal,today,1,-11.76,3.976
+Montreal,today,2,-10.28,3.352
+Montreal,today,3,-4.657,2.763
+Montreal,today,4,3.121,2.443
+Montreal,today,5,10.913,2.294
+Montreal,today,6,16.48,1.785
+Montreal,today,7,19.471,1.85
+Montreal,today,8,18.657,1.925
+Montreal,today,9,14.243,2.035
+Montreal,today,10,7.243,2.034
+Montreal,today,11,0.136,2.558
+Montreal,today,12,-6.96,3.041
+Moscow,today,1,-10.478,4.86
+Moscow,today,2,-8.549,4.381
+Moscow,today,3,-3.938,2.8
+Moscow,today,4,3.671,2.92
+Moscow,today,5,12.052,2.813
+Moscow,today,6,16.684,2.668
+Moscow,today,7,18.437,2.56
+Moscow,today,8,17.023,2.52
+Moscow,today,9,11.715,2.628
+Moscow,today,10,5.129,2.558
+Moscow,today,11,-1.895,3.055
+Moscow,today,12,-7.688,4.392
+Mumbai,today,1,23.047,2.208
+Mumbai,today,2,24.289,1.815
+Mumbai,today,3,26.781,1.453
+Mumbai,today,4,28.904,1.485
+Mumbai,today,5,29.608,1.427
+Mumbai,today,6,28.735,0.999
+Mumbai,today,7,27.072,1.448
+Mumbai,today,8,26.219,1.281
+Mumbai,today,9,26.573,1.205
+Mumbai,today,10,27.449,1.292
+Mumbai,today,11,26.364,1.843
+Mumbai,today,12,23.998,2.349
+Nairobi,today,1,22.705,1.71
+Nairobi,today,2,23.574,1.817
+Nairobi,today,3,24.105,1.683
+Nairobi,today,4,23.521,1.551
+Nairobi,today,5,22.322,1.666
+Nairobi,today,6,21.397,1.673
+Nairobi,today,7,20.925,1.683
+Nairobi,today,8,21.484,1.728
+Nairobi,today,9,22.51,2.068
+Nairobi,today,10,22.98,1.942
+Nairobi,today,11,22.013,1.62
+Nairobi,today,12,21.998,1.713
+New York,today,1,-0.721,3.457
+New York,today,2,0.049,3.352
+New York,today,3,3.78,3.168
+New York,today,4,9.343,2.489
+New York,today,5,14.857,2.087
+New York,today,6,19.752,1.615
+New York,today,7,23.025,1.558
+New York,today,8,23.002,1.631
+New York,today,9,19.66,1.945
+New York,today,10,13.88,2.091
+New York,today,11,7.838,2.585
+New York,today,12,2.601,2.904
+Oslo,today,1,-5.825,3.664
+Oslo,today,2,-5.253,3.648
+Oslo,today,3,-2.586,2.483
+Oslo,today,4,1.898,1.874
+Oslo,today,5,7.928,2.074
+Oslo,today,6,12.872,2.053
+Oslo,today,7,14.461,2.09
+Oslo,today,8,13.081,1.928
+Oslo,today,9,9.418,1.806
+Oslo,today,10,4.698,1.873
+Oslo,today,11,-0.234,2.677
+Oslo,today,12,-3.883,3.377
+Paris,today,1,4.477,2.078
+Paris,today,2,4.611,2.148
+Paris,today,3,6.278,2.071
+Paris,today,4,9.144,2.121
+Paris,today,5,12.787,1.843
+Paris,today,6,16.81,1.783
+Paris,today,7,19.23,2.242
+Paris,today,8,18.968,2.061
+Paris,today,9,16.043,1.88
+Paris,today,10,11.754,1.728
+Paris,today,11,7.897,1.748
+Paris,today,12,5.314,1.961
+Phoenix,today,1,7.201,2.838
+Phoenix,today,2,9.394,2.877
+Phoenix,today,3,12.456,3.094
+Phoenix,today,4,16.467,3.584
+Phoenix,today,5,21.948,4.168
+Phoenix,today,6,27.347,4.536
+Phoenix,today,7,31.379,3.979
+Phoenix,today,8,30.823,3.468
+Phoenix,today,9,26.924,3.209
+Phoenix,today,10,20.229,3.056
+Phoenix,today,11,12.522,2.948
+Phoenix,today,12,7.761,2.932
+Reykjavik,today,1,-0.44,3.008
+Reykjavik,today,2,-0.775,3.149
+Reykjavik,today,3,0.3,2.936
+Reykjavik,today,4,2.103,2.589
+Reykjavik,today,5,5.167,2.176
+Reykjavik,today,6,8.159,1.963
+Reykjavik,today,7,9.989,1.862
+Reykjavik,today,8,9.749,1.878
+Reykjavik,today,9,7.526,1.927
+Reykjavik,today,10,4.659,2.162
+Reykjavik,today,11,2.023,2.45
+Reykjavik,today,12,0.623,2.863
+Rome,today,1,8.675,1.814
+Rome,today,2,8.767,1.893
+Rome,today,3,10.187,1.971
+Rome,today,4,12.957,1.958
+Rome,today,5,16.797,2.047
+Rome,today,6,21.923,2.534
+Rome,today,7,25.744,2.988
+Rome,today,8,25.703,2.768
+Rome,today,9,21.94,1.996
+Rome,today,10,17.151,1.829
+Rome,today,11,12.806,1.7
+Rome,today,12,9.809,1.908
+San Diego,today,1,11.553,2.146
+San Diego,today,2,12.725,1.974
+San Diego,today,3,14.476,1.967
+San Diego,today,4,16.602,2.228
+San Diego,today,5,19.73,2.808
+San Diego,today,6,22.893,3.429
+San Diego,today,7,26.046,3.33
+San Diego,today,8,26.933,2.955
+San Diego,today,9,25.215,2.543
+San Diego,today,10,21.387,2.097
+San Diego,today,11,16.081,2.102
+San Diego,today,12,12.31,2.291
+Sao Paulo,today,1,23.568,1.29
+Sao Paulo,today,2,23.654,1.239
+Sao Paulo,today,3,22.877,1.201
+Sao Paulo,today,4,21.341,1.317
+Sao Paulo,today,5,19.238,1.417
+Sao Paulo,today,6,17.376,1.386
+Sao Paulo,today,7,16.858,1.453
+Sao Paulo,today,8,18.031,1.503
+Sao Paulo,today,9,20.085,1.85
+Sao Paulo,today,10,21.184,1.748
+Sao Paulo,today,11,21.998,1.726
+Sao Paulo,today,12,22.775,1.451
+Seoul,today,1,-2.401,2.361
+Seoul,today,2,-1.087,2.31
+Seoul,today,3,3.284,2.125
+Seoul,today,4,8.829,2.541
+Seoul,today,5,13.993,2.49
+Seoul,today,6,18.926,2.343
+Seoul,today,7,22.778,2.381
+Seoul,today,8,23.904,2.34
+Seoul,today,9,19.981,2.136
+Seoul,today,10,13.757,1.625
+Seoul,today,11,7.069,1.573
+Seoul,today,12,0.89,2.264
+Singapore,today,1,26.27,0.925
+Singapore,today,2,26.332,0.932
+Singapore,today,3,26.955,1.044
+Singapore,today,4,27.725,1.037
+Singapore,today,5,28.142,1.115
+Singapore,today,6,28.122,1.138
+Singapore,today,7,27.719,1.097
+Singapore,today,8,27.51,1.055
+Singapore,today,9,27.423,1.049
+Singapore,today,10,27.373,1.066
+Singapore,today,11,27.132,1.038
+Singapore,today,12,26.706,0.971
+Stockholm,today,1,-2.459,3.042
+Stockholm,today,2,-2.737,3.337
+Stockholm,today,3,-1.092,2.554
+Stockholm,today,4,2.86,2.164
+Stockholm,today,5,8.153,2.21
+Stockholm,today,6,13.298,2.376
+Stockholm,today,7,16.087,2.323
+Stockholm,today,8,15.444,2.171
+Stockholm,today,9,12.046,1.892
+Stockholm,today,10,7.597,1.725
+Stockholm,today,11,3.244,2.069
+Stockholm,today,12,-0.128,2.397
+Sydney,today,1,22.022,1.314
+Sydney,today,2,22.227,1.208
+Sydney,today,3,20.806,1.258
+Sydney,today,4,18.218,1.495
+Sydney,today,5,15.202,1.822
+Sydney,today,6,12.647,1.881
+Sydney,today,7,11.504,1.817
+Sydney,today,8,12.139,1.743
+Sydney,today,9,14.323,1.518
+Sydney,today,10,16.668,1.469
+Sydney,today,11,18.853,1.367
+Sydney,today,12,20.875,1.211
+Tokyo,today,1,6.688,3.004
+Tokyo,today,2,6.381,3.068
+Tokyo,today,3,8.472,2.688
+Tokyo,today,4,12.254,2.285
+Tokyo,today,5,16.381,2.011
+Tokyo,today,6,20.137,1.822
+Tokyo,today,7,23.692,1.553
+Tokyo,today,8,24.957,1.495
+Tokyo,today,9,22.799,2.016
+Tokyo,today,10,18.204,2.238
+Tokyo,today,11,13.534,2.458
+Tokyo,today,12,9.299,2.798
+Toronto,today,1,-7.287,4.079
+Toronto,today,2,-6.598,3.817
+Toronto,today,3,-1.611,3.241
+Toronto,today,4,5.937,2.498
+Toronto,today,5,13.031,2.192
+Toronto,today,6,18.466,1.79
+Toronto,today,7,21.746,1.965
+Toronto,today,8,21.328,2.136
+Toronto,today,9,17.107,2.224
+Toronto,today,10,10.09,2.257
+Toronto,today,11,3.272,2.677
+Toronto,today,12,-3.036,3.297
+Anchorage,y2080_ssp126,1,-8.3,5.221
+Anchorage,y2080_ssp126,2,-7.488,4.947
+Anchorage,y2080_ssp126,3,-4.835,4.051
+Anchorage,y2080_ssp126,4,-0.377,2.797
+Anchorage,y2080_ssp126,5,4.88,2.692
+Anchorage,y2080_ssp126,6,10.583,2.662
+Anchorage,y2080_ssp126,7,13.789,2.429
+Anchorage,y2080_ssp126,8,12.648,2.524
+Anchorage,y2080_ssp126,9,8.465,2.46
+Anchorage,y2080_ssp126,10,2.517,2.657
+Anchorage,y2080_ssp126,11,-3.595,3.6
+Anchorage,y2080_ssp126,12,-7.205,4.934
+Bangkok,y2080_ssp126,1,24.225,2.003
+Bangkok,y2080_ssp126,2,26.464,1.73
+Bangkok,y2080_ssp126,3,29.504,1.275
+Bangkok,y2080_ssp126,4,31.053,1.644
+Bangkok,y2080_ssp126,5,30.621,2.043
+Bangkok,y2080_ssp126,6,29.019,1.705
+Bangkok,y2080_ssp126,7,27.98,1.404
+Bangkok,y2080_ssp126,8,27.706,1.279
+Bangkok,y2080_ssp126,9,27.389,1.292
+Bangkok,y2080_ssp126,10,26.91,1.673
+Bangkok,y2080_ssp126,11,25.916,1.911
+Bangkok,y2080_ssp126,12,24.435,2.005
+Beijing,y2080_ssp126,1,-6.541,3.027
+Beijing,y2080_ssp126,2,-3.386,3.235
+Beijing,y2080_ssp126,3,2.945,3.293
+Beijing,y2080_ssp126,4,11.163,2.948
+Beijing,y2080_ssp126,5,18.187,2.108
+Beijing,y2080_ssp126,6,24.05,1.716
+Beijing,y2080_ssp126,7,26.697,1.911
+Beijing,y2080_ssp126,8,25.752,2.138
+Beijing,y2080_ssp126,9,20.094,1.936
+Beijing,y2080_ssp126,10,11.953,2.313
+Beijing,y2080_ssp126,11,3.312,2.511
+Beijing,y2080_ssp126,12,-3.794,2.745
+Berlin,y2080_ssp126,1,1.99,2.621
+Berlin,y2080_ssp126,2,2.189,2.635
+Berlin,y2080_ssp126,3,4.775,2.128
+Berlin,y2080_ssp126,4,9.01,2.026
+Berlin,y2080_ssp126,5,13.986,2.106
+Berlin,y2080_ssp126,6,18.451,2.085
+Berlin,y2080_ssp126,7,20.701,2.355
+Berlin,y2080_ssp126,8,19.909,2.128
+Berlin,y2080_ssp126,9,16.5,1.782
+Berlin,y2080_ssp126,10,11.419,1.716
+Berlin,y2080_ssp126,11,6.427,1.82
+Berlin,y2080_ssp126,12,3.068,2.298
+Bogota,y2080_ssp126,1,23.111,2.522
+Bogota,y2080_ssp126,2,23.91,2.639
+Bogota,y2080_ssp126,3,24.24,2.474
+Bogota,y2080_ssp126,4,23.542,2.033
+Bogota,y2080_ssp126,5,22.644,1.658
+Bogota,y2080_ssp126,6,22.105,1.612
+Bogota,y2080_ssp126,7,21.957,1.682
+Bogota,y2080_ssp126,8,22.427,1.72
+Bogota,y2080_ssp126,9,22.888,1.877
+Bogota,y2080_ssp126,10,22.93,2.321
+Bogota,y2080_ssp126,11,22.747,2.581
+Bogota,y2080_ssp126,12,22.716,2.566
+Buenos Aires,y2080_ssp126,1,26.785,2.316
+Buenos Aires,y2080_ssp126,2,26.732,2.236
+Buenos Aires,y2080_ssp126,3,23.785,2.048
+Buenos Aires,y2080_ssp126,4,19.424,1.863
+Buenos Aires,y2080_ssp126,5,14.835,1.843
+Buenos Aires,y2080_ssp126,6,11.725,1.769
+Buenos Aires,y2080_ssp126,7,11.112,1.748
+Buenos Aires,y2080_ssp126,8,12.819,2.001
+Buenos Aires,y2080_ssp126,9,15.329,2.052
+Buenos Aires,y2080_ssp126,10,18.296,2.261
+Buenos Aires,y2080_ssp126,11,21.802,2.378
+Buenos Aires,y2080_ssp126,12,24.76,2.588
+Cairo,y2080_ssp126,1,14.187,1.399
+Cairo,y2080_ssp126,2,15.241,1.647
+Cairo,y2080_ssp126,3,17.971,1.984
+Cairo,y2080_ssp126,4,21.413,2.078
+Cairo,y2080_ssp126,5,25.207,2.399
+Cairo,y2080_ssp126,6,28.999,2.758
+Cairo,y2080_ssp126,7,31.188,2.961
+Cairo,y2080_ssp126,8,31.163,2.722
+Cairo,y2080_ssp126,9,28.416,2.277
+Cairo,y2080_ssp126,10,24.779,1.876
+Cairo,y2080_ssp126,11,19.986,1.6
+Cairo,y2080_ssp126,12,15.727,1.375
+Cape Town,y2080_ssp126,1,22.23,1.048
+Cape Town,y2080_ssp126,2,22.698,1.036
+Cape Town,y2080_ssp126,3,21.933,0.858
+Cape Town,y2080_ssp126,4,19.972,0.902
+Cape Town,y2080_ssp126,5,17.633,0.961
+Cape Town,y2080_ssp126,6,15.919,0.96
+Cape Town,y2080_ssp126,7,15.124,1.003
+Cape Town,y2080_ssp126,8,15.048,1.068
+Cape Town,y2080_ssp126,9,15.965,1.124
+Cape Town,y2080_ssp126,10,17.479,1.013
+Cape Town,y2080_ssp126,11,19.318,1.08
+Cape Town,y2080_ssp126,12,20.945,1.072
+Chicago,y2080_ssp126,1,-3.032,3.633
+Chicago,y2080_ssp126,2,-1.733,3.711
+Chicago,y2080_ssp126,3,3.616,2.93
+Chicago,y2080_ssp126,4,10.751,2.72
+Chicago,y2080_ssp126,5,17.366,2.217
+Chicago,y2080_ssp126,6,22.812,2.19
+Chicago,y2080_ssp126,7,26.504,2.314
+Chicago,y2080_ssp126,8,26.473,2.769
+Chicago,y2080_ssp126,9,21.483,2.776
+Chicago,y2080_ssp126,10,14.073,2.584
+Chicago,y2080_ssp126,11,6.313,2.452
+Chicago,y2080_ssp126,12,-0.045,2.816
+Delhi,y2080_ssp126,1,14.027,3.739
+Delhi,y2080_ssp126,2,17.025,3.995
+Delhi,y2080_ssp126,3,22.696,4.236
+Delhi,y2080_ssp126,4,28.628,4.409
+Delhi,y2080_ssp126,5,33.531,4.181
+Delhi,y2080_ssp126,6,36.674,4.068
+Delhi,y2080_ssp126,7,35.015,3.592
+Delhi,y2080_ssp126,8,32.785,3.706
+Delhi,y2080_ssp126,9,31.503,3.983
+Delhi,y2080_ssp126,10,26.983,3.686
+Delhi,y2080_ssp126,11,20.616,3.484
+Delhi,y2080_ssp126,12,15.069,3.645
+Dubai,y2080_ssp126,1,19.688,2.675
+Dubai,y2080_ssp126,2,20.823,2.729
+Dubai,y2080_ssp126,3,24.001,3.196
+Dubai,y2080_ssp126,4,28.002,3.477
+Dubai,y2080_ssp126,5,32.667,4.466
+Dubai,y2080_ssp126,6,36.51,5.138
+Dubai,y2080_ssp126,7,37.974,5.127
+Dubai,y2080_ssp126,8,37.686,4.846
+Dubai,y2080_ssp126,9,35.442,4.291
+Dubai,y2080_ssp126,10,31.467,3.199
+Dubai,y2080_ssp126,11,26.403,2.677
+Dubai,y2080_ssp126,12,21.635,2.728
+Helsinki,y2080_ssp126,1,-4.673,3.737
+Helsinki,y2080_ssp126,2,-5.146,3.816
+Helsinki,y2080_ssp126,3,-1.424,2.759
+Helsinki,y2080_ssp126,4,4.531,2.464
+Helsinki,y2080_ssp126,5,11.437,2.45
+Helsinki,y2080_ssp126,6,16.652,2.154
+Helsinki,y2080_ssp126,7,19.027,2.286
+Helsinki,y2080_ssp126,8,17.657,2.186
+Helsinki,y2080_ssp126,9,13.348,2.062
+Helsinki,y2080_ssp126,10,7.845,2.162
+Helsinki,y2080_ssp126,11,2.068,2.681
+Helsinki,y2080_ssp126,12,-2.315,3.469
+Honolulu,y2080_ssp126,1,23.589,0.829
+Honolulu,y2080_ssp126,2,23.179,0.943
+Honolulu,y2080_ssp126,3,23.118,0.989
+Honolulu,y2080_ssp126,4,23.453,0.968
+Honolulu,y2080_ssp126,5,24.337,0.915
+Honolulu,y2080_ssp126,6,25.493,0.872
+Honolulu,y2080_ssp126,7,26.209,0.772
+Honolulu,y2080_ssp126,8,26.852,0.843
+Honolulu,y2080_ssp126,9,27.168,0.934
+Honolulu,y2080_ssp126,10,26.731,0.861
+Honolulu,y2080_ssp126,11,25.484,0.694
+Honolulu,y2080_ssp126,12,24.311,0.741
+Lagos,y2080_ssp126,1,27.996,1.728
+Lagos,y2080_ssp126,2,29.477,1.475
+Lagos,y2080_ssp126,3,30.551,1.167
+Lagos,y2080_ssp126,4,30.244,1.289
+Lagos,y2080_ssp126,5,29.488,1.277
+Lagos,y2080_ssp126,6,28.635,1.17
+Lagos,y2080_ssp126,7,27.637,1.135
+Lagos,y2080_ssp126,8,26.972,1.112
+Lagos,y2080_ssp126,9,27.238,1.296
+Lagos,y2080_ssp126,10,27.843,1.431
+Lagos,y2080_ssp126,11,28.263,1.359
+Lagos,y2080_ssp126,12,27.862,1.769
+London,y2080_ssp126,1,6.961,1.63
+London,y2080_ssp126,2,6.578,1.68
+London,y2080_ssp126,3,7.362,1.519
+London,y2080_ssp126,4,9.356,1.311
+London,y2080_ssp126,5,12.39,1.36
+London,y2080_ssp126,6,16.132,1.441
+London,y2080_ssp126,7,18.729,1.761
+London,y2080_ssp126,8,18.798,1.674
+London,y2080_ssp126,9,16.827,1.536
+London,y2080_ssp126,10,13.432,1.479
+London,y2080_ssp126,11,10.074,1.416
+London,y2080_ssp126,12,7.846,1.481
+Los Angeles,y2080_ssp126,1,10.456,1.999
+Los Angeles,y2080_ssp126,2,11.775,1.924
+Los Angeles,y2080_ssp126,3,13.342,2.085
+Los Angeles,y2080_ssp126,4,15.986,2.219
+Los Angeles,y2080_ssp126,5,19.497,2.606
+Los Angeles,y2080_ssp126,6,23.701,3.09
+Los Angeles,y2080_ssp126,7,27.289,2.807
+Los Angeles,y2080_ssp126,8,27.96,2.397
+Los Angeles,y2080_ssp126,9,25.716,1.962
+Los Angeles,y2080_ssp126,10,21.378,1.972
+Los Angeles,y2080_ssp126,11,15.161,2.163
+Los Angeles,y2080_ssp126,12,11.155,2.115
+Madrid,y2080_ssp126,1,6.331,2.448
+Madrid,y2080_ssp126,2,7.186,2.4
+Madrid,y2080_ssp126,3,9.23,2.269
+Madrid,y2080_ssp126,4,11.933,2.587
+Madrid,y2080_ssp126,5,15.826,2.744
+Madrid,y2080_ssp126,6,21.431,3.14
+Madrid,y2080_ssp126,7,26.026,3.363
+Madrid,y2080_ssp126,8,26.145,2.845
+Madrid,y2080_ssp126,9,21.621,2.337
+Madrid,y2080_ssp126,10,15.25,2.135
+Madrid,y2080_ssp126,11,10.069,2.216
+Madrid,y2080_ssp126,12,7.234,2.226
+Mexico City,y2080_ssp126,1,16.65,2.764
+Mexico City,y2080_ssp126,2,17.712,2.703
+Mexico City,y2080_ssp126,3,20.023,2.596
+Mexico City,y2080_ssp126,4,22.247,2.543
+Mexico City,y2080_ssp126,5,23.011,2.644
+Mexico City,y2080_ssp126,6,22.719,2.449
+Mexico City,y2080_ssp126,7,22.232,2.177
+Mexico City,y2080_ssp126,8,22.083,2.049
+Mexico City,y2080_ssp126,9,21.651,2.203
+Mexico City,y2080_ssp126,10,20.265,2.518
+Mexico City,y2080_ssp126,11,18.614,2.643
+Mexico City,y2080_ssp126,12,17.04,2.81
+Montreal,y2080_ssp126,1,-7.319,3.144
+Montreal,y2080_ssp126,2,-7.045,2.962
+Montreal,y2080_ssp126,3,-1.837,2.475
+Montreal,y2080_ssp126,4,5.955,2.613
+Montreal,y2080_ssp126,5,13.04,2.282
+Montreal,y2080_ssp126,6,18.582,1.796
+Montreal,y2080_ssp126,7,21.91,1.799
+Montreal,y2080_ssp126,8,21.316,2.193
+Montreal,y2080_ssp126,9,16.594,2.269
+Montreal,y2080_ssp126,10,9.827,2.157
+Montreal,y2080_ssp126,11,2.52,2.088
+Montreal,y2080_ssp126,12,-3.745,2.464
+Moscow,y2080_ssp126,1,-7.679,4.35
+Moscow,y2080_ssp126,2,-6.711,4.051
+Moscow,y2080_ssp126,3,-1.733,2.988
+Moscow,y2080_ssp126,4,6.511,2.982
+Moscow,y2080_ssp126,5,14.114,2.691
+Moscow,y2080_ssp126,6,18.875,2.3
+Moscow,y2080_ssp126,7,20.947,2.449
+Moscow,y2080_ssp126,8,19.614,2.494
+Moscow,y2080_ssp126,9,14.209,2.282
+Moscow,y2080_ssp126,10,7.377,2.204
+Moscow,y2080_ssp126,11,0.41,2.765
+Moscow,y2080_ssp126,12,-5.171,4.087
+Mumbai,y2080_ssp126,1,24.641,2.445
+Mumbai,y2080_ssp126,2,25.749,1.832
+Mumbai,y2080_ssp126,3,28.066,1.43
+Mumbai,y2080_ssp126,4,30.233,1.381
+Mumbai,y2080_ssp126,5,30.978,1.401
+Mumbai,y2080_ssp126,6,30.026,1.295
+Mumbai,y2080_ssp126,7,28.255,1.855
+Mumbai,y2080_ssp126,8,27.368,1.646
+Mumbai,y2080_ssp126,9,27.68,1.53
+Mumbai,y2080_ssp126,10,28.714,1.553
+Mumbai,y2080_ssp126,11,27.761,2.209
+Mumbai,y2080_ssp126,12,25.505,2.615
+Nairobi,y2080_ssp126,1,23.817,1.804
+Nairobi,y2080_ssp126,2,24.738,1.867
+Nairobi,y2080_ssp126,3,25.317,1.755
+Nairobi,y2080_ssp126,4,24.753,1.612
+Nairobi,y2080_ssp126,5,23.63,1.597
+Nairobi,y2080_ssp126,6,22.741,1.603
+Nairobi,y2080_ssp126,7,22.227,1.643
+Nairobi,y2080_ssp126,8,22.789,1.755
+Nairobi,y2080_ssp126,9,23.894,2.074
+Nairobi,y2080_ssp126,10,24.359,1.866
+Nairobi,y2080_ssp126,11,23.15,1.567
+Nairobi,y2080_ssp126,12,23.017,1.668
+New York,y2080_ssp126,1,2.354,3.09
+New York,y2080_ssp126,2,2.634,3.218
+New York,y2080_ssp126,3,6.27,2.769
+New York,y2080_ssp126,4,11.502,2.446
+New York,y2080_ssp126,5,16.754,1.926
+New York,y2080_ssp126,6,21.661,1.517
+New York,y2080_ssp126,7,25.083,1.502
+New York,y2080_ssp126,8,25.198,1.872
+New York,y2080_ssp126,9,21.806,2.02
+New York,y2080_ssp126,10,16.171,2.202
+New York,y2080_ssp126,11,10.061,2.377
+New York,y2080_ssp126,12,4.9,2.751
+Oslo,y2080_ssp126,1,-3.85,3.16
+Oslo,y2080_ssp126,2,-3.708,2.966
+Oslo,y2080_ssp126,3,-1.006,2.263
+Oslo,y2080_ssp126,4,3.481,1.718
+Oslo,y2080_ssp126,5,9.606,2.003
+Oslo,y2080_ssp126,6,14.615,2.096
+Oslo,y2080_ssp126,7,16.372,2.215
+Oslo,y2080_ssp126,8,14.906,1.983
+Oslo,y2080_ssp126,9,11.307,1.919
+Oslo,y2080_ssp126,10,6.514,2.147
+Oslo,y2080_ssp126,11,1.409,2.617
+Oslo,y2080_ssp126,12,-2.375,3.071
+Paris,y2080_ssp126,1,5.785,1.956
+Paris,y2080_ssp126,2,5.855,2.05
+Paris,y2080_ssp126,3,7.542,1.866
+Paris,y2080_ssp126,4,10.367,1.699
+Paris,y2080_ssp126,5,14.12,1.953
+Paris,y2080_ssp126,6,18.46,1.91
+Paris,y2080_ssp126,7,21.336,2.373
+Paris,y2080_ssp126,8,21.05,2.03
+Paris,y2080_ssp126,9,18.184,1.769
+Paris,y2080_ssp126,10,13.486,1.555
+Paris,y2080_ssp126,11,9.259,1.628
+Paris,y2080_ssp126,12,6.592,1.785
+Phoenix,y2080_ssp126,1,8.879,2.646
+Phoenix,y2080_ssp126,2,11.124,2.654
+Phoenix,y2080_ssp126,3,13.912,3.013
+Phoenix,y2080_ssp126,4,18.221,3.467
+Phoenix,y2080_ssp126,5,23.49,4.17
+Phoenix,y2080_ssp126,6,29.265,4.436
+Phoenix,y2080_ssp126,7,33.225,3.7
+Phoenix,y2080_ssp126,8,32.654,3.244
+Phoenix,y2080_ssp126,9,28.86,3.066
+Phoenix,y2080_ssp126,10,22.589,2.878
+Phoenix,y2080_ssp126,11,14.49,2.775
+Phoenix,y2080_ssp126,12,9.402,2.656
+Reykjavik,y2080_ssp126,1,0.944,2.781
+Reykjavik,y2080_ssp126,2,0.621,2.826
+Reykjavik,y2080_ssp126,3,1.02,2.816
+Reykjavik,y2080_ssp126,4,2.808,2.408
+Reykjavik,y2080_ssp126,5,5.564,1.765
+Reykjavik,y2080_ssp126,6,8.906,1.351
+Reykjavik,y2080_ssp126,7,10.959,1.397
+Reykjavik,y2080_ssp126,8,10.899,1.527
+Reykjavik,y2080_ssp126,9,8.693,1.753
+Reykjavik,y2080_ssp126,10,5.983,1.888
+Reykjavik,y2080_ssp126,11,3.425,2.18
+Reykjavik,y2080_ssp126,12,1.717,2.544
+Rome,y2080_ssp126,1,10.036,1.757
+Rome,y2080_ssp126,2,10.143,1.719
+Rome,y2080_ssp126,3,11.788,1.699
+Rome,y2080_ssp126,4,14.53,1.772
+Rome,y2080_ssp126,5,18.698,2.151
+Rome,y2080_ssp126,6,23.99,2.778
+Rome,y2080_ssp126,7,28.048,3.208
+Rome,y2080_ssp126,8,28.112,2.776
+Rome,y2080_ssp126,9,24.18,1.988
+Rome,y2080_ssp126,10,18.828,1.652
+Rome,y2080_ssp126,11,14.339,1.828
+Rome,y2080_ssp126,12,11.165,1.733
+San Diego,y2080_ssp126,1,13.152,2.056
+San Diego,y2080_ssp126,2,14.367,1.789
+San Diego,y2080_ssp126,3,15.855,1.865
+San Diego,y2080_ssp126,4,18.183,2.084
+San Diego,y2080_ssp126,5,21.091,2.762
+San Diego,y2080_ssp126,6,24.545,3.319
+San Diego,y2080_ssp126,7,27.727,3.111
+San Diego,y2080_ssp126,8,28.753,2.686
+San Diego,y2080_ssp126,9,27.156,2.166
+San Diego,y2080_ssp126,10,23.619,1.726
+San Diego,y2080_ssp126,11,17.973,1.924
+San Diego,y2080_ssp126,12,13.953,2.11
+Sao Paulo,y2080_ssp126,1,24.579,1.427
+Sao Paulo,y2080_ssp126,2,24.662,1.296
+Sao Paulo,y2080_ssp126,3,23.973,1.395
+Sao Paulo,y2080_ssp126,4,22.622,1.45
+Sao Paulo,y2080_ssp126,5,20.535,1.421
+Sao Paulo,y2080_ssp126,6,18.693,1.486
+Sao Paulo,y2080_ssp126,7,18.096,1.619
+Sao Paulo,y2080_ssp126,8,19.296,1.581
+Sao Paulo,y2080_ssp126,9,21.481,1.884
+Sao Paulo,y2080_ssp126,10,22.828,2.046
+Sao Paulo,y2080_ssp126,11,23.477,1.908
+Sao Paulo,y2080_ssp126,12,24.005,1.629
+Seoul,y2080_ssp126,1,-0.219,2.562
+Seoul,y2080_ssp126,2,1.0,2.375
+Seoul,y2080_ssp126,3,5.29,2.195
+Seoul,y2080_ssp126,4,10.855,2.234
+Seoul,y2080_ssp126,5,16.083,2.186
+Seoul,y2080_ssp126,6,21.193,2.1
+Seoul,y2080_ssp126,7,24.927,2.245
+Seoul,y2080_ssp126,8,26.04,2.291
+Seoul,y2080_ssp126,9,22.268,2.098
+Seoul,y2080_ssp126,10,15.726,1.646
+Seoul,y2080_ssp126,11,9.036,1.936
+Seoul,y2080_ssp126,12,2.934,2.259
+Singapore,y2080_ssp126,1,27.379,1.21
+Singapore,y2080_ssp126,2,27.416,1.187
+Singapore,y2080_ssp126,3,28.07,1.211
+Singapore,y2080_ssp126,4,28.85,1.295
+Singapore,y2080_ssp126,5,29.282,1.333
+Singapore,y2080_ssp126,6,29.235,1.342
+Singapore,y2080_ssp126,7,28.849,1.308
+Singapore,y2080_ssp126,8,28.654,1.313
+Singapore,y2080_ssp126,9,28.598,1.308
+Singapore,y2080_ssp126,10,28.451,1.347
+Singapore,y2080_ssp126,11,28.219,1.323
+Singapore,y2080_ssp126,12,27.793,1.27
+Stockholm,y2080_ssp126,1,-0.342,2.329
+Stockholm,y2080_ssp126,2,-0.896,2.588
+Stockholm,y2080_ssp126,3,0.957,2.283
+Stockholm,y2080_ssp126,4,4.84,1.802
+Stockholm,y2080_ssp126,5,10.15,1.974
+Stockholm,y2080_ssp126,6,15.352,2.092
+Stockholm,y2080_ssp126,7,18.333,2.205
+Stockholm,y2080_ssp126,8,17.631,1.929
+Stockholm,y2080_ssp126,9,14.193,1.681
+Stockholm,y2080_ssp126,10,9.572,1.55
+Stockholm,y2080_ssp126,11,4.9,1.715
+Stockholm,y2080_ssp126,12,1.542,2.113
+Sydney,y2080_ssp126,1,23.755,1.189
+Sydney,y2080_ssp126,2,23.827,1.244
+Sydney,y2080_ssp126,3,22.164,1.159
+Sydney,y2080_ssp126,4,19.572,1.395
+Sydney,y2080_ssp126,5,16.383,1.684
+Sydney,y2080_ssp126,6,13.788,1.82
+Sydney,y2080_ssp126,7,12.656,1.796
+Sydney,y2080_ssp126,8,13.417,1.635
+Sydney,y2080_ssp126,9,15.563,1.554
+Sydney,y2080_ssp126,10,18.192,1.35
+Sydney,y2080_ssp126,11,20.247,1.239
+Sydney,y2080_ssp126,12,22.325,1.13
+Tokyo,y2080_ssp126,1,8.268,3.137
+Tokyo,y2080_ssp126,2,7.96,3.08
+Tokyo,y2080_ssp126,3,10.027,2.698
+Tokyo,y2080_ssp126,4,13.877,2.079
+Tokyo,y2080_ssp126,5,17.872,1.893
+Tokyo,y2080_ssp126,6,21.897,1.703
+Tokyo,y2080_ssp126,7,25.287,1.599
+Tokyo,y2080_ssp126,8,26.518,1.528
+Tokyo,y2080_ssp126,9,24.469,1.921
+Tokyo,y2080_ssp126,10,19.762,2.243
+Tokyo,y2080_ssp126,11,15.097,2.476
+Tokyo,y2080_ssp126,12,10.892,2.741
+Toronto,y2080_ssp126,1,-3.558,3.293
+Toronto,y2080_ssp126,2,-3.426,3.414
+Toronto,y2080_ssp126,3,1.275,2.709
+Toronto,y2080_ssp126,4,8.467,2.691
+Toronto,y2080_ssp126,5,15.169,2.207
+Toronto,y2080_ssp126,6,20.591,1.945
+Toronto,y2080_ssp126,7,24.098,2.159
+Toronto,y2080_ssp126,8,23.923,2.573
+Toronto,y2080_ssp126,9,19.389,2.522
+Toronto,y2080_ssp126,10,12.648,2.33
+Toronto,y2080_ssp126,11,5.662,2.253
+Toronto,y2080_ssp126,12,-0.212,2.656
+Anchorage,y2080_ssp245,1,-6.619,4.425
+Anchorage,y2080_ssp245,2,-5.955,4.602
+Anchorage,y2080_ssp245,3,-3.674,3.571
+Anchorage,y2080_ssp245,4,0.304,2.294
+Anchorage,y2080_ssp245,5,5.456,2.043
+Anchorage,y2080_ssp245,6,11.355,2.147
+Anchorage,y2080_ssp245,7,14.439,2.489
+Anchorage,y2080_ssp245,8,13.629,2.556
+Anchorage,y2080_ssp245,9,9.27,2.622
+Anchorage,y2080_ssp245,10,3.585,2.701
+Anchorage,y2080_ssp245,11,-1.919,3.398
+Anchorage,y2080_ssp245,12,-5.034,4.118
+Bangkok,y2080_ssp245,1,24.98,2.139
+Bangkok,y2080_ssp245,2,27.108,1.948
+Bangkok,y2080_ssp245,3,30.246,1.474
+Bangkok,y2080_ssp245,4,32.125,1.607
+Bangkok,y2080_ssp245,5,31.794,2.217
+Bangkok,y2080_ssp245,6,30.074,2.041
+Bangkok,y2080_ssp245,7,28.879,1.549
+Bangkok,y2080_ssp245,8,28.625,1.423
+Bangkok,y2080_ssp245,9,28.378,1.458
+Bangkok,y2080_ssp245,10,27.875,2.006
+Bangkok,y2080_ssp245,11,26.899,2.13
+Bangkok,y2080_ssp245,12,25.355,2.173
+Beijing,y2080_ssp245,1,-4.983,2.849
+Beijing,y2080_ssp245,2,-2.395,3.503
+Beijing,y2080_ssp245,3,4.253,3.151
+Beijing,y2080_ssp245,4,11.641,2.454
+Beijing,y2080_ssp245,5,18.668,1.861
+Beijing,y2080_ssp245,6,24.609,1.657
+Beijing,y2080_ssp245,7,27.648,1.841
+Beijing,y2080_ssp245,8,26.816,2.069
+Beijing,y2080_ssp245,9,21.246,2.141
+Beijing,y2080_ssp245,10,13.048,2.211
+Beijing,y2080_ssp245,11,4.352,2.278
+Beijing,y2080_ssp245,12,-2.411,2.634
+Berlin,y2080_ssp245,1,2.854,2.293
+Berlin,y2080_ssp245,2,3.139,2.515
+Berlin,y2080_ssp245,3,5.469,2.223
+Berlin,y2080_ssp245,4,9.33,1.765
+Berlin,y2080_ssp245,5,13.989,1.711
+Berlin,y2080_ssp245,6,19.22,1.933
+Berlin,y2080_ssp245,7,21.605,2.1
+Berlin,y2080_ssp245,8,21.052,2.194
+Berlin,y2080_ssp245,9,17.297,1.967
+Berlin,y2080_ssp245,10,12.368,1.843
+Berlin,y2080_ssp245,11,7.458,2.054
+Berlin,y2080_ssp245,12,4.437,2.008
+Bogota,y2080_ssp245,1,24.694,2.919
+Bogota,y2080_ssp245,2,25.482,2.938
+Bogota,y2080_ssp245,3,25.764,2.722
+Bogota,y2080_ssp245,4,24.92,2.249
+Bogota,y2080_ssp245,5,23.936,2.043
+Bogota,y2080_ssp245,6,23.309,1.978
+Bogota,y2080_ssp245,7,23.162,1.995
+Bogota,y2080_ssp245,8,23.633,2.142
+Bogota,y2080_ssp245,9,24.319,2.365
+Bogota,y2080_ssp245,10,24.539,2.862
+Bogota,y2080_ssp245,11,24.268,3.109
+Bogota,y2080_ssp245,12,24.208,2.922
+Buenos Aires,y2080_ssp245,1,27.217,1.694
+Buenos Aires,y2080_ssp245,2,27.064,2.013
+Buenos Aires,y2080_ssp245,3,24.402,1.884
+Buenos Aires,y2080_ssp245,4,19.938,1.933
+Buenos Aires,y2080_ssp245,5,15.241,1.512
+Buenos Aires,y2080_ssp245,6,12.262,1.586
+Buenos Aires,y2080_ssp245,7,11.559,1.638
+Buenos Aires,y2080_ssp245,8,13.184,1.816
+Buenos Aires,y2080_ssp245,9,15.794,1.679
+Buenos Aires,y2080_ssp245,10,18.705,1.407
+Buenos Aires,y2080_ssp245,11,21.978,1.357
+Buenos Aires,y2080_ssp245,12,25.116,1.573
+Cairo,y2080_ssp245,1,14.865,1.104
+Cairo,y2080_ssp245,2,15.808,1.276
+Cairo,y2080_ssp245,3,18.433,1.453
+Cairo,y2080_ssp245,4,21.684,1.352
+Cairo,y2080_ssp245,5,25.273,1.585
+Cairo,y2080_ssp245,6,29.282,1.747
+Cairo,y2080_ssp245,7,31.522,1.784
+Cairo,y2080_ssp245,8,31.681,1.56
+Cairo,y2080_ssp245,9,29.057,1.36
+Cairo,y2080_ssp245,10,25.466,1.28
+Cairo,y2080_ssp245,11,20.765,1.269
+Cairo,y2080_ssp245,12,16.502,1.188
+Cape Town,y2080_ssp245,1,22.866,1.07
+Cape Town,y2080_ssp245,2,23.27,0.97
+Cape Town,y2080_ssp245,3,22.594,0.871
+Cape Town,y2080_ssp245,4,20.713,0.928
+Cape Town,y2080_ssp245,5,18.345,1.163
+Cape Town,y2080_ssp245,6,16.525,1.241
+Cape Town,y2080_ssp245,7,15.669,1.211
+Cape Town,y2080_ssp245,8,15.665,1.246
+Cape Town,y2080_ssp245,9,16.571,1.276
+Cape Town,y2080_ssp245,10,18.163,1.155
+Cape Town,y2080_ssp245,11,20.003,1.046
+Cape Town,y2080_ssp245,12,21.711,1.065
+Chicago,y2080_ssp245,1,-2.194,2.917
+Chicago,y2080_ssp245,2,-0.744,3.091
+Chicago,y2080_ssp245,3,4.059,2.757
+Chicago,y2080_ssp245,4,11.57,2.506
+Chicago,y2080_ssp245,5,18.067,2.362
+Chicago,y2080_ssp245,6,23.852,2.219
+Chicago,y2080_ssp245,7,28.045,2.779
+Chicago,y2080_ssp245,8,28.191,3.389
+Chicago,y2080_ssp245,9,23.318,3.205
+Chicago,y2080_ssp245,10,15.134,2.849
+Chicago,y2080_ssp245,11,7.169,2.6
+Chicago,y2080_ssp245,12,0.661,2.519
+Delhi,y2080_ssp245,1,14.661,3.629
+Delhi,y2080_ssp245,2,17.664,3.814
+Delhi,y2080_ssp245,3,23.23,3.803
+Delhi,y2080_ssp245,4,29.012,3.422
+Delhi,y2080_ssp245,5,33.833,3.393
+Delhi,y2080_ssp245,6,37.05,3.392
+Delhi,y2080_ssp245,7,35.91,3.479
+Delhi,y2080_ssp245,8,33.223,3.359
+Delhi,y2080_ssp245,9,32.05,3.456
+Delhi,y2080_ssp245,10,27.578,3.071
+Delhi,y2080_ssp245,11,21.147,3.168
+Delhi,y2080_ssp245,12,15.762,3.282
+Dubai,y2080_ssp245,1,20.581,2.522
+Dubai,y2080_ssp245,2,21.223,2.145
+Dubai,y2080_ssp245,3,24.176,1.636
+Dubai,y2080_ssp245,4,28.04,1.875
+Dubai,y2080_ssp245,5,32.16,1.68
+Dubai,y2080_ssp245,6,36.006,1.69
+Dubai,y2080_ssp245,7,37.287,1.826
+Dubai,y2080_ssp245,8,37.047,1.596
+Dubai,y2080_ssp245,9,35.083,1.302
+Dubai,y2080_ssp245,10,31.715,1.471
+Dubai,y2080_ssp245,11,27.24,2.377
+Dubai,y2080_ssp245,12,22.604,2.806
+Helsinki,y2080_ssp245,1,-3.192,3.723
+Helsinki,y2080_ssp245,2,-3.372,3.817
+Helsinki,y2080_ssp245,3,-0.142,2.746
+Helsinki,y2080_ssp245,4,5.269,2.297
+Helsinki,y2080_ssp245,5,11.753,2.21
+Helsinki,y2080_ssp245,6,17.177,2.026
+Helsinki,y2080_ssp245,7,19.712,2.108
+Helsinki,y2080_ssp245,8,18.491,2.25
+Helsinki,y2080_ssp245,9,14.163,2.23
+Helsinki,y2080_ssp245,10,8.814,2.283
+Helsinki,y2080_ssp245,11,3.603,2.971
+Helsinki,y2080_ssp245,12,-0.862,3.548
+Honolulu,y2080_ssp245,1,24.238,0.865
+Honolulu,y2080_ssp245,2,23.676,0.929
+Honolulu,y2080_ssp245,3,23.582,0.966
+Honolulu,y2080_ssp245,4,23.935,0.98
+Honolulu,y2080_ssp245,5,24.843,0.869
+Honolulu,y2080_ssp245,6,26.044,0.843
+Honolulu,y2080_ssp245,7,26.877,0.802
+Honolulu,y2080_ssp245,8,27.64,0.908
+Honolulu,y2080_ssp245,9,28.039,1.074
+Honolulu,y2080_ssp245,10,27.577,0.953
+Honolulu,y2080_ssp245,11,26.346,0.839
+Honolulu,y2080_ssp245,12,25.02,0.826
+Lagos,y2080_ssp245,1,29.122,1.757
+Lagos,y2080_ssp245,2,30.437,1.412
+Lagos,y2080_ssp245,3,31.658,1.225
+Lagos,y2080_ssp245,4,31.436,1.42
+Lagos,y2080_ssp245,5,30.552,1.372
+Lagos,y2080_ssp245,6,29.669,1.264
+Lagos,y2080_ssp245,7,28.67,1.267
+Lagos,y2080_ssp245,8,27.944,1.307
+Lagos,y2080_ssp245,9,28.274,1.524
+Lagos,y2080_ssp245,10,28.937,1.568
+Lagos,y2080_ssp245,11,29.364,1.478
+Lagos,y2080_ssp245,12,29.038,1.774
+London,y2080_ssp245,1,7.299,1.636
+London,y2080_ssp245,2,6.919,1.694
+London,y2080_ssp245,3,7.748,1.582
+London,y2080_ssp245,4,9.798,1.234
+London,y2080_ssp245,5,12.747,1.154
+London,y2080_ssp245,6,16.835,1.403
+London,y2080_ssp245,7,19.59,1.646
+London,y2080_ssp245,8,19.788,1.914
+London,y2080_ssp245,9,17.647,1.767
+London,y2080_ssp245,10,14.229,1.559
+London,y2080_ssp245,11,10.806,1.582
+London,y2080_ssp245,12,8.635,1.502
+Los Angeles,y2080_ssp245,1,10.941,2.011
+Los Angeles,y2080_ssp245,2,12.075,1.861
+Los Angeles,y2080_ssp245,3,13.614,1.693
+Los Angeles,y2080_ssp245,4,16.061,1.595
+Los Angeles,y2080_ssp245,5,19.667,1.571
+Los Angeles,y2080_ssp245,6,23.415,1.639
+Los Angeles,y2080_ssp245,7,27.218,1.763
+Los Angeles,y2080_ssp245,8,28.277,1.65
+Los Angeles,y2080_ssp245,9,26.247,1.511
+Los Angeles,y2080_ssp245,10,22.251,1.671
+Los Angeles,y2080_ssp245,11,15.668,2.093
+Los Angeles,y2080_ssp245,12,11.64,2.042
+Madrid,y2080_ssp245,1,6.742,2.501
+Madrid,y2080_ssp245,2,7.653,2.486
+Madrid,y2080_ssp245,3,9.867,2.648
+Madrid,y2080_ssp245,4,12.478,2.457
+Madrid,y2080_ssp245,5,16.273,2.292
+Madrid,y2080_ssp245,6,21.957,2.17
+Madrid,y2080_ssp245,7,26.701,2.148
+Madrid,y2080_ssp245,8,27.101,1.943
+Madrid,y2080_ssp245,9,22.767,2.144
+Madrid,y2080_ssp245,10,16.282,2.36
+Madrid,y2080_ssp245,11,10.905,2.468
+Madrid,y2080_ssp245,12,7.829,2.35
+Mexico City,y2080_ssp245,1,17.37,3.046
+Mexico City,y2080_ssp245,2,18.449,2.859
+Mexico City,y2080_ssp245,3,20.708,2.659
+Mexico City,y2080_ssp245,4,23.033,2.555
+Mexico City,y2080_ssp245,5,23.859,2.615
+Mexico City,y2080_ssp245,6,23.654,2.548
+Mexico City,y2080_ssp245,7,23.223,2.3
+Mexico City,y2080_ssp245,8,23.066,2.161
+Mexico City,y2080_ssp245,9,22.573,2.397
+Mexico City,y2080_ssp245,10,21.153,2.733
+Mexico City,y2080_ssp245,11,19.554,2.896
+Mexico City,y2080_ssp245,12,17.839,3.038
+Montreal,y2080_ssp245,1,-5.994,2.885
+Montreal,y2080_ssp245,2,-5.171,3.057
+Montreal,y2080_ssp245,3,-0.599,2.816
+Montreal,y2080_ssp245,4,7.178,2.474
+Montreal,y2080_ssp245,5,13.817,2.161
+Montreal,y2080_ssp245,6,19.583,1.926
+Montreal,y2080_ssp245,7,23.421,2.279
+Montreal,y2080_ssp245,8,22.872,2.852
+Montreal,y2080_ssp245,9,18.345,2.708
+Montreal,y2080_ssp245,10,11.019,2.442
+Montreal,y2080_ssp245,11,3.816,2.308
+Montreal,y2080_ssp245,12,-2.477,2.492
+Moscow,y2080_ssp245,1,-5.696,4.074
+Moscow,y2080_ssp245,2,-4.766,4.095
+Moscow,y2080_ssp245,3,0.103,2.898
+Moscow,y2080_ssp245,4,7.34,2.762
+Moscow,y2080_ssp245,5,14.625,2.478
+Moscow,y2080_ssp245,6,19.639,2.542
+Moscow,y2080_ssp245,7,21.794,2.473
+Moscow,y2080_ssp245,8,20.624,2.763
+Moscow,y2080_ssp245,9,15.076,2.37
+Moscow,y2080_ssp245,10,8.214,2.475
+Moscow,y2080_ssp245,11,2.029,3.021
+Moscow,y2080_ssp245,12,-2.963,3.368
+Mumbai,y2080_ssp245,1,25.521,2.614
+Mumbai,y2080_ssp245,2,26.595,1.88
+Mumbai,y2080_ssp245,3,28.687,1.386
+Mumbai,y2080_ssp245,4,30.896,1.399
+Mumbai,y2080_ssp245,5,31.712,1.429
+Mumbai,y2080_ssp245,6,31.076,1.37
+Mumbai,y2080_ssp245,7,29.318,2.039
+Mumbai,y2080_ssp245,8,28.321,1.82
+Mumbai,y2080_ssp245,9,28.671,1.651
+Mumbai,y2080_ssp245,10,29.673,1.691
+Mumbai,y2080_ssp245,11,28.696,2.456
+Mumbai,y2080_ssp245,12,26.442,2.986
+Nairobi,y2080_ssp245,1,24.784,1.913
+Nairobi,y2080_ssp245,2,25.822,1.983
+Nairobi,y2080_ssp245,3,26.352,1.866
+Nairobi,y2080_ssp245,4,25.689,1.757
+Nairobi,y2080_ssp245,5,24.568,1.726
+Nairobi,y2080_ssp245,6,23.664,1.621
+Nairobi,y2080_ssp245,7,23.116,1.635
+Nairobi,y2080_ssp245,8,23.639,1.603
+Nairobi,y2080_ssp245,9,24.538,1.663
+Nairobi,y2080_ssp245,10,24.928,1.576
+Nairobi,y2080_ssp245,11,23.898,1.622
+Nairobi,y2080_ssp245,12,23.869,1.765
+New York,y2080_ssp245,1,3.528,3.101
+New York,y2080_ssp245,2,3.98,3.163
+New York,y2080_ssp245,3,7.124,2.995
+New York,y2080_ssp245,4,12.523,2.404
+New York,y2080_ssp245,5,17.636,2.064
+New York,y2080_ssp245,6,22.587,1.772
+New York,y2080_ssp245,7,26.342,1.911
+New York,y2080_ssp245,8,26.673,2.225
+New York,y2080_ssp245,9,23.444,2.356
+New York,y2080_ssp245,10,17.657,2.378
+New York,y2080_ssp245,11,11.354,2.763
+New York,y2080_ssp245,12,6.09,3.112
+Oslo,y2080_ssp245,1,-3.094,3.253
+Oslo,y2080_ssp245,2,-2.823,3.123
+Oslo,y2080_ssp245,3,-0.287,2.337
+Oslo,y2080_ssp245,4,4.207,1.581
+Oslo,y2080_ssp245,5,9.939,1.56
+Oslo,y2080_ssp245,6,15.105,1.839
+Oslo,y2080_ssp245,7,16.974,1.987
+Oslo,y2080_ssp245,8,15.757,2.143
+Oslo,y2080_ssp245,9,12.02,2.064
+Oslo,y2080_ssp245,10,7.23,2.083
+Oslo,y2080_ssp245,11,2.42,2.703
+Oslo,y2080_ssp245,12,-1.487,3.051
+Paris,y2080_ssp245,1,6.349,1.794
+Paris,y2080_ssp245,2,6.484,2.078
+Paris,y2080_ssp245,3,8.148,2.011
+Paris,y2080_ssp245,4,10.871,1.729
+Paris,y2080_ssp245,5,14.307,1.64
+Paris,y2080_ssp245,6,19.37,1.981
+Paris,y2080_ssp245,7,22.451,2.132
+Paris,y2080_ssp245,8,22.445,2.423
+Paris,y2080_ssp245,9,19.224,2.094
+Paris,y2080_ssp245,10,14.52,1.744
+Paris,y2080_ssp245,11,10.278,1.642
+Paris,y2080_ssp245,12,7.754,1.556
+Phoenix,y2080_ssp245,1,9.31,2.623
+Phoenix,y2080_ssp245,2,11.424,2.552
+Phoenix,y2080_ssp245,3,14.028,2.577
+Phoenix,y2080_ssp245,4,18.11,2.564
+Phoenix,y2080_ssp245,5,23.441,2.449
+Phoenix,y2080_ssp245,6,28.793,2.174
+Phoenix,y2080_ssp245,7,33.261,2.066
+Phoenix,y2080_ssp245,8,33.176,2.093
+Phoenix,y2080_ssp245,9,29.563,2.239
+Phoenix,y2080_ssp245,10,23.578,2.439
+Phoenix,y2080_ssp245,11,15.062,2.584
+Phoenix,y2080_ssp245,12,9.972,2.606
+Reykjavik,y2080_ssp245,1,1.505,2.419
+Reykjavik,y2080_ssp245,2,0.895,2.767
+Reykjavik,y2080_ssp245,3,1.583,2.625
+Reykjavik,y2080_ssp245,4,3.407,2.195
+Reykjavik,y2080_ssp245,5,6.209,1.716
+Reykjavik,y2080_ssp245,6,9.556,1.379
+Reykjavik,y2080_ssp245,7,11.665,1.467
+Reykjavik,y2080_ssp245,8,11.604,1.666
+Reykjavik,y2080_ssp245,9,9.396,1.848
+Reykjavik,y2080_ssp245,10,6.548,1.922
+Reykjavik,y2080_ssp245,11,3.867,2.131
+Reykjavik,y2080_ssp245,12,2.113,2.337
+Rome,y2080_ssp245,1,10.597,1.744
+Rome,y2080_ssp245,2,10.788,1.765
+Rome,y2080_ssp245,3,12.296,1.602
+Rome,y2080_ssp245,4,14.814,1.459
+Rome,y2080_ssp245,5,18.834,1.687
+Rome,y2080_ssp245,6,24.455,1.937
+Rome,y2080_ssp245,7,28.548,1.956
+Rome,y2080_ssp245,8,28.711,1.624
+Rome,y2080_ssp245,9,24.907,1.813
+Rome,y2080_ssp245,10,19.744,1.633
+Rome,y2080_ssp245,11,15.231,1.825
+Rome,y2080_ssp245,12,12.397,1.717
+San Diego,y2080_ssp245,1,13.673,2.147
+San Diego,y2080_ssp245,2,14.69,1.768
+San Diego,y2080_ssp245,3,16.098,1.494
+San Diego,y2080_ssp245,4,18.15,1.367
+San Diego,y2080_ssp245,5,21.097,1.645
+San Diego,y2080_ssp245,6,24.121,1.872
+San Diego,y2080_ssp245,7,27.522,2.089
+San Diego,y2080_ssp245,8,28.775,1.767
+San Diego,y2080_ssp245,9,27.528,1.806
+San Diego,y2080_ssp245,10,24.392,1.575
+San Diego,y2080_ssp245,11,18.548,1.912
+San Diego,y2080_ssp245,12,14.535,2.122
+Sao Paulo,y2080_ssp245,1,25.593,1.735
+Sao Paulo,y2080_ssp245,2,25.829,1.527
+Sao Paulo,y2080_ssp245,3,25.024,1.587
+Sao Paulo,y2080_ssp245,4,23.683,1.718
+Sao Paulo,y2080_ssp245,5,21.569,1.756
+Sao Paulo,y2080_ssp245,6,19.632,1.845
+Sao Paulo,y2080_ssp245,7,19.08,1.772
+Sao Paulo,y2080_ssp245,8,20.271,1.81
+Sao Paulo,y2080_ssp245,9,22.389,2.16
+Sao Paulo,y2080_ssp245,10,23.699,2.38
+Sao Paulo,y2080_ssp245,11,24.354,2.13
+Sao Paulo,y2080_ssp245,12,24.925,1.957
+Seoul,y2080_ssp245,1,1.148,2.537
+Seoul,y2080_ssp245,2,2.095,2.502
+Seoul,y2080_ssp245,3,6.187,2.29
+Seoul,y2080_ssp245,4,11.251,2.042
+Seoul,y2080_ssp245,5,16.436,1.905
+Seoul,y2080_ssp245,6,21.765,2.188
+Seoul,y2080_ssp245,7,25.711,2.397
+Seoul,y2080_ssp245,8,26.946,2.507
+Seoul,y2080_ssp245,9,23.364,2.464
+Seoul,y2080_ssp245,10,16.999,1.96
+Seoul,y2080_ssp245,11,10.324,2.006
+Seoul,y2080_ssp245,12,4.244,2.269
+Singapore,y2080_ssp245,1,28.277,1.354
+Singapore,y2080_ssp245,2,28.36,1.322
+Singapore,y2080_ssp245,3,29.027,1.41
+Singapore,y2080_ssp245,4,29.911,1.49
+Singapore,y2080_ssp245,5,30.356,1.537
+Singapore,y2080_ssp245,6,30.238,1.498
+Singapore,y2080_ssp245,7,29.876,1.464
+Singapore,y2080_ssp245,8,29.686,1.46
+Singapore,y2080_ssp245,9,29.601,1.457
+Singapore,y2080_ssp245,10,29.463,1.538
+Singapore,y2080_ssp245,11,29.255,1.483
+Singapore,y2080_ssp245,12,28.727,1.368
+Stockholm,y2080_ssp245,1,0.587,2.156
+Stockholm,y2080_ssp245,2,0.151,2.493
+Stockholm,y2080_ssp245,3,1.866,2.12
+Stockholm,y2080_ssp245,4,5.488,1.692
+Stockholm,y2080_ssp245,5,10.421,1.684
+Stockholm,y2080_ssp245,6,15.762,1.835
+Stockholm,y2080_ssp245,7,18.827,1.825
+Stockholm,y2080_ssp245,8,18.325,1.858
+Stockholm,y2080_ssp245,9,14.898,1.736
+Stockholm,y2080_ssp245,10,10.292,1.617
+Stockholm,y2080_ssp245,11,5.865,1.909
+Stockholm,y2080_ssp245,12,2.451,1.995
+Sydney,y2080_ssp245,1,24.824,1.142
+Sydney,y2080_ssp245,2,24.66,1.319
+Sydney,y2080_ssp245,3,23.089,1.243
+Sydney,y2080_ssp245,4,20.493,1.528
+Sydney,y2080_ssp245,5,17.231,1.727
+Sydney,y2080_ssp245,6,14.386,1.836
+Sydney,y2080_ssp245,7,13.276,1.813
+Sydney,y2080_ssp245,8,13.956,1.681
+Sydney,y2080_ssp245,9,16.375,1.573
+Sydney,y2080_ssp245,10,19.02,1.458
+Sydney,y2080_ssp245,11,21.096,1.261
+Sydney,y2080_ssp245,12,23.314,1.2
+Tokyo,y2080_ssp245,1,9.361,3.309
+Tokyo,y2080_ssp245,2,9.073,3.316
+Tokyo,y2080_ssp245,3,11.08,3.002
+Tokyo,y2080_ssp245,4,14.771,2.325
+Tokyo,y2080_ssp245,5,18.68,2.016
+Tokyo,y2080_ssp245,6,22.815,1.856
+Tokyo,y2080_ssp245,7,26.315,1.633
+Tokyo,y2080_ssp245,8,27.633,1.556
+Tokyo,y2080_ssp245,9,25.661,2.206
+Tokyo,y2080_ssp245,10,21.021,2.473
+Tokyo,y2080_ssp245,11,16.286,2.726
+Tokyo,y2080_ssp245,12,12.016,3.078
+Toronto,y2080_ssp245,1,-2.781,3.007
+Toronto,y2080_ssp245,2,-2.234,3.314
+Toronto,y2080_ssp245,3,2.086,2.95
+Toronto,y2080_ssp245,4,9.539,2.534
+Toronto,y2080_ssp245,5,16.013,2.343
+Toronto,y2080_ssp245,6,21.806,2.234
+Toronto,y2080_ssp245,7,25.772,2.725
+Toronto,y2080_ssp245,8,25.656,3.19
+Toronto,y2080_ssp245,9,21.283,2.996
+Toronto,y2080_ssp245,10,13.831,2.659
+Toronto,y2080_ssp245,11,6.667,2.48
+Toronto,y2080_ssp245,12,0.595,2.504
+Anchorage,y2080_ssp585,1,-3.42,4.484
+Anchorage,y2080_ssp585,2,-2.962,4.163
+Anchorage,y2080_ssp585,3,-0.901,3.611
+Anchorage,y2080_ssp585,4,2.841,2.873
+Anchorage,y2080_ssp585,5,8.582,2.755
+Anchorage,y2080_ssp585,6,14.491,2.984
+Anchorage,y2080_ssp585,7,17.299,3.082
+Anchorage,y2080_ssp585,8,16.444,3.279
+Anchorage,y2080_ssp585,9,12.039,3.08
+Anchorage,y2080_ssp585,10,5.713,3.013
+Anchorage,y2080_ssp585,11,0.343,3.612
+Anchorage,y2080_ssp585,12,-2.657,4.356
+Bangkok,y2080_ssp585,1,27.101,2.541
+Bangkok,y2080_ssp585,2,29.355,2.226
+Bangkok,y2080_ssp585,3,32.335,1.89
+Bangkok,y2080_ssp585,4,34.025,2.147
+Bangkok,y2080_ssp585,5,33.818,2.678
+Bangkok,y2080_ssp585,6,31.934,2.414
+Bangkok,y2080_ssp585,7,30.718,1.901
+Bangkok,y2080_ssp585,8,30.361,1.773
+Bangkok,y2080_ssp585,9,30.013,1.91
+Bangkok,y2080_ssp585,10,29.728,2.3
+Bangkok,y2080_ssp585,11,28.766,2.531
+Bangkok,y2080_ssp585,12,27.284,2.597
+Beijing,y2080_ssp585,1,-2.029,2.509
+Beijing,y2080_ssp585,2,0.497,2.673
+Beijing,y2080_ssp585,3,6.93,2.333
+Beijing,y2080_ssp585,4,14.194,2.43
+Beijing,y2080_ssp585,5,21.338,2.056
+Beijing,y2080_ssp585,6,27.185,1.943
+Beijing,y2080_ssp585,7,30.105,2.162
+Beijing,y2080_ssp585,8,29.574,2.4
+Beijing,y2080_ssp585,9,24.339,2.479
+Beijing,y2080_ssp585,10,16.057,2.308
+Beijing,y2080_ssp585,11,7.049,2.252
+Beijing,y2080_ssp585,12,0.316,2.25
+Berlin,y2080_ssp585,1,4.941,2.438
+Berlin,y2080_ssp585,2,5.436,2.405
+Berlin,y2080_ssp585,3,7.51,2.136
+Berlin,y2080_ssp585,4,11.496,2.422
+Berlin,y2080_ssp585,5,16.582,2.287
+Berlin,y2080_ssp585,6,22.019,2.527
+Berlin,y2080_ssp585,7,25.007,2.98
+Berlin,y2080_ssp585,8,24.39,2.824
+Berlin,y2080_ssp585,9,20.305,2.503
+Berlin,y2080_ssp585,10,14.882,2.248
+Berlin,y2080_ssp585,11,9.634,2.182
+Berlin,y2080_ssp585,12,6.228,2.359
+Bogota,y2080_ssp585,1,26.885,3.316
+Bogota,y2080_ssp585,2,27.572,3.335
+Bogota,y2080_ssp585,3,27.702,3.117
+Bogota,y2080_ssp585,4,26.712,2.723
+Bogota,y2080_ssp585,5,25.717,2.453
+Bogota,y2080_ssp585,6,25.179,2.343
+Bogota,y2080_ssp585,7,25.094,2.418
+Bogota,y2080_ssp585,8,25.741,2.61
+Bogota,y2080_ssp585,9,26.503,2.953
+Bogota,y2080_ssp585,10,26.68,3.579
+Bogota,y2080_ssp585,11,26.21,3.767
+Bogota,y2080_ssp585,12,26.274,3.552
+Buenos Aires,y2080_ssp585,1,29.663,2.089
+Buenos Aires,y2080_ssp585,2,29.282,2.017
+Buenos Aires,y2080_ssp585,3,26.715,2.038
+Buenos Aires,y2080_ssp585,4,21.921,1.879
+Buenos Aires,y2080_ssp585,5,16.973,1.671
+Buenos Aires,y2080_ssp585,6,13.801,1.597
+Buenos Aires,y2080_ssp585,7,13.248,1.637
+Buenos Aires,y2080_ssp585,8,14.933,1.86
+Buenos Aires,y2080_ssp585,9,17.965,2.155
+Buenos Aires,y2080_ssp585,10,21.209,2.1
+Buenos Aires,y2080_ssp585,11,24.644,2.286
+Buenos Aires,y2080_ssp585,12,27.789,2.172
+Cairo,y2080_ssp585,1,17.034,1.736
+Cairo,y2080_ssp585,2,17.763,1.911
+Cairo,y2080_ssp585,3,20.515,2.265
+Cairo,y2080_ssp585,4,23.916,2.317
+Cairo,y2080_ssp585,5,27.873,2.677
+Cairo,y2080_ssp585,6,32.347,3.019
+Cairo,y2080_ssp585,7,35.123,3.201
+Cairo,y2080_ssp585,8,35.314,2.954
+Cairo,y2080_ssp585,9,32.108,2.524
+Cairo,y2080_ssp585,10,28.024,2.022
+Cairo,y2080_ssp585,11,23.103,1.927
+Cairo,y2080_ssp585,12,18.846,1.71
+Cape Town,y2080_ssp585,1,24.344,1.248
+Cape Town,y2080_ssp585,2,24.7,1.174
+Cape Town,y2080_ssp585,3,23.831,1.198
+Cape Town,y2080_ssp585,4,21.992,1.146
+Cape Town,y2080_ssp585,5,19.665,1.329
+Cape Town,y2080_ssp585,6,17.832,1.335
+Cape Town,y2080_ssp585,7,16.971,1.334
+Cape Town,y2080_ssp585,8,17.0,1.397
+Cape Town,y2080_ssp585,9,17.848,1.415
+Cape Town,y2080_ssp585,10,19.599,1.289
+Cape Town,y2080_ssp585,11,21.525,1.261
+Cape Town,y2080_ssp585,12,23.174,1.25
+Chicago,y2080_ssp585,1,0.622,2.976
+Chicago,y2080_ssp585,2,2.484,3.337
+Chicago,y2080_ssp585,3,6.953,2.784
+Chicago,y2080_ssp585,4,13.906,2.893
+Chicago,y2080_ssp585,5,20.998,2.912
+Chicago,y2080_ssp585,6,27.2,2.836
+Chicago,y2080_ssp585,7,31.102,3.225
+Chicago,y2080_ssp585,8,31.177,3.618
+Chicago,y2080_ssp585,9,26.558,3.695
+Chicago,y2080_ssp585,10,18.53,3.479
+Chicago,y2080_ssp585,11,9.926,3.167
+Chicago,y2080_ssp585,12,3.754,2.847
+Delhi,y2080_ssp585,1,17.683,3.444
+Delhi,y2080_ssp585,2,20.638,3.751
+Delhi,y2080_ssp585,3,26.437,3.959
+Delhi,y2080_ssp585,4,32.246,3.777
+Delhi,y2080_ssp585,5,36.997,3.473
+Delhi,y2080_ssp585,6,40.03,3.458
+Delhi,y2080_ssp585,7,38.084,3.48
+Delhi,y2080_ssp585,8,35.567,3.447
+Delhi,y2080_ssp585,9,34.776,3.69
+Delhi,y2080_ssp585,10,30.688,3.345
+Delhi,y2080_ssp585,11,23.72,3.199
+Delhi,y2080_ssp585,12,18.694,3.396
+Dubai,y2080_ssp585,1,23.124,2.52
+Dubai,y2080_ssp585,2,23.849,2.977
+Dubai,y2080_ssp585,3,27.143,3.296
+Dubai,y2080_ssp585,4,31.325,3.671
+Dubai,y2080_ssp585,5,36.066,4.688
+Dubai,y2080_ssp585,6,40.1,5.439
+Dubai,y2080_ssp585,7,41.263,5.122
+Dubai,y2080_ssp585,8,41.003,4.861
+Dubai,y2080_ssp585,9,39.167,4.385
+Dubai,y2080_ssp585,10,35.288,3.098
+Dubai,y2080_ssp585,11,30.146,2.503
+Dubai,y2080_ssp585,12,25.289,2.643
+Helsinki,y2080_ssp585,1,-0.113,3.242
+Helsinki,y2080_ssp585,2,-0.164,3.321
+Helsinki,y2080_ssp585,3,2.452,2.827
+Helsinki,y2080_ssp585,4,7.996,2.726
+Helsinki,y2080_ssp585,5,14.446,2.633
+Helsinki,y2080_ssp585,6,20.278,2.648
+Helsinki,y2080_ssp585,7,23.045,3.08
+Helsinki,y2080_ssp585,8,21.545,3.004
+Helsinki,y2080_ssp585,9,16.892,2.632
+Helsinki,y2080_ssp585,10,11.268,2.642
+Helsinki,y2080_ssp585,11,6.039,2.957
+Helsinki,y2080_ssp585,12,1.853,3.416
+Honolulu,y2080_ssp585,1,25.823,1.379
+Honolulu,y2080_ssp585,2,25.389,1.438
+Honolulu,y2080_ssp585,3,25.294,1.407
+Honolulu,y2080_ssp585,4,25.593,1.338
+Honolulu,y2080_ssp585,5,26.484,1.224
+Honolulu,y2080_ssp585,6,27.733,1.149
+Honolulu,y2080_ssp585,7,28.682,1.144
+Honolulu,y2080_ssp585,8,29.501,1.227
+Honolulu,y2080_ssp585,9,29.974,1.378
+Honolulu,y2080_ssp585,10,29.478,1.358
+Honolulu,y2080_ssp585,11,28.084,1.267
+Honolulu,y2080_ssp585,12,26.731,1.293
+Lagos,y2080_ssp585,1,30.958,2.172
+Lagos,y2080_ssp585,2,32.217,1.865
+Lagos,y2080_ssp585,3,33.202,1.744
+Lagos,y2080_ssp585,4,32.896,1.802
+Lagos,y2080_ssp585,5,32.15,1.77
+Lagos,y2080_ssp585,6,31.34,1.576
+Lagos,y2080_ssp585,7,30.321,1.717
+Lagos,y2080_ssp585,8,29.559,1.814
+Lagos,y2080_ssp585,9,29.728,1.973
+Lagos,y2080_ssp585,10,30.371,2.057
+Lagos,y2080_ssp585,11,30.941,1.857
+Lagos,y2080_ssp585,12,30.828,2.06
+London,y2080_ssp585,1,9.026,1.709
+London,y2080_ssp585,2,8.811,1.784
+London,y2080_ssp585,3,9.494,1.483
+London,y2080_ssp585,4,11.394,1.611
+London,y2080_ssp585,5,14.779,1.685
+London,y2080_ssp585,6,18.957,1.882
+London,y2080_ssp585,7,22.228,2.317
+London,y2080_ssp585,8,22.46,2.407
+London,y2080_ssp585,9,20.225,2.154
+London,y2080_ssp585,10,16.445,1.935
+London,y2080_ssp585,11,12.594,1.789
+London,y2080_ssp585,12,10.181,1.876
+Los Angeles,y2080_ssp585,1,13.107,2.276
+Los Angeles,y2080_ssp585,2,14.027,2.158
+Los Angeles,y2080_ssp585,3,15.666,2.3
+Los Angeles,y2080_ssp585,4,18.657,2.488
+Los Angeles,y2080_ssp585,5,22.429,2.887
+Los Angeles,y2080_ssp585,6,26.502,3.276
+Los Angeles,y2080_ssp585,7,30.171,3.023
+Los Angeles,y2080_ssp585,8,31.311,2.527
+Los Angeles,y2080_ssp585,9,29.211,2.159
+Los Angeles,y2080_ssp585,10,25.382,2.203
+Los Angeles,y2080_ssp585,11,18.535,2.471
+Los Angeles,y2080_ssp585,12,14.08,2.559
+Madrid,y2080_ssp585,1,8.68,2.686
+Madrid,y2080_ssp585,2,9.798,2.567
+Madrid,y2080_ssp585,3,12.089,2.634
+Madrid,y2080_ssp585,4,15.07,3.016
+Madrid,y2080_ssp585,5,20.18,3.278
+Madrid,y2080_ssp585,6,26.292,3.94
+Madrid,y2080_ssp585,7,31.225,3.942
+Madrid,y2080_ssp585,8,31.32,3.343
+Madrid,y2080_ssp585,9,26.599,3.094
+Madrid,y2080_ssp585,10,19.358,2.895
+Madrid,y2080_ssp585,11,13.207,2.641
+Madrid,y2080_ssp585,12,9.798,2.454
+Mexico City,y2080_ssp585,1,19.679,3.217
+Mexico City,y2080_ssp585,2,21.075,3.126
+Mexico City,y2080_ssp585,3,23.521,3.09
+Mexico City,y2080_ssp585,4,25.89,2.927
+Mexico City,y2080_ssp585,5,26.367,2.997
+Mexico City,y2080_ssp585,6,25.92,2.819
+Mexico City,y2080_ssp585,7,25.657,2.578
+Mexico City,y2080_ssp585,8,25.532,2.501
+Mexico City,y2080_ssp585,9,24.85,2.673
+Mexico City,y2080_ssp585,10,23.333,2.963
+Mexico City,y2080_ssp585,11,21.663,3.154
+Mexico City,y2080_ssp585,12,20.15,3.254
+Montreal,y2080_ssp585,1,-3.059,2.783
+Montreal,y2080_ssp585,2,-1.842,2.885
+Montreal,y2080_ssp585,3,2.621,2.726
+Montreal,y2080_ssp585,4,9.978,2.951
+Montreal,y2080_ssp585,5,16.835,2.825
+Montreal,y2080_ssp585,6,22.725,2.492
+Montreal,y2080_ssp585,7,26.485,2.85
+Montreal,y2080_ssp585,8,26.165,3.294
+Montreal,y2080_ssp585,9,21.518,3.32
+Montreal,y2080_ssp585,10,14.236,3.288
+Montreal,y2080_ssp585,11,6.666,2.959
+Montreal,y2080_ssp585,12,0.501,2.641
+Moscow,y2080_ssp585,1,-2.593,3.936
+Moscow,y2080_ssp585,2,-1.572,3.836
+Moscow,y2080_ssp585,3,2.91,3.221
+Moscow,y2080_ssp585,4,10.111,3.128
+Moscow,y2080_ssp585,5,17.157,3.046
+Moscow,y2080_ssp585,6,23.141,3.274
+Moscow,y2080_ssp585,7,25.732,3.444
+Moscow,y2080_ssp585,8,24.169,3.202
+Moscow,y2080_ssp585,9,18.012,2.804
+Moscow,y2080_ssp585,10,10.797,2.713
+Moscow,y2080_ssp585,11,4.546,3.033
+Moscow,y2080_ssp585,12,-0.271,3.435
+Mumbai,y2080_ssp585,1,27.587,2.752
+Mumbai,y2080_ssp585,2,28.644,2.137
+Mumbai,y2080_ssp585,3,30.81,1.73
+Mumbai,y2080_ssp585,4,32.85,1.71
+Mumbai,y2080_ssp585,5,33.548,1.679
+Mumbai,y2080_ssp585,6,32.572,1.888
+Mumbai,y2080_ssp585,7,30.742,2.331
+Mumbai,y2080_ssp585,8,29.701,2.096
+Mumbai,y2080_ssp585,9,30.054,2.013
+Mumbai,y2080_ssp585,10,31.108,2.041
+Mumbai,y2080_ssp585,11,30.386,2.559
+Mumbai,y2080_ssp585,12,28.274,3.082
+Nairobi,y2080_ssp585,1,26.308,2.03
+Nairobi,y2080_ssp585,2,27.493,2.044
+Nairobi,y2080_ssp585,3,28.143,2.061
+Nairobi,y2080_ssp585,4,27.45,2.034
+Nairobi,y2080_ssp585,5,26.525,2.011
+Nairobi,y2080_ssp585,6,25.863,2.023
+Nairobi,y2080_ssp585,7,25.33,2.14
+Nairobi,y2080_ssp585,8,25.773,2.185
+Nairobi,y2080_ssp585,9,26.756,2.308
+Nairobi,y2080_ssp585,10,27.043,2.075
+Nairobi,y2080_ssp585,11,25.618,1.841
+Nairobi,y2080_ssp585,12,25.468,1.92
+New York,y2080_ssp585,1,5.283,3.136
+New York,y2080_ssp585,2,6.281,3.09
+New York,y2080_ssp585,3,9.322,2.939
+New York,y2080_ssp585,4,14.568,2.744
+New York,y2080_ssp585,5,20.052,2.488
+New York,y2080_ssp585,6,25.36,2.135
+New York,y2080_ssp585,7,28.897,2.384
+New York,y2080_ssp585,8,29.103,2.695
+New York,y2080_ssp585,9,26.048,2.915
+New York,y2080_ssp585,10,20.261,3.14
+New York,y2080_ssp585,11,13.64,3.179
+New York,y2080_ssp585,12,8.145,3.082
+Oslo,y2080_ssp585,1,-0.206,2.704
+Oslo,y2080_ssp585,2,-0.063,2.801
+Oslo,y2080_ssp585,3,1.977,2.204
+Oslo,y2080_ssp585,4,6.545,2.173
+Oslo,y2080_ssp585,5,12.49,2.244
+Oslo,y2080_ssp585,6,17.868,2.455
+Oslo,y2080_ssp585,7,20.111,2.907
+Oslo,y2080_ssp585,8,18.778,2.842
+Oslo,y2080_ssp585,9,14.705,2.512
+Oslo,y2080_ssp585,10,9.779,2.441
+Oslo,y2080_ssp585,11,5.006,2.641
+Oslo,y2080_ssp585,12,1.273,2.921
+Paris,y2080_ssp585,1,8.059,1.949
+Paris,y2080_ssp585,2,8.419,2.013
+Paris,y2080_ssp585,3,9.94,1.786
+Paris,y2080_ssp585,4,12.635,2.177
+Paris,y2080_ssp585,5,16.907,2.297
+Paris,y2080_ssp585,6,22.063,2.556
+Paris,y2080_ssp585,7,25.723,2.876
+Paris,y2080_ssp585,8,25.578,2.863
+Paris,y2080_ssp585,9,22.134,2.529
+Paris,y2080_ssp585,10,16.869,2.138
+Paris,y2080_ssp585,11,12.03,1.876
+Paris,y2080_ssp585,12,9.249,1.897
+Phoenix,y2080_ssp585,1,11.942,2.92
+Phoenix,y2080_ssp585,2,13.83,3.068
+Phoenix,y2080_ssp585,3,16.706,3.455
+Phoenix,y2080_ssp585,4,21.59,3.953
+Phoenix,y2080_ssp585,5,27.184,4.388
+Phoenix,y2080_ssp585,6,32.858,4.524
+Phoenix,y2080_ssp585,7,36.542,3.769
+Phoenix,y2080_ssp585,8,36.175,3.414
+Phoenix,y2080_ssp585,9,32.805,3.281
+Phoenix,y2080_ssp585,10,27.32,3.155
+Phoenix,y2080_ssp585,11,18.571,3.202
+Phoenix,y2080_ssp585,12,12.792,3.111
+Reykjavik,y2080_ssp585,1,3.082,2.367
+Reykjavik,y2080_ssp585,2,2.864,2.305
+Reykjavik,y2080_ssp585,3,3.316,2.299
+Reykjavik,y2080_ssp585,4,4.975,1.903
+Reykjavik,y2080_ssp585,5,7.704,1.456
+Reykjavik,y2080_ssp585,6,11.109,1.306
+Reykjavik,y2080_ssp585,7,13.389,1.573
+Reykjavik,y2080_ssp585,8,13.541,1.854
+Reykjavik,y2080_ssp585,9,11.407,1.998
+Reykjavik,y2080_ssp585,10,8.505,2.249
+Reykjavik,y2080_ssp585,11,5.661,2.33
+Reykjavik,y2080_ssp585,12,3.939,2.341
+Rome,y2080_ssp585,1,12.586,1.852
+Rome,y2080_ssp585,2,12.776,1.68
+Rome,y2080_ssp585,3,14.265,1.661
+Rome,y2080_ssp585,4,17.028,1.941
+Rome,y2080_ssp585,5,21.84,2.382
+Rome,y2080_ssp585,6,27.905,3.024
+Rome,y2080_ssp585,7,32.382,3.495
+Rome,y2080_ssp585,8,32.669,3.023
+Rome,y2080_ssp585,9,28.287,2.422
+Rome,y2080_ssp585,10,22.462,1.949
+Rome,y2080_ssp585,11,17.439,1.899
+Rome,y2080_ssp585,12,14.116,1.86
+San Diego,y2080_ssp585,1,15.804,2.237
+San Diego,y2080_ssp585,2,16.658,2.041
+San Diego,y2080_ssp585,3,18.15,2.168
+San Diego,y2080_ssp585,4,20.707,2.511
+San Diego,y2080_ssp585,5,23.672,3.013
+San Diego,y2080_ssp585,6,27.104,3.541
+San Diego,y2080_ssp585,7,30.388,3.299
+San Diego,y2080_ssp585,8,31.634,2.845
+San Diego,y2080_ssp585,9,30.321,2.49
+San Diego,y2080_ssp585,10,27.272,2.102
+San Diego,y2080_ssp585,11,21.246,2.313
+San Diego,y2080_ssp585,12,16.859,2.538
+Sao Paulo,y2080_ssp585,1,27.458,2.021
+Sao Paulo,y2080_ssp585,2,27.689,1.939
+Sao Paulo,y2080_ssp585,3,27.036,2.117
+Sao Paulo,y2080_ssp585,4,25.774,2.262
+Sao Paulo,y2080_ssp585,5,23.733,2.32
+Sao Paulo,y2080_ssp585,6,21.806,2.266
+Sao Paulo,y2080_ssp585,7,21.307,2.17
+Sao Paulo,y2080_ssp585,8,22.488,2.284
+Sao Paulo,y2080_ssp585,9,24.855,2.42
+Sao Paulo,y2080_ssp585,10,26.347,2.814
+Sao Paulo,y2080_ssp585,11,26.613,2.737
+Sao Paulo,y2080_ssp585,12,27.026,2.411
+Seoul,y2080_ssp585,1,3.311,3.156
+Seoul,y2080_ssp585,2,4.594,2.834
+Seoul,y2080_ssp585,3,8.762,2.496
+Seoul,y2080_ssp585,4,13.792,2.506
+Seoul,y2080_ssp585,5,19.139,2.592
+Seoul,y2080_ssp585,6,24.371,2.67
+Seoul,y2080_ssp585,7,28.194,2.768
+Seoul,y2080_ssp585,8,29.353,2.84
+Seoul,y2080_ssp585,9,26.137,2.872
+Seoul,y2080_ssp585,10,19.605,2.505
+Seoul,y2080_ssp585,11,12.608,2.542
+Seoul,y2080_ssp585,12,6.339,2.961
+Singapore,y2080_ssp585,1,29.585,1.631
+Singapore,y2080_ssp585,2,29.758,1.644
+Singapore,y2080_ssp585,3,30.505,1.71
+Singapore,y2080_ssp585,4,31.347,1.851
+Singapore,y2080_ssp585,5,31.757,1.833
+Singapore,y2080_ssp585,6,31.735,1.746
+Singapore,y2080_ssp585,7,31.386,1.772
+Singapore,y2080_ssp585,8,31.233,1.782
+Singapore,y2080_ssp585,9,31.176,1.794
+Singapore,y2080_ssp585,10,31.01,1.919
+Singapore,y2080_ssp585,11,30.631,1.871
+Singapore,y2080_ssp585,12,30.063,1.703
+Stockholm,y2080_ssp585,1,3.159,2.038
+Stockholm,y2080_ssp585,2,2.839,2.154
+Stockholm,y2080_ssp585,3,4.245,2.058
+Stockholm,y2080_ssp585,4,7.861,2.001
+Stockholm,y2080_ssp585,5,13.071,2.164
+Stockholm,y2080_ssp585,6,18.671,2.348
+Stockholm,y2080_ssp585,7,22.024,2.782
+Stockholm,y2080_ssp585,8,21.391,2.607
+Stockholm,y2080_ssp585,9,17.669,2.208
+Stockholm,y2080_ssp585,10,12.812,2.029
+Stockholm,y2080_ssp585,11,8.324,2.003
+Stockholm,y2080_ssp585,12,4.809,2.169
+Sydney,y2080_ssp585,1,26.594,1.424
+Sydney,y2080_ssp585,2,26.557,1.404
+Sydney,y2080_ssp585,3,25.006,1.594
+Sydney,y2080_ssp585,4,22.571,1.604
+Sydney,y2080_ssp585,5,19.381,1.946
+Sydney,y2080_ssp585,6,16.619,2.155
+Sydney,y2080_ssp585,7,15.44,2.126
+Sydney,y2080_ssp585,8,16.18,2.044
+Sydney,y2080_ssp585,9,18.517,1.943
+Sydney,y2080_ssp585,10,21.076,1.758
+Sydney,y2080_ssp585,11,23.225,1.61
+Sydney,y2080_ssp585,12,25.299,1.464
+Tokyo,y2080_ssp585,1,11.118,3.558
+Tokyo,y2080_ssp585,2,10.925,3.496
+Tokyo,y2080_ssp585,3,13.067,2.978
+Tokyo,y2080_ssp585,4,16.675,2.529
+Tokyo,y2080_ssp585,5,20.696,2.357
+Tokyo,y2080_ssp585,6,24.645,2.251
+Tokyo,y2080_ssp585,7,28.224,2.105
+Tokyo,y2080_ssp585,8,29.409,2.045
+Tokyo,y2080_ssp585,9,27.746,2.504
+Tokyo,y2080_ssp585,10,23.271,2.902
+Tokyo,y2080_ssp585,11,18.357,3.028
+Tokyo,y2080_ssp585,12,13.781,3.382
+Toronto,y2080_ssp585,1,0.039,3.019
+Toronto,y2080_ssp585,2,1.1,3.167
+Toronto,y2080_ssp585,3,5.094,2.733
+Toronto,y2080_ssp585,4,11.889,3.0
+Toronto,y2080_ssp585,5,18.853,2.939
+Toronto,y2080_ssp585,6,24.835,2.748
+Toronto,y2080_ssp585,7,28.632,3.206
+Toronto,y2080_ssp585,8,28.571,3.566
+Toronto,y2080_ssp585,9,24.362,3.618
+Toronto,y2080_ssp585,10,17.081,3.443
+Toronto,y2080_ssp585,11,9.414,3.149
+Toronto,y2080_ssp585,12,3.436,2.79

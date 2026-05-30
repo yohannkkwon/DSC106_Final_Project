@@ -36,15 +36,16 @@ const state = {
   city: "San Diego",
   overviewStep: "historical",
   trajectoryStep: "all",
-  // Map sliders: 0 = SSP1-2.6, 0.5 = SSP2-4.5, 1.0 = SSP5-8.5 (smooth interp)
-  tempMapT: 1.0,
-  precipMapT: 1.0,
+  bnStep: "today",
+  // Map: single shared slider + variable toggle
+  mapVar: "tas",   // "tas" or "pr"
+  mapT: 1.0,       // 0 = SSP1-2.6, 0.5 = SSP2-4.5, 1.0 = SSP5-8.5
 };
 
 const tooltip = d3.select("body").append("div").attr("class", "tooltip");
 
 // Data
-let citiesAnnual, citiesRaw, extremes, analog, citiesMeta, spatial, globalMean;
+let citiesAnnual, citiesRaw, extremes, analog, citiesMeta, spatial, globalMean, monthlyClimatology;
 let worldLand = null;
 let availableScenarios = ALL_SCEN;
 
@@ -69,7 +70,7 @@ let availableScenarios = ALL_SCEN;
 async function loadAll() {
   const tryCsv = async (p) => { try { return await d3.csv(p, rowParse); } catch { return null; } };
   const tryJson = async (u) => { try { const r = await fetch(u); return r.ok ? await r.json() : null; } catch { return null; } };
-  const [annual, ext, ana, meta, sp, gm, raw, atlas] = await Promise.all([
+  const [annual, ext, ana, meta, sp, gm, raw, mclim, atlas] = await Promise.all([
     tryCsv("data/cities_annual.csv"),
     tryCsv("data/extremes_annual.csv"),
     tryCsv("data/analog.csv"),
@@ -77,6 +78,7 @@ async function loadAll() {
     tryCsv("data/spatial.csv"),
     tryCsv("data/global_mean_annual.csv"),
     tryCsv("data/cities_annual_models.csv"),
+    tryCsv("data/monthly_climatology.csv"),
     tryJson("https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json"),
   ]);
   citiesAnnual = annual || [];
@@ -86,6 +88,7 @@ async function loadAll() {
   spatial = sp || [];
   globalMean = gm || [];
   citiesRaw = raw || [];
+  monthlyClimatology = mclim || [];
   if (atlas && typeof topojson !== "undefined") {
     try { worldLand = topojson.feature(atlas, atlas.objects.land); } catch {}
   }
@@ -182,18 +185,32 @@ function setupControls() {
     document.querySelector(".pick-city").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  // Map sliders
-  setupMapSlider("temp-map-slider", "temp-map", (t) => {
-    state.tempMapT = t;
-    updateMapCellsByT("#temp-map", "tas", t);
-    updateMapReadout("temp-map-name", "temp-map-sub", t);
+  // Unified map slider + var toggle
+  setupMapSlider("map-slider", "world-map", (t) => {
+    state.mapT = t;
+    updateMapCellsByT("#world-map", state.mapVar, t);
+    updateMapReadout("map-name", "map-sub", t);
   });
-  setupMapSlider("precip-map-slider", "precip-map", (t) => {
-    state.precipMapT = t;
-    updateMapCellsByT("#precip-map", "pr", t);
-    updateMapReadout("precip-map-name", "precip-map-sub", t);
+  document.querySelectorAll(".map-var-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const v = btn.dataset.var;
+      if (v === state.mapVar) return;
+      state.mapVar = v;
+      document.querySelectorAll(".map-var-btn").forEach(b => b.classList.toggle("active", b === btn));
+      // update title/deck copy too
+      const title = document.getElementById("map-title");
+      const deck = document.getElementById("map-deck");
+      if (v === "tas") {
+        title.innerHTML = "The whole world, <em>redrawn</em>.";
+        deck.textContent = "Projected change in annual mean temperature, 2071–2100 vs 1950–2014 baseline. Toggle between temperature and precipitation; drag the slider to morph between emissions pathways.";
+      } else {
+        title.innerHTML = "Rain, <em>redrawn</em>.";
+        deck.innerHTML = `Percent change in annual precipitation vs baseline. Wet regions get wetter, dry regions get drier — the <em>wet-gets-wetter</em> signal of a warmer atmosphere.`;
+      }
+      drawWorldMap();
+    });
   });
-  // tick clicks snap to those positions
+  // tick clicks snap
   document.querySelectorAll(".map-slider-ticks").forEach(group => {
     group.querySelectorAll("span").forEach(span => {
       span.addEventListener("click", () => {
@@ -330,11 +347,13 @@ function setupScrollTriggers() {
   const stakesLines = Array.from(document.querySelectorAll(".stakes-line"));
   const overviewSteps = Array.from(document.querySelectorAll('[data-scrolly="overview"] .scrolly-step'));
   const trajSteps = Array.from(document.querySelectorAll('[data-scrolly="trajectory"] .scrolly-step'));
+  const bnSteps = Array.from(document.querySelectorAll('[data-scrolly="bigNumbers"] .scrolly-step'));
+  const bnPanels = Array.from(document.querySelectorAll(".bn-panel"));
   const bnSection = document.querySelector(".big-numbers-chapter");
 
   let activeOverview = null;
   let activeTraj = null;
-  let bnFired = false;
+  let activeBn = null;
 
   function lastCrossed(elements, triggerY) {
     let lastIdx = -1;
@@ -377,14 +396,18 @@ function setupScrollTriggers() {
       }
     }
 
-    if (bnSection) {
-      const r = bnSection.getBoundingClientRect();
-      const inView = r.top < vh * 0.6 && r.bottom > vh * 0.4;
-      if (inView && !bnFired) {
-        bnFired = true;
-        triggerBigNumbersAnimation();
-      } else if (!inView) {
-        bnFired = false;
+    // big-numbers scrolly: swap panels + sync inline values per step
+    const bnIdx = lastCrossed(bnSteps, triggerY);
+    if (bnIdx >= 0) {
+      const target = bnSteps[bnIdx];
+      if (target !== activeBn) {
+        bnSteps.forEach(s => s.classList.remove("active"));
+        target.classList.add("active");
+        activeBn = target;
+        const panelKey = target.dataset.step;
+        state.bnStep = panelKey;
+        bnPanels.forEach(p => p.classList.toggle("active", p.dataset.panel === panelKey));
+        renderBigNumbersPanel(panelKey);
       }
     }
   }
@@ -400,7 +423,7 @@ function setupScrollTriggers() {
   window.addEventListener("resize", update);
 
   // IO-based: any step entering OR leaving viewport triggers update().
-  const allTriggers = [...stakesLines, ...overviewSteps, ...trajSteps];
+  const allTriggers = [...stakesLines, ...overviewSteps, ...trajSteps, ...bnSteps];
   if (bnSection) allTriggers.push(bnSection);
   // also observe the chapter sections that CONTAIN the scrolly groups, so we
   // pick up changes when steps have already scrolled past
@@ -421,10 +444,14 @@ function setupScrollTriggers() {
 // ============================================================
 function renderAll() {
   drawOverviewChart();
+  // Activate first big-numbers panel by default so something renders before scroll
+  const firstPanel = document.querySelector('.bn-panel[data-panel="today"]');
+  if (firstPanel) firstPanel.classList.add("active");
+  const firstStep = document.querySelector('[data-scrolly="bigNumbers"] .scrolly-step[data-step="today"]');
+  if (firstStep) firstStep.classList.add("active");
   renderCity();
   drawWarmingRank();
-  drawTempMap();
-  drawPrecipMap();
+  drawWorldMap();
 }
 function renderCity() {
   // text — guarded against missing elements (some get re-rendered by other functions)
@@ -440,43 +467,110 @@ function renderCity() {
   drawTrajectoryChart();
   drawChoiceChart();
   updateAnalogCard();
-  updateBigNumbers();   // also updates the bn-city-name span
+  // re-render whichever big-numbers panel is currently in view
+  const activePanel = document.querySelector(".bn-panel.active");
+  renderBigNumbersPanel(activePanel ? activePanel.dataset.panel : "today");
   drawDumbbell();
 }
 
 // ============================================================
 // Big numbers (animated)
 // ============================================================
-function bnValues() {
-  const today = d3.mean(
-    extremes.filter(d => d.city === state.city && d.scenario === "historical"
-                    && d.year >= 1985 && d.year <= 2014),
-    d => d.days_over_35C
-  );
-  const future = d3.mean(
-    extremes.filter(d => d.city === state.city && d.scenario === "ssp585"
-                    && d.year >= 2071 && d.year <= 2100),
-    d => d.days_over_35C
-  );
+// Returns aggregated extreme-heat metrics for the current city (or null if no daily data).
+function bnMetrics(city = state.city) {
+  const histRows = extremes.filter(d => d.city === city && d.scenario === "historical"
+                              && d.year >= 1985 && d.year <= 2014);
+  const futRows = extremes.filter(d => d.city === city && d.scenario === "ssp585"
+                              && d.year >= 2071 && d.year <= 2100);
+  if (!histRows.length || !futRows.length) return null;
+  const mean = (rows, k) => d3.mean(rows, d => d[k]);
+  const max = (rows, k) => d3.max(rows, d => d[k]);
   return {
-    today: today != null ? Math.round(today) : null,
-    future: future != null ? Math.round(future) : null,
+    today30: Math.round(mean(histRows, "days_over_30C")),
+    today35: Math.round(mean(histRows, "days_over_35C")),
+    today40: Math.round(mean(histRows, "days_over_40C")),
+    today_hw: Math.round(max(histRows, "longest_run_over_35C")),
+    fut30:   Math.round(mean(futRows, "days_over_30C")),
+    fut35:   Math.round(mean(futRows, "days_over_35C")),
+    fut40:   Math.round(mean(futRows, "days_over_40C")),
+    fut_hw:  Math.round(max(futRows, "longest_run_over_35C")),
   };
 }
 
-function updateBigNumbers() {
-  const { today, future } = bnValues();
-  document.getElementById("bn-today").textContent = today ?? "—";
-  document.getElementById("bn-2080").textContent = future ?? "—";
-  updateBigCaption(today, future);
+// Top-15 cities by absolute increase in days_over_35C
+function bnRankingData() {
+  const cities = citiesMeta.map(d => d.city);
+  return cities.map(c => {
+    const m = bnMetrics(c);
+    if (!m) return null;
+    return { city: c, today: m.today35, future: m.fut35, delta: m.fut35 - m.today35 };
+  }).filter(Boolean).sort((a, b) => b.delta - a.delta).slice(0, 15);
 }
 
-function triggerBigNumbersAnimation() {
-  const { today, future } = bnValues();
-  if (today == null || future == null) return;
-  countUp("#bn-today", today, 900);
-  countUp("#bn-2080", future, 1300);
-  updateBigCaption(today, future);
+// Main entry: re-render whichever panel is currently active.
+function renderBigNumbersPanel(stepKey) {
+  const m = bnMetrics();
+
+  // Sync inline-span values inside the scrolly steps (city name + numbers)
+  document.querySelectorAll(".bn-city-inline").forEach(el => el.textContent = state.city);
+  const inline = (cls, val) => document.querySelectorAll(cls).forEach(el => el.textContent = val);
+
+  if (!m) {
+    // No daily-data city — show a graceful placeholder on day-counting panels,
+    // but the calendar still works (uses monthly climatology which all 36 cities have).
+    document.querySelectorAll(".bn-megavalue").forEach(el => el.textContent = "—");
+    document.querySelectorAll(".bn-multiplier #bn-multiplier-text").forEach(el => el.textContent = "no daily-resolution data");
+    inline(".bn-today-inline", "no data");
+    inline(".bn-2080-inline", "no data");
+    inline(".bn-mult-inline", "—");
+    inline(".bn-hw-today-inline", "—");
+    inline(".bn-hw-future-inline", "—");
+    document.getElementById("bn-heatwave-compare").textContent =
+      `Daily-resolution model output isn't available for ${state.city} yet.`;
+    document.getElementById("bn-threshold-bars").innerHTML =
+      `<div style="text-align:center;color:rgba(255,255,255,0.6);padding:24px;">
+         No daily-resolved data available for ${state.city}.
+       </div>`;
+    document.getElementById("bn-ranking").innerHTML = "";
+    renderCalendar();  // calendar still works from monthly data
+    return;
+  }
+
+  // Sync the inline-text values
+  inline(".bn-today-inline", m.today35);
+  inline(".bn-2080-inline", m.fut35);
+  const mult = m.today35 >= 1
+    ? (m.fut35 / m.today35).toFixed(1) + "×"
+    : (m.fut35 > 0 ? "from zero" : "—");
+  inline(".bn-mult-inline", mult);
+  inline(".bn-hw-today-inline", m.today_hw + " day" + (m.today_hw === 1 ? "" : "s"));
+  inline(".bn-hw-future-inline", m.fut_hw + " day" + (m.fut_hw === 1 ? "" : "s"));
+
+  // Panel 1: today
+  countUp("#bn-today", m.today35, 800);
+
+  // Panel 2: 2080 (dual)
+  setMega(".bn-today-dual", m.today35);
+  setMega(".bn-2080-dual", m.fut35);
+  document.getElementById("bn-multiplier-text").textContent = mult + " more";
+
+  // Panel 3: calendar (uses monthly climatology, not daily data — works for all cities)
+  renderCalendar();
+
+  // Panel 4: heatwave
+  setMega(".bn-heatwave-value", m.fut_hw);
+  document.getElementById("bn-heatwave-compare").textContent =
+    `Today's longest stretch in ${state.city}: ${m.today_hw} day${m.today_hw === 1 ? "" : "s"}.`;
+
+  // Panel 5: thresholds
+  renderThresholdBars(m);
+
+  // Panel 6: ranking
+  renderRanking();
+}
+
+function setMega(sel, val) {
+  document.querySelectorAll(sel).forEach(el => el.textContent = val);
 }
 
 function countUp(sel, target, duration) {
@@ -489,30 +583,129 @@ function countUp(sel, target, duration) {
     });
 }
 
-function updateBigCaption(today, future) {
-  const captionEl = document.getElementById("bn-caption");
-  if (!captionEl) return;
-  // Cities without daily-resolution model output (e.g. Montreal, Toronto, Phoenix,
-  // Helsinki, Oslo, Rome) can't have an exact day-counting answer — show an
-  // honest empty state instead of stale numbers from the last city.
-  if (today == null || future == null) {
-    captionEl.innerHTML =
-      `<strong>Daily extreme-heat data isn't available for ${state.city} yet</strong> ` +
-      `(only a subset of climate models publish daily output at high resolution). ` +
-      `The temperature trajectory and analog above are still based on the full 8-model ensemble.`;
+// Calendar: 365 squares, hot days marked.
+// Estimate per-day hot probability from monthly climatology using a normal CDF.
+// (We don't have day-level data, but monthly mean + std + threshold gives us a
+// statistical "fraction of days above 35°C" per month, which we then convert
+// to colored squares.)
+function renderCalendar() {
+  const todayEl = document.getElementById("cal-today");
+  const futureEl = document.getElementById("cal-future");
+  const todayCountEl = document.getElementById("cal-today-count");
+  const futureCountEl = document.getElementById("cal-future-count");
+  if (!todayEl || !futureEl) return;
+
+  const todayRows = monthlyClimatology.filter(d => d.city === state.city && d.period === "today");
+  const futureRows = monthlyClimatology.filter(d => d.city === state.city && d.period === "y2080_ssp585");
+  if (!todayRows.length || !futureRows.length) {
+    todayEl.innerHTML = futureEl.innerHTML = "";
+    todayCountEl.textContent = futureCountEl.textContent = "—";
     return;
   }
-  let xText;
-  if (today >= 1) {
-    const x = (future / today).toFixed(1);
-    xText = `${x}× increase`;
-  } else if (future > 0) {
-    xText = "from essentially zero";
-  } else {
-    xText = "no change";
+
+  // Build per-month {mean, std} maps
+  const todayByMonth = new Map(todayRows.map(d => [d.month, { mean: +d.tas_C, std: Math.max(1.5, +d.std_C || 2) }]));
+  const futureByMonth = new Map(futureRows.map(d => [d.month, { mean: +d.tas_C, std: Math.max(1.5, +d.std_C || 2) }]));
+
+  const THRESHOLD = 35;
+  // Daily temperature variance is typically larger than monthly mean variance;
+  // boost by a factor for plausible daily variability around the monthly mean.
+  const DAILY_STD_BOOST = 2.5;
+
+  // For each day-of-year, find the month and probability that daily tas exceeds 35°C
+  const cdf = (x, mean, std) => {
+    // Normal CDF approximation via erf
+    const z = (x - mean) / (std * Math.SQRT2);
+    return 0.5 * (1 + erf(z));
+  };
+  const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+  function buildCalendarHTML(perMonthMap) {
+    const cells = [];
+    let totalHotDays = 0;
+    for (let m = 1; m <= 12; m++) {
+      const stats = perMonthMap.get(m) || { mean: 0, std: 5 };
+      const dailyStd = stats.std * DAILY_STD_BOOST;
+      const probHot = 1 - cdf(THRESHOLD, stats.mean, dailyStd);
+      const monthHotDays = probHot * daysInMonth[m - 1];
+      totalHotDays += monthHotDays;
+      // Deterministically distribute the hot days across the month (clustered around mid-month)
+      const n = daysInMonth[m - 1];
+      const hotN = Math.round(monthHotDays);
+      // Choose middle hotN days
+      const start = Math.max(0, Math.floor((n - hotN) / 2));
+      for (let d = 0; d < n; d++) {
+        const isHot = d >= start && d < start + hotN;
+        cells.push(`<div class="bn-cal-day${isHot ? " hot" : ""}"></div>`);
+      }
+    }
+    return { html: cells.join(""), totalHotDays: Math.round(totalHotDays) };
   }
-  captionEl.innerHTML = `That's a <strong>${xText}</strong> in dangerously hot days for <span id="bn-city-name">${state.city}</span>.`;
+
+  const today = buildCalendarHTML(todayByMonth);
+  const future = buildCalendarHTML(futureByMonth);
+  todayEl.innerHTML = today.html;
+  futureEl.innerHTML = future.html;
+  todayCountEl.textContent = today.totalHotDays;
+  futureCountEl.textContent = future.totalHotDays;
 }
+
+// Abramowitz–Stegun erf approximation
+function erf(x) {
+  const sign = x < 0 ? -1 : 1;
+  x = Math.abs(x);
+  const a1 =  0.254829592, a2 = -0.284496736, a3 =  1.421413741;
+  const a4 = -1.453152027, a5 =  1.061405429, p = 0.3275911;
+  const t = 1 / (1 + p * x);
+  const y = 1 - ((((a5 * t + a4) * t + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+  return sign * y;
+}
+
+function renderThresholdBars(m) {
+  const container = document.getElementById("bn-threshold-bars");
+  if (!container) return;
+  const maxVal = Math.max(m.fut30, m.fut35, m.fut40, 1);
+  const rows = [
+    { label: "30 °C", today: m.today30, future: m.fut30 },
+    { label: "35 °C", today: m.today35, future: m.fut35 },
+    { label: "40 °C", today: m.today40, future: m.fut40 },
+  ];
+  container.innerHTML = rows.map(r => `
+    <div class="bn-thr-row">
+      <div class="bn-thr-label">${r.label}</div>
+      <div class="bn-thr-bar-wrap">
+        <div class="bn-thr-bar-future" style="width:${(r.future / maxVal) * 100}%"></div>
+        <div class="bn-thr-bar-today" style="width:${(r.today / maxVal) * 100}%"></div>
+      </div>
+      <div class="bn-thr-value">${r.future} <span class="small">was ${r.today}</span></div>
+    </div>`).join("");
+}
+
+function renderRanking() {
+  const container = document.getElementById("bn-ranking");
+  if (!container) return;
+  const data = bnRankingData();
+  if (!data.length) { container.innerHTML = ""; return; }
+  const maxVal = data[0].future || 1;
+  // ensure current city is in the visible list — if not in top 15, append it
+  if (!data.find(r => r.city === state.city)) {
+    const m = bnMetrics();
+    if (m) data.push({ city: state.city, today: m.today35, future: m.fut35, delta: m.fut35 - m.today35 });
+  }
+  container.innerHTML = data.map(r => `
+    <div class="bn-rank-row${r.city === state.city ? " you" : ""}">
+      <div class="bn-rank-city">${r.city}</div>
+      <div class="bn-rank-bar-wrap">
+        <div class="bn-rank-bar" style="width:${(r.future / maxVal) * 100}%"></div>
+      </div>
+      <div class="bn-rank-value">${r.future}</div>
+    </div>`).join("");
+}
+
+// Compatibility shims so any leftover references don't break
+function updateBigNumbers() { renderBigNumbersPanel(state.bnStep || "today"); }
+function triggerBigNumbersAnimation() { renderBigNumbersPanel(state.bnStep || "today"); }
+function updateBigCaption() { /* deprecated; renderBigNumbersPanel handles inline text now */ }
 
 // ============================================================
 // Smoothing helper
@@ -943,10 +1136,18 @@ function drawDumbbell() {
 // ============================================================
 // Maps
 // ============================================================
-function drawTempMap() { drawMap("#temp-map", "tas", state.tempMapT,
-  { label: "Δ Temperature (°C)", cmap: tasColor, domain: [0, 13] }); }
-function drawPrecipMap() { drawMap("#precip-map", "pr", state.precipMapT,
-  { label: "Δ Precipitation (%)", cmap: prColor, domain: [-50, 50] }); }
+function drawWorldMap() {
+  if (state.mapVar === "tas") {
+    drawMap("#world-map", "tas", state.mapT,
+      { label: "Δ Temperature (°C)", cmap: tasColor, domain: [0, 13] });
+  } else {
+    drawMap("#world-map", "pr", state.mapT,
+      { label: "Δ Precipitation (%)", cmap: prColor, domain: [-50, 50] });
+  }
+}
+// Back-compat shims so other code paths don't break during transition
+function drawTempMap() { drawWorldMap(); }
+function drawPrecipMap() { /* now part of drawWorldMap */ }
 
 // Per-cell lookup tables built on demand: key = "lat,lon" -> {ssp126, ssp245, ssp585}
 const cellIndex = { tas: null, pr: null };
@@ -1102,7 +1303,6 @@ window.addEventListener("resize", () => {
     drawChoiceChart();
     drawDumbbell();
     drawWarmingRank();
-    drawTempMap();
-    drawPrecipMap();
+    drawWorldMap();
   }, 200);
 });
