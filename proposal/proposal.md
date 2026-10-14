@@ -1,7 +1,7 @@
 # Your City in 2080
 ### DSC 106 Final Project Proposal
 
-**Team:** Yohan Kwon, Holden (UCSD), + 1 TBD
+**Team:** Yohan Kwon, Holden Flett, Edison Ayran
 **Date:** May 19, 2026
 
 ---
