@@ -244,6 +244,14 @@ h2.chapter-title em { color: var(--accent); font-style: italic; }
   background: linear-gradient(180deg, transparent 60%, var(--ssp585-soft) 60%);
   padding: 0 4px;
 }
+.hero .byline {
+  margin-top: 36px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
 
 /* ============================================================
    CHAPTER 2: STAKES — sequential prose
@@ -1132,6 +1140,7 @@ footer {
   text-align: center;
 }
 footer p { margin: 8px 0; }
+footer .footer-byline { font-weight: 600; color: var(--ink); }
 footer .tiny { font-size: 11px; opacity: 0.8; }
 
 /* ============================================================
